@@ -46,6 +46,19 @@ System.register(['angular2/core'], function(exports_1) {
                     });
                     return Promise.resolve(ngDevelopers);
                 };
+                DeveloperService.prototype.saveDeveloper = function (dev) {
+                    var firebaseUrl;
+                    var developerRef;
+                    var ngDeveloper;
+                    firebaseUrl = "https://ngmain.firebaseio.com/developers/" + dev.gitID;
+                    developerRef = new Firebase(firebaseUrl);
+                    developerRef.update({
+                        "firstName": dev.firstName,
+                        "lastName": dev.lastName,
+                        "bio": dev.bio,
+                        "blogUrl": dev.blogUrl
+                    });
+                };
                 DeveloperService = __decorate([
                     core_1.Injectable(), 
                     __metadata('design:paramtypes', [])

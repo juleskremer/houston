@@ -45,6 +45,27 @@ export class DeveloperService {
     return Promise.resolve(ngDevelopers);
 
   }
+
+   saveDeveloper(dev: Developer) {
+    
+    var firebaseUrl: string;
+	  var developerRef: Firebase;
+    var ngDeveloper: Developer;
+    
+		firebaseUrl = "https://ngmain.firebaseio.com/developers/" + dev.gitID;
+		developerRef = new Firebase(firebaseUrl);
+
+    developerRef.update(
+       {
+            "firstName": dev.firstName,
+            "lastName": dev.lastName,
+            "bio" : dev.bio,
+            "blogUrl" : dev.blogUrl
+        }
+       
+    );
+  
+  }
   
 }
 

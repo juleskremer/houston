@@ -40,6 +40,9 @@ System.register(['angular2/core', '../../services/developers/developer.service',
                     this._service.getDeveloper(id).then(function (developer) { return _this.developer = developer; });
                     this._languageService.getLanguages().then(function (resp) { return _this.languages = resp; });
                 };
+                DeveloperEditComponent.prototype.onSave = function (developer) {
+                    this._service.saveDeveloper(developer);
+                };
                 DeveloperEditComponent.prototype.onCancel = function (developer) {
                     this._router.navigate(['DeveloperDetail', { id: developer.gitID }]);
                 };

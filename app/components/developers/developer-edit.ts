@@ -32,7 +32,10 @@ export class DeveloperEditComponent {
   this._languageService.getLanguages().then((resp) => this.languages = resp);
 
     }
-    
+  
+  onSave(developer: Developer){
+      this._service.saveDeveloper(developer);
+  }
   onCancel(developer: Developer) {
     this._router.navigate( ['DeveloperDetail', { id: developer.gitID }] );
   }
