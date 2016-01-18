@@ -148,6 +148,7 @@
 
                 </div><!--Missions end-->
             </div><!--Missions end-->
+            
         </div><!--left end-->
         
         <!-- ===========================
@@ -239,8 +240,15 @@
         
 
     </div><!--container end-->
-
-        <div><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple" (click)="onSelect(developer)">Edit Me</a></div>
-        <div><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple" (click)="gotoDevelopers()">Back</a></div>
+    
+   <!-- ===========================
+    FOOTER
+    =========================== -->
+    <footer class="text-center">
+      <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" (click)="onSelect(developer)">Edit Developer</button>
+      &nbsp;
+      <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="gotoDevelopers()">Cancel</button>
+    </footer>
+    <div><p></p></div>
 
 </div>
