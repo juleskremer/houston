@@ -1,8 +1,8 @@
 [debug] ----------------------------------------------------------------------
-[debug] Command:      /usr/local/Cellar/node/4.1.1/bin/node /Users/juliekremer/.npm-packages/bin/firebase deploy
+[debug] Command:      /usr/local/bin/node /Users/juliekremer/.npm-packages/bin/firebase deploy
 [debug] Platform:     darwin
-[debug] Node Version: v4.1.1
-[debug] Time:         Tue Dec 29 2015 21:53:50 GMT-0800 (PST)
+[debug] Node Version: v4.2.4
+[debug] Time:         Mon Jan 18 2016 13:00:51 GMT-0800 (PST)
 [debug] ----------------------------------------------------------------------
 [debug] 
 [debug] >>> HTTP REQUEST GET https://admin.firebase.com/firebase/ngmain/token?token=XXX 
