@@ -1,0 +1,14 @@
+    <div *ngIf="mission">
+      <h2>{{mission.title}}</h2>
+      <div>
+        <div>Description:  {{ mission.description }}</div>
+        <div>Core POC:  {{ mission.corePOC }}</div>
+        <div>Git Link:  {{ mission.gitID }}</div>
+        <div>Developers: {{ mission.developers }} </div>
+        <div>Points: {{ mission.points }} </div>
+        <div>Start Date: {{ mission.startDate }} </div>
+        <div>Approval Date: {{ mission.approvalDate }} </div>
+        <div><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple" (click)="onSelect(mission)">Edit Me</a></div>
+        <div><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple" (click)="gotoMissions()">Back</a></div>
+      </div>
+    </div>

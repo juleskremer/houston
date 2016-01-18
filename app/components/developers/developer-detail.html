@@ -1,0 +1,246 @@
+
+    <div *ngIf="developer">
+        <div class="container">
+        <!-- ===========================
+        HEADER 
+        ============================ -->
+        <div id="header" class="row">
+            <div class="col-sm-2">
+                <img class="propic" src="{{developer.picUrl}}" alt="{{developer.lastName}}">
+            </div>
+            <!-- photo end-->
+
+            <div class="col-sm-10">
+                <div class="cv-title">
+                    <div class="row">
+                        <div class="col-sm-7">
+                            <h1>{{developer.firstName}} {{developer.lastName}}</h1>
+                        </div>
+                    </div>
+                    <h2>Angular Google Developer Expert</h2>
+                </div><!-- Title end-->
+
+                <!-- ===========================
+                SOCIAL & CONTACT
+                ============================ -->
+                <div class="row">
+                    <div class="col-sm-4">
+                        <ul class="list-unstyled">
+                            <li><a href=""><span class="social fa fa-home"></span>(Ask for WebPage)</a>
+                            </li>
+                            <li><a href=""><span class="social fa fa-phone"></span>(Ask for Phone)</a>
+                            </li>
+                            <li><a href="mailto:{{developer.eMail}}"><span class="social fa fa-envelope-o"></span>{{developer.eMail}}</a>
+                            </li>
+                        </ul>
+                    </div><!-- social 1st col end-->
+
+                    <div class="col-sm-4">
+                        <ul class="list-unstyled">
+                            <li><a href="{{developer.blogUrl}}"><span class="fa fa-file-text-o"></span>Blog</a>
+                            </li>
+                            <li><a href="http://www.twitter.com/{{developer.twitterID}}"><span class="social fa fa-twitter"></span>Twitter</a>
+                            </li>
+                            <li><a href="{{developer.resumeUrl}}"><span class="fa fa-file-code-o"></span>Resume</a>
+                            </li>
+                        </ul>
+                    </div><!-- social 2nd col end-->
+                    
+                    <div class="col-sm-4">
+                        <ul class="list-unstyled">
+                            <li><a href="http://www.github.com/{{developer.gitID}}"><span class="social fa fa-github"></span>GitHub</a>
+                            </li>
+                            <li><a href="http://www.twitter.com/{{developer.twitterID}}"><span class="social fa fa-twitter"></span>Twitter</a>
+                            </li>
+                            <li><a href=""><span class="social fa fa-linkedin"></span>Linkedin</a>
+                            </li>
+                        </ul>
+                    </div><!-- social 3nd col end-->
+                </div><!-- header social end-->
+            </div><!-- header right end-->
+        </div><!-- header end-->
+
+        <hr class="firsthr">
+
+        <!-- ===========================
+        BODY LEFT PART
+        ============================ -->
+        <div class="col-md-8 mainleft">
+            <div id="statement" class="row mobmid">
+                <div class="col-sm-1">
+                    <span class="secicon fa fa-user"></span>
+                </div><!--icon end-->
+
+                <div class="col-sm-11">
+                    <h3>Biography</h3>
+                    <p>{{developer.bio}}</p>
+                    <p class="signature">{{developer.firstName}} {{developer.lastName}}</p>
+                </div><!--info end-->
+            </div><!--personal statement end-->
+
+            <hr>
+
+            <div id="education" class="row mobmid">
+                <div class="col-sm-1">
+                    <span class="secicon fa fa-graduation-cap"></span>
+                </div><!--icon end-->
+
+                <div class="col-sm-11">
+                    <h3>Communities</h3>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>Would put a list of them here with a heading for each</h4>
+                            <p class="sub"><a href="">this would link to the community page</a>
+                            </p>
+                            <p>{{developer.communities}}</p>
+                        </div>
+
+                    </div><!-- Communities 1 end-->
+                    
+                </div>
+            </div><!--Communities end-->
+            
+            <hr>
+            
+                <div id="education" class="row mobmid">
+                <div class="col-sm-1">
+                    <span class="secicon fa fa-graduation-cap"></span>
+                </div><!--icon end-->
+
+                <div class="col-sm-11">
+                    <h3>Conferences</h3>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>Would put a list of them here with a heading for each</h4>
+                            <p class="sub"><a href="">this would link to the conference page</a>
+                            </p>
+                            <p>{{developer.conferences}}</p>
+                        </div>
+
+                    </div><!-- Communities 1 end-->
+                    
+                </div>
+            </div><!--Communities end-->
+            
+            <hr>
+
+            <!-- ===========================
+            MISSIONS
+            ============================ -->
+            <div id="job" class="row mobmid">
+                <div class="col-sm-1">
+                    <span class="secicon fa fa-briefcase"></span>
+                </div><!--icon end-->
+
+                <div class="col-sm-11">
+                    <h3>Angular Missions</h3>
+
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>Each Mission Header</h4>
+                            <p class="sub"><a href="">LinktoMission</a>
+                            </p>
+                            <p>{{developer.missions}}</p>
+                        </div>
+                    </div><!--Mission 1 end-->
+
+                </div><!--Missions end-->
+            </div><!--Missions end-->
+        </div><!--left end-->
+        
+        <!-- ===========================
+        SIDEBAR
+        =========================== -->
+        <div class="col-md-4 mainright">
+            <div class="row">
+                <div class="col-sm-1 col-md-2 mobmid">
+                    <span class="secicon fa fa-magic"></span>
+                </div><!--icon end-->
+
+                <div class="col-sm-11 col-md-10">
+                    <h3 class="mobmid">Details</h3>
+
+                    <p>AngularJS</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width: 65%">
+                            <span class="sr-only">65% Complete (success)</span>
+                        </div>
+                    </div><!--skill end-->
+
+
+                    <p>Angular 2</p>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100" style="width: 85%">
+                            <span class="sr-only">85% Complete</span>
+                        </div>
+                    </div><!--skill end-->
+<hr>
+                <div class="col-sm-11 col-md-10 ">
+
+                    <div class="award">
+                        <h4>Locations</h4>
+                        <p>{{developer.locations}}</p>
+                    </div>
+                    <!--1st award end-->
+
+                    <div class="award">
+                        <h4>Languages</h4>
+                        <p>{{developer.languages}}</p>
+                    </div><!--1st award end-->
+                </div><!--awards end-->
+
+                </div><!--info end-->
+            </div><!--tech skills end-->
+            
+            <hr>
+
+            <div class="row mobmid">
+                <div class="col-sm-1 col-md-2">
+                    <span class="secicon fa fa-trophy"></span>
+                </div><!--icon end-->
+
+                <div class="col-sm-11 col-md-10 ">
+                    <h3>Awards</h3>
+
+                    <div class="award">
+                        <h4>Mission Leader</h4>
+                        <p>I did the most missions.</p>
+                    </div>
+                    <!--1st award end-->
+
+                    <div class="award">
+                        <h4>Most Answers</h4>
+                        <p>I answered the most ?</p>
+                    </div><!--1st award end-->
+                </div><!--awards end-->
+
+            </div>
+            
+            <hr>
+
+            <div class="row ">
+                <div class="col-sm-1 col-md-2 mobmid">
+                    <span class="secicon fa fa-quote-left"></span>
+                </div><!--icon end-->
+
+                <div class="col-sm-11 col-md-10 testimonials">
+                    <h3 class="mobmid">Leaderboard </h3>
+
+                    <div class="row">
+                        <blockquote>
+                            <p>showsomething</p>
+                        </blockquote>
+                    </div><!--1st testimonial end-->
+                </div><!--awards end-->
+            </div><!--tech skills end-->
+        </div><!--right end-->
+        
+
+    </div><!--container end-->
+
+        <div><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple" (click)="onSelect(developer)">Edit Me</a></div>
+        <div><a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple" (click)="gotoDevelopers()">Back</a></div>
+
+</div>
