@@ -5,12 +5,7 @@ export class LanguageService {
   getLanguages(): Promise<Language[]> { return Promise.resolve(LANGUAGES); }
 
   getLanguage(id: string): Promise<Language> {
-    return Promise.resolve(LANGUAGES).then((languages) => {
-      for (var language of languages) {
-        if (language.code === id) {
-          return language;
-        }
-      }
-    });
+    return Promise.resolve(LANGUAGES)
+      .then(languages => languages.find((lang) => lang.code === id));
   }
 }

@@ -11,19 +11,19 @@ import {RouteParams, Router} from 'angular2/router';
 })
 export class MissionEditComponent {
   public mission: Mission;
-  
+
   submitted = false;
-  
+
   onSubmit() { this.submitted = true; }
-  
+
   constructor(
   private _router:Router,
   private _routeParams:RouteParams,
-  private _service:MissionService){}
-  
+  private _service: MissionsService){}
+
   ngOnInit() {
   let id = this._routeParams.get('id');
   this._service.getMission(id).then(mission => this.mission = mission);
 }
-  
+
 }
