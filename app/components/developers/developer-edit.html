@@ -5,8 +5,7 @@
      <article class="template animated slideInRight">
         <div *ngIf="developer">
             <h4>{{developer.firstName}} {{developer.lastName}}</h4>
-
-
+    
     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
       <label class="mdl-textfield__label" for="firstName">First Name</label>
       <input type="text" id="firstName" class="mdl-textfield__input" [(ngModel)]="developer.firstName" />
@@ -47,6 +46,11 @@
         <textarea class="mdl-textfield__input" type="text" rows= "5" id="bio" [(ngModel)]="developer.bio"></textarea>
         <label class="mdl-textfield__label" for="sample5">Bio</label>
   </div>
+
+  
+  
+  
+  
     <div>        
       <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
       mdl-button--accent" (click)="onSave(developer)" [disabled]="!developeredit.form.valid">Save</button>

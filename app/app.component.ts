@@ -4,12 +4,14 @@ import {DeveloperService} from './services/developers/developer.service';
 import {DevelopersComponent} from './components/developers/developers';
 import {MissionsComponent} from './components/missions/missions';
 import {MissionsService} from './services/missions/mission.service';
+import {EventsComponent} from './components/events/events';
+import {EventsService} from './services/events/events.service';
 
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
-  directives: [DevelopersComponent, MissionsComponent, [ROUTER_DIRECTIVES]],
-  providers: [DeveloperService, MissionsService, ROUTER_PROVIDERS]
+  directives: [[ROUTER_DIRECTIVES]],
+  providers: [ROUTER_PROVIDERS]
 })
 @RouteConfig([
   {
@@ -17,6 +19,11 @@ import {MissionsService} from './services/missions/mission.service';
     name: 'DevelopersComponent',
     component: DevelopersComponent,
     useAsDefault: true
+  },
+  {
+    path: '/events/...',
+    name: 'EventsComponent',
+    component: EventsComponent,
   },
   {
     path: '/missions/...',
