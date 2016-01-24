@@ -26,6 +26,6 @@ export class EventsListingComponent implements OnInit {
   }
 
   onSpeakerSelect(developer: Developer) {
-    this._router.navigate(['/developers/DeveloperDetail', { id: developer.gitID }]);
+    this._router.navigate(['DeveloperDetail', { id: developer.gitID }]);
   }
 }
