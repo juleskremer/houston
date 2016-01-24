@@ -18,7 +18,8 @@ export class DeveloperDetailComponent {
 
   ngOnInit() {
     let id = this._routeParams.get('id');
-    this._service.getDeveloper(id).then(developer => this.developer = developer);
+    this.developer = this._service.getDeveloper(id);
+    //this._service.getDeveloper(id).then(developer => this.developer = developer);
   }
   onSelect(developer: Developer) {
     this._router.navigate(['DeveloperEdit', { id: developer.gitID }]);

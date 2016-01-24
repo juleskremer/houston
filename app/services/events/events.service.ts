@@ -1,17 +1,14 @@
-//this service will get replaced entirely
-//with some magical firebase lib
-
-
 import {Event} from './event';
 import {Injectable} from 'angular2/core';
 import {Http, Headers, HTTP_PROVIDERS} from 'angular2/http';
 import {DeveloperService} from "../developers/developer.service"
+import {Developer} from "../developers/developer"
 
 @Injectable()
-export class EventsService {
+export class EventsService  {
 
 
-  getEvent(id: string) {
+  getEvent(id: string) : Event {
 
     var firebaseUrl: string;
     var eventRef: Firebase;
@@ -24,11 +21,12 @@ export class EventsService {
       ngEvent = snapshot.val();
       // data === "hello"
     });
-    return Promise.resolve(ngEvent);
+    //return Promise.resolve(ngEvent);
+    return ngEvent;
 
   }
 
-  getEvents() {
+  getEvents() : Event[] {
 
     var firebaseUrl: string;
     var eventsRef: Firebase;
@@ -47,7 +45,8 @@ export class EventsService {
         });
     });
         
-    return Promise.resolve(ngEvents);
+    //return Promise.resolve(ngEvents);
+    return ngEvents;
 
   }
   
@@ -58,13 +57,13 @@ export class EventsService {
   {      
       var devService = new DeveloperService();
       event.eventSpeakers = new Array();
+      var newDev: Developer;
       for(var prop in event.speakers)
       {
-          devService.getDeveloper(prop).then(developer => event.eventSpeakers.push(developer));
-      }
-      console.log(event);    
-      
-       
+          newDev = devService.getDeveloper(prop);
+          event.eventSpeakers.push(newDev)
+          //devService.getDeveloper(prop).then(developer => event.eventSpeakers.push(developer));
+      }   
   }
 
 }

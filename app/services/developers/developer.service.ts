@@ -10,7 +10,7 @@ import {Http, Headers, HTTP_PROVIDERS} from 'angular2/http';
 export class DeveloperService {
 
 
-  getDeveloper(id: string) {
+  getDeveloper(id: string) : Developer {
 
     var firebaseUrl: string;
     var developerRef: Firebase;
@@ -23,8 +23,9 @@ export class DeveloperService {
       ngDeveloper = snapshot.val();
       // data === "hello"
     });
-    return Promise.resolve(ngDeveloper);
-
+    
+    //return new Promise<Developer[]>(resolve => ngDeveloper);
+    return ngDeveloper;
   }
 
   getDevelopers() {
@@ -55,15 +56,7 @@ export class DeveloperService {
     firebaseUrl = "https://ngmain.firebaseio.com/developers/" + dev.gitID;
     developerRef = new Firebase(firebaseUrl);
 
-    developerRef.update(
-      {
-        "firstName": dev.firstName,
-        "lastName": dev.lastName,
-        "bio": dev.bio,
-        "blogUrl": dev.blogUrl
-      }
-
-    );
+    developerRef.update(dev);
 
   }
 

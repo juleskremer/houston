@@ -3,7 +3,7 @@ export interface Developer {
   bio: string;
   buddy: string;
   community: string;
-  conferences: string;
+  events: string;
   email: string;
   firstName: string;
   gitID: string;

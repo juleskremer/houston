@@ -237,6 +237,33 @@ _:-ms-input-placeholder, :root .demo-graph {
   border-left: 5px solid #a94442; /* red */
 }
 
+
+.demo-card-event.mdl-card {
+  width: 256px;
+  height: 256px;
+  background: rgba(255, 255, 255, 0.56);
+}
+.demo-card-event > .mdl-card__actions {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.demo-card-event > .mdl-card__title {
+  align-items: flex-start;
+}
+.demo-card-event > .mdl-card__title > h4 {
+  margin-top: 0;
+}
+.demo-card-event > .mdl-card__actions {
+  display: flex;
+  box-sizing:border-box;
+  align-items: center;
+}
+.demo-card-event > .mdl-card__title,
+.demo-card-event > .mdl-card__actions,
+.demo-card-event > .mdl-card__actions > .mdl-button {
+  color: #757575;;
+}
+
+
 div.centered      { width: 900px; }
 div.columns       { width: 600px;  margin: 0 auto;}
 div.columns div   { width: 300px; height: 100px; float: left; }

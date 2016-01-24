@@ -3,6 +3,7 @@ import {EventsService} from '../../services/events/events.service';
 import {Event} from '../../services/events/event';
 import {RouteConfig, RouterOutlet} from 'angular2/router';
 import {EventsListingComponent} from './events-listing';
+import {DeveloperService} from "../../services/developers/developer.service";
 
 
 @Component({
@@ -10,7 +11,7 @@ import {EventsListingComponent} from './events-listing';
     <router-outlet></router-outlet>
   `,
   directives: [RouterOutlet],
-  providers:  [EventsService]
+  providers:  [EventsService, DeveloperService]
 })
 @RouteConfig([
   {path:'/',         name: 'EventsListing', component: EventsListingComponent, useAsDefault: true},

@@ -2,7 +2,6 @@ import {Component, OnInit} from 'angular2/core';
 import {EventsService} from '../../services/events/events.service';
 import {Event} from '../../services/events/event';
 import {Router} from 'angular2/router';
-import {ObjToArr} from "../../pipes/objToArray";
 import {Developer} from "../../services/developers/developer";
 
 @Component({
@@ -12,7 +11,7 @@ import {Developer} from "../../services/developers/developer";
   styleUrls: [],
   providers: [],
   directives: [],
-  pipes: [ObjToArr]
+  pipes: []
 })
 export class EventsListingComponent implements OnInit {
   events: Event[] = [];
@@ -22,10 +21,12 @@ export class EventsListingComponent implements OnInit {
     private _service: EventsService){}
   
   ngOnInit() {
-    this._service.getEvents().then(events => this.events = events);
+    //this.events = new Array();
+    this.events = this._service.getEvents();
+    //this._service.getEvents().then(events => this.events = events);
   }
 
-  onSpeakerSelect(developer: Developer) {
-    this._router.navigate(['DeveloperDetail', { id: developer.gitID }]);
+  onSpeakerSelect(developer: string) {
+   this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', { id: developer}]);
   }
 }
