@@ -30,8 +30,6 @@ export class DeveloperService {
 
   }
 
-
-
   saveDeveloper(dev: Developer) {
 
     this.developerRef.update(dev);
