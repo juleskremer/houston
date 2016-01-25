@@ -15,7 +15,8 @@ export class DevelopersListingComponent implements OnInit {
 
   constructor(
     private _router: Router,
-    public devService: DeveloperService) { }
+    public devService: DeveloperService
+    ) { }
 
   ngOnInit() {
   }

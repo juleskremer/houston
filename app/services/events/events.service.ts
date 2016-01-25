@@ -9,7 +9,6 @@ export class EventsService  {
     
 
    eventRef: Firebase;
-   //ngEvent: Event;
    ngEvents: Event[] = [];
    
    constructor(public devService: DeveloperService){
@@ -22,6 +21,16 @@ export class EventsService  {
         });
         
         
-   }    
+   }
+   
+   
+    getEvent(id: string) : Event {
+
+        var index: number;
+        index = this.ngEvents.findIndex(function(o) { return o.id == id; })
+        return this.ngEvents[index];
+
+  }
+       
 }
 

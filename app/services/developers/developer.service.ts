@@ -30,26 +30,9 @@ export class DeveloperService {
 
   }
 
-  getDevelopers() {
 
-    this.developerRef.on("value", snapshot => {
-      snapshot.forEach(childSnap => {
-        this.ngDevelopers.push(childSnap.val())
-      });
-    });
-
-    return Promise.resolve(this.ngDevelopers);
-
-  }
 
   saveDeveloper(dev: Developer) {
-
-    //var firebaseUrl: string;
-    //var developerRef: Firebase;
-    var ngDeveloper: Developer;
-
-    //firebaseUrl = "https://ngmain.firebaseio.com/developers/" + dev.gitID;
-    //developerRef = new Firebase(firebaseUrl);
 
     this.developerRef.update(dev);
 
