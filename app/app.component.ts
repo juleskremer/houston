@@ -10,6 +10,7 @@ import {EventsService} from './services/events/events.service';
 @Component({
   selector: 'my-app',
   templateUrl: 'app/app.component.html',
+  viewProviders: [DeveloperService],
   directives: [[ROUTER_DIRECTIVES]],
   providers: [ROUTER_PROVIDERS]
 })

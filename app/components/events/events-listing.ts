@@ -14,16 +14,12 @@ import {Developer} from "../../services/developers/developer";
   pipes: []
 })
 export class EventsListingComponent implements OnInit {
-  events: Event[] = [];
   
   constructor(
     private _router: Router,
-    private _service: EventsService){}
+    public eventService: EventsService){}
   
   ngOnInit() {
-    //this.events = new Array();
-    this.events = this._service.getEvents();
-    //this._service.getEvents().then(events => this.events = events);
   }
 
   onSpeakerSelect(developer: string) {

@@ -24,16 +24,14 @@ export class DeveloperEditComponent {
   constructor(
     private _router: Router,
     private _routeParams: RouteParams,
-    private _service: DeveloperService, private _languageService: LanguageService) { }
+    public devService: DeveloperService) { }
 
   ngOnInit() {
-    let id = this._routeParams.get('id');
-    this._service.getDeveloper(id).then(developer => this.developer = developer);
-    this._languageService.getLanguages().then((resp) => this.languages = resp);
+    this.developer = this.devService.getDeveloper(this._routeParams.get('id'));
   }
 
   onSave(developer: Developer) {
-    this._service.saveDeveloper(developer);
+    this.devService.saveDeveloper(developer);
   }
   onCancel(developer: Developer) {
     this._router.navigate(['DeveloperDetail', { id: developer.gitID }]);

@@ -19,4 +19,4 @@ import {DeveloperEditComponent} from './developer-edit';
   {path:'/developer-detail/:id', name: 'DeveloperEdit', component: DeveloperEditComponent }
 
 ])
-export class DevelopersComponent { }
+export class DevelopersComponent {}

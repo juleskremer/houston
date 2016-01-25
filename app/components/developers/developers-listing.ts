@@ -12,14 +12,12 @@ import {Router} from 'angular2/router';
   pipes: []
 })
 export class DevelopersListingComponent implements OnInit {
-  developers: Developer[] = [];
 
   constructor(
     private _router: Router,
-    private _service: DeveloperService) { }
+    public devService: DeveloperService) { }
 
   ngOnInit() {
-    this._service.getDevelopers().then(developers => this.developers = developers);
   }
 
   onSelect(developer: Developer) {

@@ -9,54 +9,49 @@ import {Http, Headers, HTTP_PROVIDERS} from 'angular2/http';
 @Injectable()
 export class DeveloperService {
 
-
+   developerRef: Firebase;
+   ngDevelopers: Developer[] = [];
+   
+   constructor(){
+       
+       this.developerRef = new Firebase("https://ngmain.firebaseio.com/developers/");
+       this.developerRef.on("value", snapshot => {
+            snapshot.forEach(childSnap => {
+            this.ngDevelopers.push(childSnap.val())
+            });
+        });
+   }
+  
   getDeveloper(id: string) : Developer {
 
-    var firebaseUrl: string;
-    var developerRef: Firebase;
-    var ngDeveloper: Developer;
+    var index: number;
+    index = this.ngDevelopers.findIndex(function(o) { return o.gitID == id; })
+    return this.ngDevelopers[index];
 
-    firebaseUrl = "https://ngmain.firebaseio.com/developers/" + id;
-    developerRef = new Firebase(firebaseUrl);
-
-    developerRef.once("value", function(snapshot) {
-      ngDeveloper = snapshot.val();
-      // data === "hello"
-    });
-    
-    //return new Promise<Developer[]>(resolve => ngDeveloper);
-    return ngDeveloper;
   }
 
   getDevelopers() {
 
-    var firebaseUrl: string;
-    var developersRef: Firebase;
-    var ngDevelopers: Developer[] = [];
-
-    firebaseUrl = "https://ngmain.firebaseio.com/developers";
-    developersRef = new Firebase(firebaseUrl);
-
-    developersRef.on("value", snapshot => {
+    this.developerRef.on("value", snapshot => {
       snapshot.forEach(childSnap => {
-        ngDevelopers.push(childSnap.val())
+        this.ngDevelopers.push(childSnap.val())
       });
     });
 
-    return Promise.resolve(ngDevelopers);
+    return Promise.resolve(this.ngDevelopers);
 
   }
 
   saveDeveloper(dev: Developer) {
 
-    var firebaseUrl: string;
-    var developerRef: Firebase;
+    //var firebaseUrl: string;
+    //var developerRef: Firebase;
     var ngDeveloper: Developer;
 
-    firebaseUrl = "https://ngmain.firebaseio.com/developers/" + dev.gitID;
-    developerRef = new Firebase(firebaseUrl);
+    //firebaseUrl = "https://ngmain.firebaseio.com/developers/" + dev.gitID;
+    //developerRef = new Firebase(firebaseUrl);
 
-    developerRef.update(dev);
+    this.developerRef.update(dev);
 
   }
 
