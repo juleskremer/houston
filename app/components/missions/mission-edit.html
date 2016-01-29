@@ -1,64 +1,49 @@
- <div class="container">
-     
- <div [hidden]="submitted">
-     
-    <div *ngIf="mission">
-      <h2>{{mission.title}}</h2>
-      <div>
-	  	<form (ngSubmit)="onSubmit()" #missionedit="ngForm">
-      		<div class="form-group">
-        		<label for="title">Title</label>
-        		<input type="text" class="form-control" required
-              [(ngModel)]="mission.title"
-              ngControl = "title">
-      		</div>
-      		<div class="form-group">
-        		<label for="corePOC">Angular Core POC</label>
-        		<input type="text" class="form-control" required
-              [(ngModel)]="mission.corePOC"
-              ngControl = "corePOC">
-      		</div>
-      		<div class="form-group">
-        		<label for="description">Description</label>
-        		<input type="text" class="form-control" required
-              [(ngModel)]="mission.description"
-              ngControl = "description">
-      		</div>
-          <div class="form-group">
-        		<label for="developers">Developers</label>
-        		<input type="text" class="form-control" required
-              [(ngModel)]="mission.developers"
-              ngControl = "developers">
-      		</div>
-      		<div class="form-group">
-        		<label for="points">Points</label>
-        		<input type="text" class="form-control" required
-              [(ngModel)]="mission.points"
-              ngControl = "points" #points="ngForm">
-      		</div>
-          <div [hidden]="gitID.valid" class="alert alert-danger">
-            It's all about them points, them points, them points.'
-          </div>
-      		<div class="form-group">
-        		<label for="startDate">Start Date</label>
-        		<input type="text" class="form-control" required
-              [(ngModel)]="mission.startDate"
-              ngControl = "startDate" #startDate="ngForm">
-      		</div>
-      		<div class="form-group">
-        		<label for="approvalDate">Approved Date</label>
-        		<input type="text" class="form-control" required
-              [(ngModel)]="mission.approvalDate"
-              ngControl = "approvalDate" #approvalDate="ngForm">
-      		</div>
-      <button type="submit" class="btn btn-default"
-        [disabled]="!missionedit.form.valid">Submit</button>
-    </form>
-      </div>
+<div class="container">
+
+    <div [hidden]="submitted">
+
+        <div *ngIf="mission">
+            <h2>{{mission.title}}</h2>
+            <div>
+                <form (ngSubmit)="onSubmit()" #missionedit="ngForm">
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" class="form-control" required [(ngModel)]="mission.title" ngControl="title">
+                    </div>
+                    <div class="form-group">
+                        <label for="corePOC">Angular Core POC</label>
+                        <input type="text" class="form-control" required [(ngModel)]="mission.corePOC" ngControl="corePOC">
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <input type="text" class="form-control" required [(ngModel)]="mission.description" ngControl="description">
+                    </div>
+                    <div class="form-group">
+                        <label for="developers">Developers</label>
+                        <input type="text" class="form-control" required [(ngModel)]="mission.developers" ngControl="developers">
+                    </div>
+                    <div class="form-group">
+                        <label for="points">Points</label>
+                        <input type="text" class="form-control" required [(ngModel)]="mission.points" ngControl="points" #points="ngForm">
+                    </div>
+                    <div [hidden]="gitID.valid" class="alert alert-danger">
+                        It's all about them points, them points, them points.'
+                    </div>
+                    <div class="form-group">
+                        <label for="startDate">Start Date</label>
+                        <input type="text" class="form-control" required [(ngModel)]="mission.startDate" ngControl="startDate" #startDate="ngForm">
+                    </div>
+                    <div class="form-group">
+                        <label for="approvalDate">Approved Date</label>
+                        <input type="text" class="form-control" required [(ngModel)]="mission.approvalDate" ngControl="approvalDate" #approvalDate="ngForm">
+                    </div>
+                    <button type="submit" class="btn btn-default" [disabled]="!missionedit.form.valid">Submit</button>
+                </form>
+            </div>
+        </div>
     </div>
-    </div>
-    
+
     <div [hidden]="!submitted">
-    <p>you submitted somethan</p>
+        <p>you submitted somethan</p>
     </div>
- <div>
+    <div>

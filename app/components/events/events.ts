@@ -7,13 +7,13 @@ import {DeveloperService} from "../../services/developers/developer.service";
 
 
 @Component({
-  template:  `
+    template: `
     <router-outlet></router-outlet>
   `,
-  directives: [RouterOutlet],
-  providers:  [EventsService, DeveloperService]
+    directives: [RouterOutlet],
+    providers: [EventsService, DeveloperService]
 })
 @RouteConfig([
-  {path:'/',         name: 'EventsListing', component: EventsListingComponent, useAsDefault: true},
+    { path: '/', name: 'EventsListing', component: EventsListingComponent, useAsDefault: true },
 ])
 export class EventsComponent { }

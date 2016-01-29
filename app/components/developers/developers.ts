@@ -7,16 +7,16 @@ import {DeveloperDetailComponent} from './developer-detail';
 import {DeveloperEditComponent} from './developer-edit';
 
 @Component({
-  template:  `
+    template: `
     <router-outlet></router-outlet>
   `,
-  directives: [RouterOutlet],
-  providers:  [DeveloperService]
+    directives: [RouterOutlet],
+    providers: [DeveloperService]
 })
 @RouteConfig([
-  {path:'/',         name: 'DevelopersListing', component: DevelopersListingComponent, useAsDefault: true},
-  {path:'/:id',      name: 'DeveloperDetail', component: DeveloperDetailComponent},
-  {path:'/developer-detail/:id', name: 'DeveloperEdit', component: DeveloperEditComponent }
+    { path: '/', name: 'DevelopersListing', component: DevelopersListingComponent, useAsDefault: true },
+    { path: '/:id', name: 'DeveloperDetail', component: DeveloperDetailComponent },
+    { path: '/developer-detail/:id', name: 'DeveloperEdit', component: DeveloperEditComponent }
 
 ])
-export class DevelopersComponent {}
+export class DevelopersComponent { }

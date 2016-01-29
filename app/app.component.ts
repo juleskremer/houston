@@ -8,29 +8,29 @@ import {EventsComponent} from './components/events/events';
 import {EventsService} from './services/events/events.service';
 
 @Component({
-  selector: 'my-app',
-  templateUrl: 'app/app.component.html',
-  viewProviders: [DeveloperService],
-  directives: [[ROUTER_DIRECTIVES]],
-  providers: [ROUTER_PROVIDERS]
+    selector: 'my-app',
+    templateUrl: 'app/app.component.html',
+    viewProviders: [DeveloperService],
+    directives: [[ROUTER_DIRECTIVES]],
+    providers: [ROUTER_PROVIDERS]
 })
 @RouteConfig([
-  {
-    path: '/developers/...',
-    name: 'DevelopersComponent',
-    component: DevelopersComponent,
-    useAsDefault: true
-  },
-  {
-    path: '/events/...',
-    name: 'EventsComponent',
-    component: EventsComponent,
-  },
-  {
-    path: '/missions/...',
-    name: 'MissionsComponent',
-    component: MissionsComponent
-  }
+    {
+        path: '/developers/...',
+        name: 'DevelopersComponent',
+        component: DevelopersComponent,
+        useAsDefault: true
+    },
+    {
+        path: '/events/...',
+        name: 'EventsComponent',
+        component: EventsComponent,
+    },
+    {
+        path: '/missions/...',
+        name: 'MissionsComponent',
+        component: MissionsComponent
+    }
 ])
 export class AppComponent {
 }
