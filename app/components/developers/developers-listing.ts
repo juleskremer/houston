@@ -1,27 +1,27 @@
-import {Component, OnInit} from 'angular2/core';
+import {Component} from 'angular2/core';
 import {DeveloperService} from '../../services/developers/developer.service';
-import {Developer} from '../../services/developers/developer';
+import {IDeveloper} from '../../services/developers/developer';
 import {Router} from 'angular2/router';
+import {Observable} from 'rxjs';
 
 @Component({
     selector: 'developers-listing',
     templateUrl: 'app/components/developers/developers-listing.html',
-    styleUrls: [],
-    providers: [],
-    directives: [],
-    pipes: []
 })
-export class DevelopersListingComponent implements OnInit {
+export class DevelopersListingComponent {
+
+    ngDevelopers: Observable<IDeveloper[]>;
 
     constructor(
         private _router: Router,
-        public devService: DeveloperService
-    ) { }
+        public _devService: DeveloperService
+    ) {
 
-    ngOnInit() {
+        this.ngDevelopers = this._devService.ngDevelopers;
     }
 
-    onSelect(developer: Developer) {
+    onSelect(developer: IDeveloper) {
+
         this._router.navigate(['DeveloperDetail', { id: developer.gitID }]);
     }
 }

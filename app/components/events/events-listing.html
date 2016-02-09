@@ -1,5 +1,5 @@
 <div class="mdl-grid">
-    <div class="mdl-cell mdl-cell--3-col " *ngFor="#event of eventService.ngEvents">
+    <div class="mdl-cell mdl-cell--3-col " *ngFor="#event of ngEvents | async">
 
 
 
@@ -16,9 +16,9 @@
 
             <div class="mdl-card__actions mdl-card--border">
 
-                <div *ngFor="#speaker of event.eventSpeakers">
-                    <img src="./images/expertslogo.png" width="50" height="50" (click)="onSpeakerSelect(speaker.gitID)">
-                </div>
+                <!--<div *ngFor="#speaker of event.speakers">
+                    <img src="{{speaker.value}}" width="50" height="50" (click)="onSpeakerSelect(speaker.key)">
+                </div>-->
             </div>
             <div class="mdl-card__actions mdl-card--border">
                 <i class="material-icons">event</i>{{event.date}}

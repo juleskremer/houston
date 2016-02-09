@@ -33,4 +33,5 @@ import {EventsService} from './services/events/events.service';
     }
 ])
 export class AppComponent {
+
 }

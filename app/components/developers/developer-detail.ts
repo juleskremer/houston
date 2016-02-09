@@ -1,30 +1,28 @@
 import {Component, OnInit} from 'angular2/core';
 import {DeveloperService} from '../../services/developers/developer.service';
-import {Developer} from '../../services/developers/developer';
-import {RouteParams, Router} from 'angular2/router';
+import {IDeveloper} from '../../services/developers/developer';
+import {RouteParams} from 'angular2/router';
+import {Observable} from 'rxjs';
+import {DeveloperDetailsComponent} from './developer-details';
 
 @Component({
-    selector: 'my-developer-detail',
-    templateUrl: 'app/components/developers/developer-detail.html',
-    inputs: ['developer']
+    selector: 'developer-detail',
+    directives: [DeveloperDetailsComponent],
+    template:`
+      <developer-details [developer]="developer | async">
+    
+    `
 })
 export class DeveloperDetailComponent {
-    public developer: Developer;
+   
+    developer: Observable<IDeveloper>;
 
     constructor(
-        private _router: Router,
         private _routeParams: RouteParams,
-        public devService: DeveloperService) { }
+        public _devService: DeveloperService) { }
 
     ngOnInit() {
-        this.developer = this.devService.getDeveloper(this._routeParams.get('id'));
-    }
-    onSelect(developer: Developer) {
-        this._router.navigate(['DeveloperEdit', { id: developer.gitID }]);
-    }
-
-    gotoDevelopers() {
-        this._router.navigate(['DevelopersListing']);
+        this.developer = this._devService.getDeveloper(this._routeParams.get('id'));    
     }
 
 }

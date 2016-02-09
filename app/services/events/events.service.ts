@@ -1,35 +1,21 @@
-import {Event} from './event';
+import {IEvent} from './event';
 import {Injectable} from 'angular2/core';
-import {Http, Headers, HTTP_PROVIDERS} from 'angular2/http';
-import {DeveloperService} from "../developers/developer.service"
-import {Developer} from "../developers/developer"
+import {Http, HTTP_PROVIDERS} from 'angular2/http';
+import {Observable} from 'rxjs';
+import  'rxjs/add/operator/share';
+import  'rxjs/add/operator/map';
+
 
 @Injectable()
 export class EventsService {
 
+    ngEvents: Observable<IEvent[]>;
 
-    eventRef: Firebase;
-    ngEvents: Event[] = [];
+    constructor(public _http: Http) {
 
-    constructor(public devService: DeveloperService) {
-
-        this.eventRef = new Firebase("https://ngmain.firebaseio.com/events/");
-        this.eventRef.on("value", snapshot => {
-            snapshot.forEach(childSnap => {
-                this.ngEvents.push(new Event(childSnap.val(), this.devService));
-            });
-        });
-
-
-    }
-
-
-    getEvent(id: string): Event {
-
-        var index: number;
-        index = this.ngEvents.findIndex(function(o) { return o.id == id; })
-        return this.ngEvents[index];
-
+        this.ngEvents = _http.get('/app/mock-data/events.json')
+            .map(response => response.json()).share();
+            
     }
 
 }

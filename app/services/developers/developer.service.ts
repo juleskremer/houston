@@ -1,39 +1,33 @@
-//this service will get replaced entirely
-//with some magical firebase lib
-
-
-import {Developer} from './developer';
+import {IDeveloper} from './developer';
 import {Injectable} from 'angular2/core';
-import {Http, Headers, HTTP_PROVIDERS} from 'angular2/http';
+import {Http, HTTP_PROVIDERS} from 'angular2/http';
+import {Observable} from 'rxjs';
+import  'rxjs/add/operator/share';
+import  'rxjs/add/operator/map';
 
 @Injectable()
 export class DeveloperService {
 
-    developerRef: Firebase;
-    ngDevelopers: Developer[] = [];
-
-    constructor() {
-
-        this.developerRef = new Firebase("https://ngmain.firebaseio.com/developers/");
-        this.developerRef.on("value", snapshot => {
-            snapshot.forEach(childSnap => {
-                this.ngDevelopers.push(childSnap.val())
-            });
-        });
+    ngDevelopers: Observable<IDeveloper[]>;
+    constructor(public _http: Http) {
+       
+        this.ngDevelopers = _http.get('/app/mock-data/developers.json')
+            .map(response => response.json()).share();
     }
 
-    getDeveloper(id: string): Developer {
 
-        var index: number;
-        index = this.ngDevelopers.findIndex(function(o) { return o.gitID == id; })
-        return this.ngDevelopers[index];
-
+    getDeveloper(id: string) : Observable<IDeveloper> {
+ //       this.devCache[id] = new ReplaySubject(1);
+ //       this.ngDevelopers.map(devs => devs.find(dev => dev.gitID === id))
+ //         .subscribe(dev => this.devCache[id].next(dev));        
+ 
+        return this.ngDevelopers.map(devs => devs.find(dev => dev.gitID === id));
+        
+ //       return this.devCache[id];
     }
 
-    saveDeveloper(dev: Developer) {
-
-        this.developerRef.update(dev);
-
+    saveDeveloper(dev: IDeveloper) {
+//         this.devCache[dev.gitId].next()
     }
 
 }
