@@ -10,14 +10,14 @@ import {Observable} from 'rxjs';
 })
 export class DevelopersListingComponent {
 
-    ngDevelopers: Observable<IDeveloper[]>;
+    developers$: Observable<IDeveloper[]>;
 
     constructor(
         private _router: Router,
         public _devService: DeveloperService
     ) {
 
-        this.ngDevelopers = this._devService.ngDevelopers;
+        this.developers$ = this._devService.developers$;
     }
 
     onSelect(developer: IDeveloper) {

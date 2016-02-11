@@ -11,13 +11,13 @@ import {Observable} from 'rxjs';
 })
 export class EventsListingComponent  {
 
-    ngEvents: Observable<IEvent[]>;
+    events$: Observable<IEvent[]>;
 
     constructor(
         private _router: Router,
         public _eventService: EventsService) {
 
-        this.ngEvents = this._eventService.ngEvents;
+        this.events$ = this._eventService.events$;
         
     }
     

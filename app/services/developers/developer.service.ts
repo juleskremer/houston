@@ -8,10 +8,10 @@ import  'rxjs/add/operator/map';
 @Injectable()
 export class DeveloperService {
 
-    ngDevelopers: Observable<IDeveloper[]>;
+    developers$: Observable<IDeveloper[]>;
     constructor(public _http: Http) {
        
-        this.ngDevelopers = _http.get('/app/mock-data/developers.json')
+        this.developers$ = _http.get('/app/mock-data/developers.json')
             .map(response => response.json()).share();
     }
 
@@ -21,7 +21,7 @@ export class DeveloperService {
  //       this.ngDevelopers.map(devs => devs.find(dev => dev.gitID === id))
  //         .subscribe(dev => this.devCache[id].next(dev));        
  
-        return this.ngDevelopers.map(devs => devs.find(dev => dev.gitID === id));
+        return this.developers$.map(devs => devs.find(dev => dev.gitID === id));
         
  //       return this.devCache[id];
     }

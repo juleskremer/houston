@@ -9,11 +9,11 @@ import  'rxjs/add/operator/map';
 @Injectable()
 export class EventsService {
 
-    ngEvents: Observable<IEvent[]>;
+    events$: Observable<IEvent[]>;
 
     constructor(public _http: Http) {
 
-        this.ngEvents = _http.get('/app/mock-data/events.json')
+        this.events$ = _http.get('/app/mock-data/events.json')
             .map(response => response.json()).share();
             
     }
