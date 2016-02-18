@@ -3,6 +3,8 @@ import {DeveloperService} from '../../services/developers/developer.service';
 import {IDeveloper} from '../../services/developers/developer';
 import {Router} from 'angular2/router';
 import {Observable} from 'rxjs';
+// import {AppStore} from '../../services/store/AppStore';
+// import {Store} from "@ngrx/store";
 
 @Component({
     selector: 'developers-listing',
@@ -14,10 +16,12 @@ export class DevelopersListingComponent {
 
     constructor(
         private _router: Router,
-        public _devService: DeveloperService
+        private _devService: DeveloperService
     ) {
 
         this.developers$ = this._devService.developers$;
+        // this.developers$ = _devService.developers$;
+        // _devService.loadDevelopers();
     }
 
     onSelect(developer: IDeveloper) {
