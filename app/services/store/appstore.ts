@@ -6,6 +6,7 @@ export interface AppStore {
     selectedDeveloper: IDeveloper;
     
     events: IEvent[];
+    selectedEvent: IEvent;
     
 }
 
@@ -52,6 +53,15 @@ export const events = (state: any = [], {type, payload}) => {
       return state.filter(event => {
         return event.id !== payload.id;
       });
+    default:
+      return state;
+  }
+};
+
+export const selectedEvent = (state: any = null, {type, payload}) => {
+  switch (type) {
+    case 'SELECT_EVENT':
+      return payload;
     default:
       return state;
   }

@@ -16,13 +16,20 @@ export class EventsService {
     constructor(public _http: Http, private store: Store<AppStore>) {
         this.events$ = store.select('events');
     }
-    
-        loadEvents() {
+
+    loadEvents() {
 
         this._http.get(BASE_URL)
             .map(res => res.json())
             .map(payload => ({ type: 'ADD_EVENTS', payload }))
             .subscribe(action => this.store.dispatch(action));
+
+    }
+
+    updateEvent(event: IEvent) {
+
+        this._http.put(`${BASE_URL}${event.id}`, JSON.stringify(event), HEADER)
+            .subscribe(action => this.store.dispatch({ type: 'UPDATE_EVENT', payload: event }));
 
     }
 

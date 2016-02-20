@@ -25,6 +25,11 @@ export class EventsListingComponent  {
         _eventService.loadEvents();
     }
     
+    onSelect(event: IEvent) {
+
+        this.store.dispatch({type: 'SELECT_EVENT', payload: event});
+        this._router.navigate(['EventEdit']);
+    }
     onSpeakerSelect(developer: string) {
        
        //need to figure out how to do this in store
