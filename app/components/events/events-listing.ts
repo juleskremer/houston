@@ -1,13 +1,16 @@
-import {Component} from 'angular2/core';
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {EventsService} from '../../services/events/events.service';
 import {IEvent} from '../../services/events/event';
 import {Router} from 'angular2/router';
 import {Observable} from 'rxjs';
+import {Store} from '@ngrx/store';
+import {AppStore} from '../../services/store/appstore';
 
 @Component({
 
     selector: 'events-listing',
-    templateUrl: 'app/components/events/events-listing.html'
+    templateUrl: 'app/components/events/events-listing.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventsListingComponent  {
 
@@ -15,13 +18,16 @@ export class EventsListingComponent  {
 
     constructor(
         private _router: Router,
-        public _eventService: EventsService) {
-
-        this.events$ = this._eventService.events$;
-        
+        private _eventService: EventsService,
+        private store: Store<AppStore>
+    ) {
+        this.events$ = _eventService.events$;
+        _eventService.loadEvents();
     }
     
     onSpeakerSelect(developer: string) {
-        this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', { id: developer }]);
+       
+       //need to figure out how to do this in store
+       // this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', { id: developer }]);
     }
 }

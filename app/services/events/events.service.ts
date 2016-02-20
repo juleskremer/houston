@@ -1,21 +1,29 @@
 import {IEvent} from './event';
 import {Injectable} from 'angular2/core';
-import {Http, HTTP_PROVIDERS} from 'angular2/http';
+import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
 import {Observable} from 'rxjs';
-import  'rxjs/add/operator/share';
-import  'rxjs/add/operator/map';
+import {Store} from '@ngrx/store';
+import {AppStore} from '../store/appstore';
 
+const BASE_URL = 'http://localhost:3004/events/';
+const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 
 @Injectable()
 export class EventsService {
 
     events$: Observable<IEvent[]>;
 
-    constructor(public _http: Http) {
+    constructor(public _http: Http, private store: Store<AppStore>) {
+        this.events$ = store.select('events');
+    }
+    
+        loadEvents() {
 
-        this.events$ = _http.get('/app/mock-data/events.json')
-            .map(response => response.json()).share();
-            
+        this._http.get(BASE_URL)
+            .map(res => res.json())
+            .map(payload => ({ type: 'ADD_EVENTS', payload }))
+            .subscribe(action => this.store.dispatch(action));
+
     }
 
 }

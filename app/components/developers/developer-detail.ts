@@ -1,28 +1,22 @@
-import {Component, OnInit} from 'angular2/core';
-import {DeveloperService} from '../../services/developers/developer.service';
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {IDeveloper} from '../../services/developers/developer';
-import {RouteParams} from 'angular2/router';
 import {Observable} from 'rxjs';
 import {DeveloperDetailsComponent} from './developer-details';
+import {Store} from '@ngrx/store';
+import {AppStore} from '../../services/store/AppStore';
 
 @Component({
     selector: 'developer-detail',
     directives: [DeveloperDetailsComponent],
-    template:`
-      <developer-details [developer]="developer | async">
-    
-    `
+    template:'<developer-details [developer]="developer$ | async">',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeveloperDetailComponent {
    
-    developer: Observable<IDeveloper>;
+    developer$: Observable<IDeveloper>;
 
-    constructor(
-        private _routeParams: RouteParams,
-        public _devService: DeveloperService) { }
-
-    ngOnInit() {
-        this.developer = this._devService.getDeveloper(this._routeParams.get('id'));    
+    constructor(private store: Store<AppStore>) 
+    {
+        this.developer$ = store.select('selectedDeveloper');
     }
-
 }

@@ -13,7 +13,7 @@ import {DeveloperEditComponent} from './developer-edit';
 })
 @RouteConfig([
     { path: '/', name: 'DevelopersListing', component: DevelopersListingComponent, useAsDefault: true },
-    { path: '/:id', name: 'DeveloperDetail', component: DeveloperDetailComponent },
+    { path: '/developer-detail', name: 'DeveloperDetail', component: DeveloperDetailComponent },
     { path: '/developer-detail/:id', name: 'DeveloperEdit', component: DeveloperEditComponent }
 
 ])

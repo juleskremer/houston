@@ -1,14 +1,15 @@
-import {Component} from 'angular2/core';
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {DeveloperService} from '../../services/developers/developer.service';
 import {IDeveloper} from '../../services/developers/developer';
 import {Router} from 'angular2/router';
 import {Observable} from 'rxjs';
-// import {AppStore} from '../../services/store/AppStore';
-// import {Store} from "@ngrx/store";
+import {Store} from '@ngrx/store';
+import {AppStore} from '../../services/store/appstore';
 
 @Component({
     selector: 'developers-listing',
     templateUrl: 'app/components/developers/developers-listing.html',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DevelopersListingComponent {
 
@@ -16,16 +17,16 @@ export class DevelopersListingComponent {
 
     constructor(
         private _router: Router,
-        private _devService: DeveloperService
+        private _devService: DeveloperService,
+        private store: Store<AppStore>
     ) {
-
-        this.developers$ = this._devService.developers$;
-        // this.developers$ = _devService.developers$;
-        // _devService.loadDevelopers();
+        this.developers$ = _devService.developers$;
+        _devService.loadDevelopers();
     }
 
     onSelect(developer: IDeveloper) {
 
-        this._router.navigate(['DeveloperDetail', { id: developer.gitID }]);
+        this.store.dispatch({type: 'SELECT_DEVELOPER', payload: developer});
+        this._router.navigate(['DeveloperDetail']);
     }
 }

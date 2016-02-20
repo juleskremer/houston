@@ -1,4 +1,4 @@
-import {Component, Input} from 'angular2/core';
+import {Component, Input, ChangeDetectionStrategy} from 'angular2/core';
 import {NgForm} from 'angular2/common';
 import {DeveloperService} from '../../services/developers/developer.service';
 import {IDeveloper} from '../../services/developers/developer';
@@ -13,7 +13,8 @@ import {EventEmitter, Output} from 'angular2/core';
     templateUrl: 'app/components/developers/developer-editform.html',
     styles: ['.mdl-textfield__label {top: 0;}'],
     inputs: ['developer', 'language'],
-    providers: [LanguageService]
+    providers: [LanguageService],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeveloperEditFormComponent {
     public languages: Language[];
@@ -35,6 +36,6 @@ export class DeveloperEditFormComponent {
     }
     
     onCancel(developer: IDeveloper) {
-        this._router.navigate(['DeveloperDetail', { id: developer.gitID }]);
+        this._router.navigate(['DeveloperDetail']);
     }
 }

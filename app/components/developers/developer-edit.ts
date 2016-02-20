@@ -1,28 +1,30 @@
-import {Component, OnInit} from 'angular2/core';
-import {DeveloperService} from '../../services/developers/developer.service';
+import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {IDeveloper} from '../../services/developers/developer';
-import {RouteParams} from 'angular2/router';
 import {Observable} from 'rxjs';
 import {DeveloperEditFormComponent} from './developer-editform';
+import {Store} from '@ngrx/store';
+import {AppStore} from '../../services/store/AppStore';
+import {DeveloperService} from '../../services/developers/developer.service';
 
 @Component({
     selector: 'developer-edit',
     directives: [DeveloperEditFormComponent],
-    template:'<developer-editform [developer]="developer | async" (save)=saveDeveloper($event)>'
+    template:`
+        <developer-editform [developer]="developer$ | async" 
+        (save)=saveDeveloper($event)>`,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeveloperEditComponent {
    
-    developer: Observable<IDeveloper>;
+    developer$: Observable<IDeveloper>;
 
-    constructor(
-        private _routeParams: RouteParams,
-        public _devService: DeveloperService) { }
-
-    ngOnInit() {
-        this.developer = this._devService.getDeveloper(this._routeParams.get('id'));    
+    constructor(private store: Store<AppStore>, private _devService: DeveloperService) 
+    {
+        this.developer$ = store.select('selectedDeveloper');
     }
     
-    saveDeveloper(dev: IDeveloper){
-        console.log('should be saved');
+    saveDeveloper(developer: IDeveloper){
+
+        this._devService.updateDeveloper(developer); 
     }
 }

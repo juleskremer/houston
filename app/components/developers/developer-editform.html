@@ -19,8 +19,8 @@
                         <input type="text" id="eMail" class="mdl-textfield__input" [(ngModel)]="developer.eMail" />
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="gitID">Git ID</label>
-                        <input type="text" id="gitID" class="mdl-textfield__input" [(ngModel)]="developer.gitID" />
+                        <label class="mdl-textfield__label" for="id">Git ID</label>
+                        <input type="text" id="id" class="mdl-textfield__input" [(ngModel)]="developer.id" />
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <label class="mdl-textfield__label" for="twitterID">Twitter ID</label>
@@ -43,17 +43,38 @@
                         <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.locations" />
                     </div>
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <label class="mdl-textfield__label" for="locations">Resume Url</label>
+                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.resumeUrl" />
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <label class="mdl-textfield__label" for="locations">Twitter ID</label>
+                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.twitterID" />
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <label class="mdl-textfield__label" for="locations">Linked In ID</label>
+                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.linkedIn" />
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <label class="mdl-textfield__label" for="locations">Website Url</label>
+                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.webpage" />
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <label class="mdl-textfield__label" for="locations">Phone Number</label>
+                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.phone" />
+                    </div>
+                    <div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                         <textarea class="mdl-textfield__input" type="text" rows="5" id="bio" [(ngModel)]="developer.bio"></textarea>
                         <label class="mdl-textfield__label" for="sample5">Bio</label>
                     </div>
-
+                    </div>
 
 
 
 
                     <div>
                         <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
-      mdl-button--accent" (click)="onSave(developer)" [disabled]="!developeredit.form.valid">Save</button>
+      mdl-button--accent" (click)="save.emit(developer)" [disabled]="!developeredit.form.valid">Save</button>
                         &nbsp;
                         <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
       " (click)="onCancel(developer)">Cancel</button>
