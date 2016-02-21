@@ -1,10 +1,8 @@
 import {Component, Input, ChangeDetectionStrategy} from 'angular2/core';
-import {NgForm} from 'angular2/common';
-import {EventsService} from '../../services/events/events.service';
 import {IEvent} from '../../services/events/event';
-import {Router} from 'angular2/router';
 import {Observable} from 'rxjs';
 import {EventEmitter, Output} from 'angular2/core';
+import {EVENT_TYPES} from '../../const/const';
 
 @Component({
     selector: 'event-editform',
@@ -15,23 +13,29 @@ import {EventEmitter, Output} from 'angular2/core';
 })
 export class EventEditFormComponent {
     submitted = false;
+    selectedType = {};
+    eventTypes = EVENT_TYPES;
 
-    @Input() event: IEvent;
+    //@Input() event: IEvent;
+    @Input('event') _event: IEvent;
     @Output() save: EventEmitter<IEvent> = new EventEmitter();
+    @Output() cancel: EventEmitter<IEvent> = new EventEmitter(); 
 
-    constructor(
-        private _router: Router,
-        public _eventsService: EventsService) { }
+    originalID: string;
+    selectedEvent: IEvent;
+    
+    set _event(value: IEvent){
+        if (value) this.originalID = value.id;
+        this.selectedEvent = Object.assign({}, value);
+    }
 
     onSubmit() { 
         this.submitted = true; 
     }
-
-    onSave(event: IEvent) {
-        this.save.emit(event);
-    }
     
-    onCancel() {
-        this._router.navigate(['EventsListing']);
+    onTypeChange(event){
+        this.selectedEvent.type = event.target.options.selectedIndex; 
+        this.selectedType = EVENT_TYPES[event.target.options.selectedIndex]
     }
+
 }

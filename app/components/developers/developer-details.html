@@ -16,7 +16,7 @@
                             <h1>{{developer.firstName}} {{developer.lastName}}</h1>
                         </div>
                     </div>
-                    <h2>Angular Google Developer Expert</h2>
+                    <h2 *ngIf="developer.isGDE">Angular Google Developer Expert</h2>
                 </div>
                 <!-- Title end-->
 

@@ -654,7 +654,7 @@
   ],
   "events": [
     {
-      "id": "1",
+      "id": "e1",
       "name": "ng-conf",
       "type": "conference",
       "location": "Salt Lake City, Nevada, US",
@@ -665,7 +665,7 @@
       "url": "http://www.ng-conf.org/"
     },
     {
-      "id": "2",
+      "id": "e2",
       "name": "AngularConnect",
       "type": "conference",
       "location": "London, UK",
@@ -677,7 +677,7 @@
       "url": ""
     },
     {
-      "id": "3",
+      "id": "e3",
       "name": "Meetup Test",
       "type": "meetup",
       "location": "London, UK",
@@ -688,7 +688,7 @@
       "url": ""
     },
     {
-      "id": "4",
+      "id": "e4",
       "name": "VideoCast Test",
       "type": "video",
       "location": "Mountain View, CA",
@@ -699,7 +699,7 @@
       "url": "http://angular.io"
     },
     {
-      "id": "5",
+      "id": "e5",
       "name": "O'Reilly Fluent",
       "type": "conference",
       "location": "San Francisco, CA",

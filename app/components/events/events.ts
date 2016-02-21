@@ -12,6 +12,6 @@ import {EventEditComponent} from './event-edit';
 })
 @RouteConfig([
     { path: '/', name: 'EventsListing', component: EventsListingComponent, useAsDefault: true },
-    { path: '/event-edit', name: 'EventEdit', component: EventEditComponent }
+    { path: '/event-edit', name: 'EventEdit', component: EventEditComponent },
 ])
 export class EventsComponent { }

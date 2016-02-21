@@ -1,8 +1,6 @@
 <div class="mdl-grid">
     <div class="mdl-cell mdl-cell--3-col " *ngFor="#event of events$ | async">
 
-
-
         <div class="demo-card-event mdl-card mdl-shadow--2dp">
             <div class="mdl-card__title mdl-card--expand">
                 <div [ngSwitch]="event.type">
@@ -25,9 +23,15 @@
             </div>
             <div class="mdl-card__actions mdl-card--border">
                 <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"
-                (click)="onSelect(event)">Edit</a>
+                (click)="onEdit(event)">Edit</a>
             </div>
         </div>
 
         <div></div>
+    </div>
+    <div>
+        <footer class="text-center">
+            <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            (click)="onNew()">Add New Event</button>
+        </footer>
     </div>
