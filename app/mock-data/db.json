@@ -6,8 +6,8 @@
       "buddy": "Jeff",
       "community": "GDG Utah",
       "events": {
-        "0": "true",
-        "3": "true"
+        "e1": "true",
+        "e3": "true"
       },
       "conferences": "ng-conf 2016",
       "eMail": "aaronfrost@gmail.com",
@@ -36,7 +36,7 @@
       "buddy": "",
       "community": "",
       "events": {
-        "1": "true"
+        "e1": "true"
       },
       "conferences": "",
       "eMail": "hello@mynameisdonald.com",
@@ -63,6 +63,7 @@
       "bio": "Christian Weyer is a well-known veteran in designing and implementing distributed application architectures for Windows- and NET-based systems. With his company Thinktecture he has focused in the past 17 years on end-to-end aspects of distributed software systems. His toolbox includes technologies such as HTML5, JavaScript, AngularJS, .NET, ASP.NET, Web API, SignalR, and Azure. For several years now, he is a friend of lightweight architectures based on Web APIs and push services with HTML5-base application UIs that can span multiple platforms and devices.\nChristian is a Google GDE & Microsoft MVP. He talks about software architecture and development with cross-platform and integration aspects at conferences for almost 2 decades - with passion.",
       "buddy": "",
       "community": "",
+      "events": {},
       "conferences": "OOP Conference 2016,BASTA! Spring,BASTA!,AngularJS Days (Munich, Germany)",
       "eMail": "christian.weyer.cw@gmail.com",
       "firstName": "Christian",
@@ -89,6 +90,7 @@
       "bio": "Ciro is a Frontend Engineer who writes code on Vim, he's addicted to tests and write them first whenever possible. Ciro is very active on GitHub, helping several known projects like Angular and Karma, but also creating his own projects like angular-testing-recipes.",
       "buddy": "Victor",
       "community": "Angular JS Meetup BH, Angular JS Meeting Sao Paulo",
+      "events": {},
       "conferences": "qconsp",
       "eMail": "ciroanunes@gmail.com",
       "firstName": "Ciro",
@@ -116,6 +118,7 @@
       "bio": "Dan is the founder of Wahlin Consulting, which provides consulting and training services on web technologies such as JavaScript, Angular, HTML5, jQuery, Node.js, C#, ASP.NET MVC, Web API and SharePoint. He%u2019s also a course author on Pluralsight.com and Udemy.com and has published several courses covering a range of technologies including the Angular JumpStart and Custom Angular Directives courses.\n\nDan speaks at conferences and user groups around the world and has written several books on web technologies. He blogs at http://blogUrl.codewithdan.com, runs the Web Weekly newsletter (a great way to stay updated on the latest technologies), and writes columns for various technical magazines.",
       "buddy": "Martin",
       "community": "",
+      "events": {},
       "conferences": "DevIntersection,AngleBrackets,NDC London,DevSum,NDC Oslo,NDC Australia",
       "eMail": "dwahlin@gmail.com",
       "firstName": "Dan",
@@ -141,6 +144,7 @@
       "bio": "Raul is a software engineer passionate about JS frameworks, web technologies and cross-platform development. Since 2012 he's focused in Angular, HTML5 video and his open source project Videogular.\n\nRaul works as a freelance front-end architect for companies around the world helping them to build high-performance web apps. In his spare time he's usually involved in local meetups, writing blogUrl posts, speaking at conferences and contributing to open source projects.\n\nHe lives in Barcelona and is happy by default :)",
       "buddy": "",
       "community": "",
+      "events": {},
       "conferences": "AngularJS Days",
       "eMail": "elecash@gmail.com",
       "firstName": "Raul",
@@ -168,6 +172,7 @@
       "bio": "",
       "buddy": "Matias",
       "community": "",
+      "events": {},
       "conferences": "",
       "eMail": "gonzaloruizdevilla@gmail.com",
       "firstName": "Gonzalo",
@@ -193,6 +198,7 @@
       "bio": "Gerard is a multi-talented Computer Science Engineer specialised in Web. He is now an AngularJS fanboy and a community activist fighting for the JavaScript revolution. He has lived and worked for all sorts of companies in Germany, Brazil, UK and Spain. He is always up for a good challenge. He enjoys running AngularJS Labs London, mentoring AngularJS students, participating in the community, giving talks and writing technical articles at Medium.",
       "buddy": "",
       "community": "Angular Labs London",
+      "events": {},
       "conferences": "jfokus, ng-nl, Riga Dev Day, QCon London, AngularJS Days, Jazoon, ng-conf, Fullstack 2016, Webvisions London",
       "eMail": "gerard.sans@gmail.com",
       "firstName": "Gerard",
@@ -218,6 +224,7 @@
       "id": "jackfranklin",
       "bio": "",
       "buddy": "Julie",
+      "events": {},
       "community": "",
       "conferences": "",
       "eMail": "jack@jackfranklin.net",
@@ -244,6 +251,7 @@
       "bio": "Chief Architect at GetHuman, Google Developer Expert (GDE), Host of @AngularAir, Angular Universal contributor, Boston Angular Meetup Co-organizer, Boston College '00",
       "buddy": "",
       "community": "Boston Angular Meetup",
+      "events": {},
       "conferences": "",
       "eMail": "jeffwhelpley@gmail.com",
       "firstName": "Jeff",
@@ -270,6 +278,7 @@
       "bio": "",
       "buddy": "",
       "community": "",
+      "events": {},
       "conferences": "",
       "eMail": "joeeames@gmail.com",
       "firstName": "Joe",
@@ -296,7 +305,7 @@
       "buddy": "Tobias",
       "community": "",
       "events": {
-        "1": "true"
+        "e1": "true"
       },
       "conferences": "Anglebrackets, Build Ignite, ngConf, NDC",
       "eMail": "john@johnpapa.net",
@@ -323,6 +332,7 @@
       "bio": "I am a JavaScript developer and trainer located in Paris, France. I believe that AngularJS is what the Web platform was missing. When I am not working on production ready apps, I enjoy writing technical articles, speaking at local meetups and conferences, hacking on different technologies and sharing with the community.",
       "buddy": "",
       "community": "",
+      "events": {},
       "conferences": "DevFest Paris 2016",
       "eMail": "wassim.chegham@gmail.com",
       "firstName": "Wassim",
@@ -349,6 +359,7 @@
       "bio": "",
       "buddy": "",
       "community": "",
+      "events": {},
       "conferences": "",
       "eMail": "martin@gon.to",
       "firstName": "Martin",
@@ -374,6 +385,7 @@
       "bio": "Pascal is a Angular GDE and a trainer at @thoughtram. He also works on the Angular 2 project, loves open source and has a big heart for the community.",
       "buddy": "",
       "community": "HannoverJS",
+      "events": {},
       "conferences": "ng-nl",
       "eMail": "pascal@thoughtram.io ",
       "firstName": "Pascal",
@@ -400,6 +412,7 @@
       "bio": "",
       "buddy": "",
       "community": "",
+      "events": {},
       "conferences": "",
       "eMail": "patrick@gdi2290.com",
       "firstName": "Patrick",
@@ -425,6 +438,7 @@
       "bio": "",
       "buddy": "",
       "community": "",
+      "events": {},
       "conferences": "",
       "eMail": "",
       "firstName": "Rob",
@@ -450,6 +464,7 @@
       "bio": "",
       "buddy": "Brian",
       "community": "",
+      "events": {},
       "conferences": "",
       "eMail": "sharondio@gmail.com",
       "firstName": "Sharon",
@@ -475,6 +490,7 @@
       "bio": "I'm an Angular consultant and trainer, from South of France. I conduct training sessions in a lot of French companies, and also in some other French-speaking countries.",
       "buddy": "Chirayu",
       "community": "",
+      "events": {},
       "conferences": "Devoxx France 2016, DevFest Paris 2016, DevFest Nantes 2016, BreizhCamp 2016",
       "eMail": "tchatel@gmail.com",
       "firstName": "Thierry",
@@ -501,6 +517,7 @@
       "bio": "Tim Ruffles is a Javascript contractor & trainer in London. He is a co-founder of the Sidekick code-quality tool.\n\nTim maintains the Javascript Garden and runs Functional Javascript London. Beyond that he speaks frequently at conferences and user-groups. He's been writing single-page apps since dojo and Flex were cool.",
       "buddy": "",
       "community": "Functional Javascript London",
+      "events": {},
       "conferences": "",
       "eMail": "timruffles@googlemail.com",
       "firstName": "Tim",
@@ -526,6 +543,7 @@
       "bio": "Uri Shaked is a Google Developer Expert for AngularJS. He created the popular angular-moment open source module and regularly speaks about Web-related technologies in conferences and meetups. Among his interests are reverse engineering, hardware hacking, playing music and Salsa dancing.",
       "buddy": "Rado",
       "community": "ng-conf Israel, GDG Tel Aviv",
+      "events": {},
       "conferences": "ng-nl, ng-conf, AngularConnect , DevWeek",
       "eMail": "uri@salsa4fun.co.il",
       "firstName": "Uri",
@@ -552,6 +570,7 @@
       "bio": "",
       "buddy": "",
       "community": "",
+      "events": {},
       "conferences": "",
       "eMail": "vince@neevtech.com",
       "firstName": "Vinci",
@@ -578,7 +597,7 @@
       "buddy": "",
       "community": "",
       "events": {
-        "2": "true"
+        "e2": "true"
       },
       "conferences": "",
       "eMail": "wardbell@gmail.com",
@@ -605,6 +624,7 @@
       "bio": "Maxim Salnikov is Oslo-based web UI developer, a Google Developer Expert with strong passion to mobile. He has 10+ years experience in development front-ends for complex web applications. He knows everything about web front-end: starting from user interfaces prototyping, going through HTML/CSS/JS implementation and finishing with architecting RESTful APIs.\n\nWorking daily with web front-end technologies he is happy to experiment with the same stack for building hybrid mobile apps using latest hybrid frameworks. On evenings he runs Norway%u2019s largest meetups dedicated to web front-end: Framsia, AngularJS Oslo. Also he is leader of Norway's biggest community dedicated to mobile development (Mobile Meetup Oslo) and currently working on organizing conference for mobile developers in 2016.\n\nMaxim likes to travel the world visiting developers events and open for offers to share his experiences and knowledge by speaking at conferences and meetups.",
       "buddy": "",
       "community": "AngularJS Oslo Meetup, ngCommunity, World Angular Day",
+      "events": {},
       "conferences": "Riga Dev Day 2016",
       "eMail": "salnikov@gmail.com",
       "firstName": "Maxim",
@@ -631,6 +651,7 @@
       "bio": "",
       "buddy": "Jeremy",
       "community": "",
+      "events": {},
       "conferences": "",
       "eMail": "willmendesneto@gmail.com",
       "firstName": "Wilson",
@@ -659,7 +680,7 @@
       "type": "conference",
       "location": "Salt Lake City, Nevada, US",
       "speakers": {
-        "aaronfrost": "https://pbs.twimg.com/profile_images/460667350706962433/UCvQytmY_400x400.jpeg"
+        "aaronfrost": true
       },
       "date": "05/04/16",
       "url": "http://www.ng-conf.org/"
@@ -670,8 +691,8 @@
       "type": "conference",
       "location": "London, UK",
       "speakers": {
-        "johnpapa": "http://www.johnpapa.net/wp-content/uploads/2007/12/JPBW-150x150.png",
-        "beardyco": ""
+        "johnpapa": true,
+        "beardyco": true
       },
       "date": "9/27/2016",
       "url": ""
@@ -682,7 +703,7 @@
       "type": "meetup",
       "location": "London, UK",
       "speakers": {
-        "wardbell": ""
+        "wardbell": true
       },
       "date": "10/26/16",
       "url": ""
@@ -693,7 +714,7 @@
       "type": "video",
       "location": "Mountain View, CA",
       "speakers": {
-        "aaronfrost": "https://pbs.twimg.com/profile_images/460667350706962433/UCvQytmY_400x400.jpeg"
+        "aaronfrost": true
       },
       "date": "10/26/16",
       "url": "http://angular.io"
@@ -706,6 +727,26 @@
       "speakers": {},
       "date": "3/8/2016",
       "url": "http://conferences.oreilly.com/fluent/javascript-html-us"
+    }
+  ],
+  "communities": [
+    {
+      "id": "c1",
+      "name": "City Angular MeetUp",
+      "type": "meetup",
+      "description": "",
+      "location": "Mountain View, CA",
+      "span": "monthly",
+      "contact": "aaronfrost",
+      "url": "blah.org"
+    },
+    {
+      "id": "c2",
+      "name": "Angular Community",
+      "type": "Slack/Forum/GroupChat",
+      "description": "",
+      "contact": "aaronfrost",
+      "url": "blahblah.org"
     }
   ]
 }

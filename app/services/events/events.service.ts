@@ -27,7 +27,6 @@ export class EventsService {
     }
 
     saveEvent(event: IEvent) {
-        //need to implement create/edit on editform
         (event.id) ? this.updateEvent(event) : this.createEvent(event);
     }
 
