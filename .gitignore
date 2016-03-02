@@ -2,3 +2,4 @@ node_modules
 app/**/*.js
 app/**/*.js.map
 *.log
+__build__
