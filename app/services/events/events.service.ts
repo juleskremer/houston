@@ -25,15 +25,15 @@ export class EventsService {
             .map(payload => ({ type: 'ADD_EVENTS', payload }))
             .subscribe(action => this.store.dispatch(action));
             
-        this.events$ =  Observable.combineLatest(
-            this.store.select('events'),
-            this.store.select('developers'),
-            (events: IEvent[], developers: IDeveloper[]) => {
-                return events.map(event => {
-                    var eventSpeakers = developers.filter(developer => event.speakers.indexOf(developer.id) > -1);
-                    return Object.assign({}, event, {speakers: eventSpeakers});
-                });
-            });
+        // this.events$ =  Observable.combineLatest(
+        //     this.store.select('events'),
+        //     this.store.select('developers'),
+        //     (events: IEvent[], developers: IDeveloper[]) => {
+        //         return events.map(event => {
+        //             var eventSpeakers = developers.filter(developer => event.speakers.indexOf(developer.id) > -1);
+        //             return Object.assign({}, event, {speakers: eventSpeakers});
+        //         });
+        //     });
 
     }
 
