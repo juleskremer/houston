@@ -5,13 +5,11 @@ import {Router} from 'angular2/router';
 import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../../services/store/appstore';
-import {EventSpeakerListComponent} from './event-speakerlist';
 
 @Component({
 
     selector: 'events-listing',
     templateUrl: 'app/components/events/events-listing.html',
-    directives: [EventSpeakerListComponent],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventsListingComponent  {

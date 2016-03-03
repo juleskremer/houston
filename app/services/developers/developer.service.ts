@@ -26,9 +26,9 @@ export class DeveloperService {
 
     }
 
-    getDeveloper(id: string): Observable<IDeveloper> {
-        return this.developers$.map(devs => devs.find(dev => dev.id === id));
-    }
+    // getDeveloper(id: string): Observable<IDeveloper> {
+    //     return this.developers$.map(devs => devs.find(dev => dev.id === id));
+    // }
 
     updateDeveloper(developer: IDeveloper) {
 

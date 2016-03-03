@@ -44,10 +44,15 @@
                 '@ngrx/store': {
                     main: 'dist/index.js',
                     defaultExtension: 'js'
+                },
+                'rxjs': {
+                    main: 'Rx.js',
+                    defaultExtension: 'js'
                 }
             },
             map: {
-                '@ngrx/store': 'node_modules/@ngrx/store'
+                '@ngrx/store': 'node_modules/@ngrx/store',
+                'rxjs' : 'node_modules/rxjs'
             }
         });
       System.import('app/boot')
