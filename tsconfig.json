@@ -1,57 +1,15 @@
 {
   "compilerOptions": {
     "target": "ES5",
-    "module": "commonjs",
-    "removeComments": true,
+    "module": "system",
+    "moduleResolution": "node",
+    "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "sourceMap": true
+    "removeComments": false,
+    "noImplicitAny": false
   },
   "exclude": [
     "node_modules"
-  ],
-  "filesGlob": [
-    "app/**/*.ts",
-    "typings/browser.d.ts"
-  ],
-  "compileOnSave": false,
-  "atom": {
-    "rewriteTsconfig": true
-  },
-  "files": [
-    "app/app.component.ts",
-    "app/boot.ts",
-    "app/components/developers/developer-detail.ts",
-    "app/components/developers/developer-details.ts",
-    "app/components/developers/developer-edit.ts",
-    "app/components/developers/developer-editform.ts",
-    "app/components/developers/developers-listing.ts",
-    "app/components/developers/developers.ts",
-    "app/components/events/event-edit.ts",
-    "app/components/events/event-editform.ts",
-    "app/components/events/event-speakerlist.ts",
-    "app/components/events/events-listing.ts",
-    "app/components/events/events.ts",
-    "app/components/missions/mission-detail.ts",
-    "app/components/missions/mission-edit.ts",
-    "app/components/missions/missions-listing.ts",
-    "app/components/missions/missions.ts",
-    "app/const/const.ts",
-    "app/firebase.d.ts",
-    "app/services/common/country-model.ts",
-    "app/services/common/country.service.ts",
-    "app/services/common/language-model.ts",
-    "app/services/common/language.service.ts",
-    "app/services/common/mock-countries.ts",
-    "app/services/common/mock-language.ts",
-    "app/services/developers/developer.service.ts",
-    "app/services/developers/developer.ts",
-    "app/services/events/event.ts",
-    "app/services/events/events.service.ts",
-    "app/services/missions/mission.service.ts",
-    "app/services/missions/mission.ts",
-    "app/services/store/appstore.ts",
-    "app/vendor.ts",
-    "typings/browser.d.ts"
   ]
 }
