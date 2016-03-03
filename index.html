@@ -36,14 +36,20 @@
     <!-- 2. Configure SystemJS -->
     <script>
         System.config({
-        packages: { 
-          app: {
-            format: 'register',
-            defaultExtension: 'js'
-          }
-        },
-        map: { '@ngrx/store' : '/node_modules/@ngrx/store/dist/store.js' }
-      });
+        packages: {
+                app: {
+                    format: 'register',
+                    defaultExtension: 'js'
+                },
+                '@ngrx/store': {
+                    main: 'dist/index.js',
+                    defaultExtension: 'js'
+                }
+            },
+            map: {
+                '@ngrx/store': 'node_modules/@ngrx/store'
+            }
+        });
       System.import('app/boot')
             .then(null, console.error.bind(console));
     </script>
