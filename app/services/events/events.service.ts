@@ -4,6 +4,7 @@ import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
 import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../store/appstore';
+import {IDeveloper} from '../developers/developer';
 
 const BASE_URL = 'http://localhost:3004/events/';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
@@ -14,7 +15,7 @@ export class EventsService {
     events$: Observable<IEvent[]>;
 
     constructor(public _http: Http, private store: Store<AppStore>) {
-        this.events$ = store.select('events');
+
     }
 
     loadEvents() {
@@ -23,6 +24,16 @@ export class EventsService {
             .map(res => res.json())
             .map(payload => ({ type: 'ADD_EVENTS', payload }))
             .subscribe(action => this.store.dispatch(action));
+            
+        this.events$ =  Observable.combineLatest(
+            this.store.select('events'),
+            this.store.select('developers'),
+            (events: IEvent[], developers: IDeveloper[]) => {
+                return events.map(event => {
+                    var eventSpeakers = developers.filter(developer => event.speakers.indexOf(developer.id) > -1);
+                    return Object.assign({}, event, {speakers: eventSpeakers});
+                });
+            });
 
     }
 
