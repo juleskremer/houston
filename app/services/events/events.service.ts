@@ -13,11 +13,11 @@ const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 export class EventsService {
 
     events$: Observable<IEvent[]>;
-    newest$: Observable<any>;
+    newest$: Observable<IEvent[]>;
 
     constructor(public _http: Http, private store: Store<AppStore>) {
         
-        this.events$ = store.select('events');
+        //this.events$ = store.select('events');
     }
 
 
@@ -29,17 +29,17 @@ export class EventsService {
             .subscribe(action => this.store.dispatch(action));
             
 
-this.newest$ = Observable.combineLatest(
+this.events$ = Observable.combineLatest(
     this.store.select('events'),
     this.store.select('developers'),
-    (events: IEvent[], developers: IDeveloper[])=> {
+    (events: any[], developers: any[])=> {
       return events.map(event => {
-        var speakers = event.speakers.map(speakerId => developers.find(developer => developer.id === speakerId))
+        var speakers = Object.keys(event.speakers).map(speakerId => developers.find(developer => developer.id === speakerId))
         return Object.assign({}, event, {speakers: speakers});
       });
     });
 
-this.newest$.subscribe(c => console.log('combined', c));
+this.events$.subscribe(c => console.log('combined', c));
             
     }
 

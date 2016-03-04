@@ -19,9 +19,10 @@
 
                 <div class="mdl-card__actions mdl-card--border">
 
-                    <!--<div *ngFor="#speaker of event.speakers">
-                    <img src="{{speaker.value}}" width="50" height="50" (click)="onSpeakerSelect(speaker.key)">
-                </div>-->
+                    <div *ngFor="#speaker of event.speakers">
+                    <!--<img src="{{speaker.picUrl}}" width="50" height="50">-->
+                    {{speaker.firstName}}
+                </div>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">
                     <i class="material-icons">event</i>{{event.date}}

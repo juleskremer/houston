@@ -21,8 +21,8 @@ export class EventsListingComponent  {
         private _eventService: EventsService,
         private store: Store<AppStore>
     ) {
-        this.events$ = _eventService.events$;
         _eventService.loadEvents();
+        this.events$ = _eventService.events$;
     }
     
     onEdit(event: IEvent) {

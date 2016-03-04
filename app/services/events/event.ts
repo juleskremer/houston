@@ -6,7 +6,7 @@ export interface IEvent {
   name: string;
   type: string;
   location: string;
-  speakers: any;
+  speakers: IDeveloper[];
   date: string;
   url: string;  
 }
