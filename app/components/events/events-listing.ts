@@ -1,10 +1,10 @@
 import {Component, ChangeDetectionStrategy} from 'angular2/core';
-import {EventsService} from '../../services/events/events.service';
 import {IEvent} from '../../services/events/event';
 import {Router} from 'angular2/router';
 import {Observable} from 'rxjs';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../../services/store/appstore';
+import {DataService} from '../../services/dataservice/dataservice';
 
 @Component({
 
@@ -18,11 +18,10 @@ export class EventsListingComponent  {
 
     constructor(
         private _router: Router,
-        private _eventService: EventsService,
+        private _dataService: DataService,
         private store: Store<AppStore>
     ) {
-        _eventService.loadEvents();
-        this.events$ = _eventService.events$;
+        this.events$ = _dataService.events$;
     }
     
     onEdit(event: IEvent) {

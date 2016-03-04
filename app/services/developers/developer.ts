@@ -1,3 +1,4 @@
+import {IEvent} from '../events/event';
 
 export interface IDeveloper {
     //note: using gitID as id
@@ -7,7 +8,7 @@ export interface IDeveloper {
     bio: string;
     buddy: string;
     community: string;
-    events: string;
+    events: IEvent[];
     email: string;
     firstName: string;
     languages: string;

@@ -1,4 +1,5 @@
 import {IDeveloper} from './developer';
+import {IEvent} from '../events/event';
 import {Injectable} from 'angular2/core';
 import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
 import {Observable} from 'rxjs';
@@ -12,17 +13,31 @@ const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 export class DeveloperService {
 
     developers$: Observable<IDeveloper[]>;
-    
+
     constructor(public _http: Http, private store: Store<AppStore>) {
-        this.developers$ = store.select('developers');
+        //this.developers$ = store.select('developers');
     }
 
-    loadDevelopers() {
+    fetchDevelopers() {
 
         this._http.get(BASE_URL)
             .map(res => res.json())
             .map(payload => ({ type: 'ADD_DEVELOPERS', payload }))
             .subscribe(action => this.store.dispatch(action));
+
+    }
+
+    loadDevelopers() {
+
+        this.developers$ = Observable.combineLatest(
+            this.store.select('developers'),
+            this.store.select('events'),
+            (developers: any[], events: any[]) => {
+                return developers.map(developer => {
+                    var devEvents: Array<IEvent> = Object.keys(developer.events).map(eventId => events.find(event => event.id === eventId))
+                    return Object.assign({}, developer, { events: devEvents });
+                });
+            });   
 
     }
 

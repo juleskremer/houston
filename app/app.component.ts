@@ -1,4 +1,4 @@
-import {Component, ChangeDetectionStrategy} from 'angular2/core';
+import {Component, OnInit, ChangeDetectionStrategy} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 import {DeveloperService} from './services/developers/developer.service';
 import {DevelopersComponent} from './components/developers/developers';
@@ -6,13 +6,14 @@ import {MissionsComponent} from './components/missions/missions';
 import {MissionsService} from './services/missions/mission.service';
 import {EventsComponent} from './components/events/events';
 import {EventsService} from './services/events/events.service';
+import {DataService} from './services/dataservice/dataservice';
 
 @Component({
     selector: 'my-app',
     templateUrl: 'app/app.component.html',
-    viewProviders: [DeveloperService],
+    viewProviders: [],
     directives: [[ROUTER_DIRECTIVES]],
-    providers: [ROUTER_PROVIDERS]
+    providers: [ROUTER_PROVIDERS, DataService, EventsService, DeveloperService]
 })
 @RouteConfig([
     {
@@ -32,6 +33,17 @@ import {EventsService} from './services/events/events.service';
         component: MissionsComponent
     }
 ])
+
 export class AppComponent {
+    
+    constructor(private _dataService: DataService){
+        
+    }
+    
+    ngOnInit(){
+        
+        this._dataService.initData();        
+  
+    }
 
 }

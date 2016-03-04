@@ -13,34 +13,31 @@ const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 export class EventsService {
 
     events$: Observable<IEvent[]>;
-    newest$: Observable<IEvent[]>;
 
     constructor(public _http: Http, private store: Store<AppStore>) {
-        
-        //this.events$ = store.select('events');
+
     }
 
 
-    loadEvents() {
+    fetchEvents() {
 
         this._http.get(BASE_URL)
             .map(res => res.json())
             .map(payload => ({ type: 'ADD_EVENTS', payload }))
             .subscribe(action => this.store.dispatch(action));
-            
+    }
+    
+    loadEvents(){
 
-this.events$ = Observable.combineLatest(
-    this.store.select('events'),
-    this.store.select('developers'),
-    (events: any[], developers: any[])=> {
-      return events.map(event => {
-        var speakers = Object.keys(event.speakers).map(speakerId => developers.find(developer => developer.id === speakerId))
-        return Object.assign({}, event, {speakers: speakers});
-      });
-    });
-
-this.events$.subscribe(c => console.log('combined', c));
-            
+        this.events$ = Observable.combineLatest(
+            this.store.select('events'),
+            this.store.select('developers'),
+            (events: any[], developers: any[]) => {
+                return events.map(event => {
+                    var speakers: Array<IDeveloper> = Object.keys(event.speakers).map(speakerId => developers.find(developer => developer.id === speakerId))
+                    return Object.assign({}, event, { speakers: speakers });
+                });
+            });        
     }
 
     saveEvent(event: IEvent) {
@@ -48,7 +45,7 @@ this.events$.subscribe(c => console.log('combined', c));
     }
 
     createEvent(event: IEvent) {
-                
+
         this._http.post(`${BASE_URL}`, JSON.stringify(this.addUUID(event)), HEADER)
             .subscribe(action => this.store.dispatch({ type: 'CREATE_EVENT', payload: event }));
     }
