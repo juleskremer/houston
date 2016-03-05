@@ -98,175 +98,171 @@
 
                     <div class="row">
                         <div class="col-md-9">
-                            <h4>Would put a list of them here with a heading for each</h4>
-                            <p class="sub"><a href="">this would link to the community page</a>
-                            </p>
-                            <p>{{developer.communities}}</p>
+                            <div *ngFor="#community of developer.communities">
+                                <a href="{{community.url}}">{{community.name}}</a>
+                            </div>
                         </div>
+                        <!-- Communities 1 end-->
 
                     </div>
-                    <!-- Communities 1 end-->
-
                 </div>
-            </div>
-            <!--Communities end-->
+                <!--Communities end-->
 
-            <hr>
+                <hr>
 
-            <div id="education" class="row mobmid">
-                <div class="col-sm-1">
-                    <span class="secicon fa fa-graduation-cap"></span>
-                </div>
-                <!--icon end-->
+                <div id="education" class="row mobmid">
+                    <div class="col-sm-1">
+                        <span class="secicon fa fa-graduation-cap"></span>
+                    </div>
+                    <!--icon end-->
 
-                <div class="col-sm-11">
-                    <h3>Events & Conferences</h3>
+                    <div class="col-sm-11">
+                        <h3>Events & Conferences</h3>
 
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h4>Would put a list of them here with a heading for each</h4>
-                            <p class="sub"><a href="">this would link to the conference page</a>
-                            </p>
-                            <p>{{developer.Events}}</p>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div *ngFor="#event of developer.events">
+                                    <a href="{{event.url}}">{{event.name}}</a>
+                                </div>
+                            </div>
+
                         </div>
+                        <!-- Communities 1 end-->
 
                     </div>
-                    <!-- Communities 1 end-->
-
                 </div>
-            </div>
-            <!--Communities end-->
+                <!--Communities end-->
 
-            <hr>
+                <hr>
 
-            <!-- ===========================
+                <!-- ===========================
             MISSIONS
             ============================ -->
-            <div id="job" class="row mobmid">
-                <div class="col-sm-1">
-                    <span class="secicon fa fa-space-shuttle"></span>
-                </div>
-                <!--icon end-->
-
-                <div class="col-sm-11">
-                    <h3>Angular Missions</h3>
-
-                    <div class="row">
-                        <div class="col-md-9">
-                            <h4>Each Mission Header</h4>
-                            <p class="sub"><a href="">LinktoMission</a>
-                            </p>
-                            <p>{{developer.missions}}</p>
-                        </div>
+                <div id="job" class="row mobmid">
+                    <div class="col-sm-1">
+                        <span class="secicon fa fa-space-shuttle"></span>
                     </div>
-                    <!--Mission 1 end-->
+                    <!--icon end-->
 
+                    <div class="col-sm-11">
+                        <h3>Angular Missions</h3>
+
+                        <div class="row">
+                            <div class="col-md-9">
+                                <h4>Each Mission Header</h4>
+                                <p class="sub"><a href="">LinktoMission</a>
+                                </p>
+                                <p>{{developer.missions}}</p>
+                            </div>
+                        </div>
+                        <!--Mission 1 end-->
+
+                    </div>
+                    <!--Missions end-->
                 </div>
                 <!--Missions end-->
+
             </div>
-            <!--Missions end-->
+            <!--left end-->
 
-        </div>
-        <!--left end-->
-
-        <!-- ===========================
+            <!-- ===========================
         SIDEBAR
         =========================== -->
-        <div class="col-md-4 mainright">
-            <div class="row">
-                <div class="col-sm-1 col-md-2 mobmid">
-                    <span class="secicon fa fa-magic"></span>
-                </div>
-                <!--icon end-->
+            <div class="col-md-4 mainright">
+                <div class="row">
+                    <div class="col-sm-1 col-md-2 mobmid">
+                        <span class="secicon fa fa-magic"></span>
+                    </div>
+                    <!--icon end-->
 
-                <div class="col-sm-11 col-md-10">
+                    <div class="col-sm-11 col-md-10">
+                        <div class="col-sm-11 col-md-10 ">
+
+                            <div class="award">
+                                <h4>Locations</h4>
+                                <p>{{developer.locations}}</p>
+                            </div>
+                            <!--1st award end-->
+
+                            <div class="award">
+                                <h4>Languages</h4>
+                                <p>{{developer.languages}}</p>
+                            </div>
+                            <!--1st award end-->
+                        </div>
+                        <!--awards end-->
+
+                    </div>
+                    <!--info end-->
+                </div>
+                <!--tech skills end-->
+
+                <hr>
+
+                <div class="row mobmid">
+                    <div class="col-sm-1 col-md-2">
+                        <span class="secicon fa fa-trophy"></span>
+                    </div>
+                    <!--icon end-->
+
                     <div class="col-sm-11 col-md-10 ">
+                        <h3>Awards</h3>
 
                         <div class="award">
-                            <h4>Locations</h4>
-                            <p>{{developer.locations}}</p>
+                            <h4>Mission Leader</h4>
+                            <p>I did the most missions.</p>
                         </div>
                         <!--1st award end-->
 
                         <div class="award">
-                            <h4>Languages</h4>
-                            <p>{{developer.languages}}</p>
+                            <h4>Most Answers</h4>
+                            <p>I answered the most ?</p>
                         </div>
                         <!--1st award end-->
                     </div>
                     <!--awards end-->
 
                 </div>
-                <!--info end-->
-            </div>
-            <!--tech skills end-->
 
-            <hr>
+                <hr>
 
-            <div class="row mobmid">
-                <div class="col-sm-1 col-md-2">
-                    <span class="secicon fa fa-trophy"></span>
-                </div>
-                <!--icon end-->
-
-                <div class="col-sm-11 col-md-10 ">
-                    <h3>Awards</h3>
-
-                    <div class="award">
-                        <h4>Mission Leader</h4>
-                        <p>I did the most missions.</p>
+                <div class="row ">
+                    <div class="col-sm-1 col-md-2 mobmid">
+                        <span class="secicon fa fa-quote-left"></span>
                     </div>
-                    <!--1st award end-->
+                    <!--icon end-->
 
-                    <div class="award">
-                        <h4>Most Answers</h4>
-                        <p>I answered the most ?</p>
+                    <div class="col-sm-11 col-md-10 testimonials">
+                        <h3 class="mobmid">Leaderboard </h3>
+
+                        <div class="row">
+                            <blockquote>
+                                <p>showsomething</p>
+                            </blockquote>
+                        </div>
+                        <!--1st testimonial end-->
                     </div>
-                    <!--1st award end-->
+                    <!--awards end-->
                 </div>
-                <!--awards end-->
-
+                <!--tech skills end-->
             </div>
+            <!--right end-->
 
-            <hr>
 
-            <div class="row ">
-                <div class="col-sm-1 col-md-2 mobmid">
-                    <span class="secicon fa fa-quote-left"></span>
-                </div>
-                <!--icon end-->
-
-                <div class="col-sm-11 col-md-10 testimonials">
-                    <h3 class="mobmid">Leaderboard </h3>
-
-                    <div class="row">
-                        <blockquote>
-                            <p>showsomething</p>
-                        </blockquote>
-                    </div>
-                    <!--1st testimonial end-->
-                </div>
-                <!--awards end-->
-            </div>
-            <!--tech skills end-->
         </div>
-        <!--right end-->
+        <!--container end-->
 
-
-    </div>
-    <!--container end-->
-
-    <!-- ===========================
+        <!-- ===========================
     FOOTER
     =========================== -->
-    <footer class="text-center">
-        <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-        (click)="onSelect(developer)">Edit Developer</button>
-        &nbsp;
-        <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="gotoDevelopers()">Cancel</button>
-    </footer>
-    <div>
-        <p></p>
-    </div>
+        <footer class="text-center">
+            <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+            (click)="onSelect(developer)">Edit Developer</button>
+            &nbsp;
+            <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="gotoDevelopers()">Cancel</button>
+        </footer>
+        <div>
+            <p></p>
+        </div>
 
-</div>
+    </div>

@@ -15,7 +15,8 @@ export class DeveloperDetailsComponent {
     @Input() developer: IDeveloper;
     
     onSelect(developer: IDeveloper) {
-        this._router.navigate(['DeveloperEdit', { id: developer.id }]);
+        //we are already with our selectedDeveloper so need to update store
+        this._router.navigate(['DeveloperEdit']);
     }
     
     gotoDevelopers() {

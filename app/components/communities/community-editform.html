@@ -1,0 +1,50 @@
+<div class="container">
+    <!--<div [hidden]="submitted">-->
+    <form (ngSubmit)="onSubmit()" #eventedit="ngForm">
+        <article class="template animated slideInRight">
+            <div>
+                <h4 *ngIf="!selectedCommunity.id">Creating New Community</h4>
+                <h4 *ngIf="selectedCommunity.id">{{selectedCommunity.name}}</h4>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="name">Name</label>
+                    <input type="text" id="name" class="mdl-textfield__input" [(ngModel)]="selectedCommunity.name" />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="type">Type</label>
+                    <input type="text" id="type" class="mdl-textfield__input" [(ngModel)]="selectedCommunity.type" />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="location">Location</label>
+                    <input type="text" id="location" class="mdl-textfield__input" [(ngModel)]="selectedCommunity.location" />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="date">Description</label>
+                    <input type="text" id="date" class="mdl-textfield__input" [(ngModel)]="selectedCommunity.description" />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="url">URL</label>
+                    <input type="text" id="url" class="mdl-textfield__input" [(ngModel)]="selectedCommunity.url" />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="speakers">Members</label>
+                    <input type="text" id="speakers" class="mdl-textfield__input" [(ngModel)]="selectedCommunity.members" />
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                (click)="save.emit(selectedCommunity)" [disabled]="!communityedit.form.valid">Save</button>
+                &nbsp;
+                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="cancel.emit()">Cancel</button>
+                &nbsp;
+                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="delete()">Delete</button>
+            </div>
+        </article>
+    </form>
+
+    <!--</div>-->
+
+    <!--<div [hidden]="!submitted">
+        <p>yay you saved something</p>
+    </div>-->
+    <div>

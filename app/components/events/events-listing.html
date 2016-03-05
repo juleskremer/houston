@@ -1,5 +1,5 @@
 <div class="container">
-        <div id="header" class="row">
+    <div id="header" class="row">
         <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
         (click)="onNew()">Add New Event</button>
     </div>
@@ -20,15 +20,15 @@
                 <div class="mdl-card__actions mdl-card--border">
 
                     <div *ngFor="#speaker of event.speakers">
-                    <img src="{{speaker.picUrl}}" width="50" height="50">
+                        <img src="{{speaker.picUrl}}" width="50" height="50" (click)="onSpeakerSelect(speaker)">
                 </div>
                 </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <i class="material-icons">event</i>{{event.date}}
+                <div class=" mdl-card__actions mdl-card--border ">
+                    <i class="material-icons ">event</i>{{event.date}}
                 </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"
-                    (click)="onEdit(event)">Edit</a>
+                <div class="mdl-card__actions mdl-card--border ">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect " data-upgraded=",MaterialButton,MaterialRipple "
+                    (click)="onEdit(event) ">Edit</a>
                 </div>
             </div>
 
@@ -36,4 +36,3 @@
         </div>
     </div>
 </div>
-

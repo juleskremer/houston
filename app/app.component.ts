@@ -6,6 +6,8 @@ import {MissionsComponent} from './components/missions/missions';
 import {MissionsService} from './services/missions/mission.service';
 import {EventsComponent} from './components/events/events';
 import {EventsService} from './services/events/events.service';
+import {CommunitiesComponent} from './components/communities/communities';
+import {CommunitiesService} from './services/communities/communities.service';
 import {DataService} from './services/dataservice/dataservice';
 
 @Component({
@@ -13,7 +15,7 @@ import {DataService} from './services/dataservice/dataservice';
     templateUrl: 'app/app.component.html',
     viewProviders: [],
     directives: [[ROUTER_DIRECTIVES]],
-    providers: [ROUTER_PROVIDERS, DataService, EventsService, DeveloperService]
+    providers: [ROUTER_PROVIDERS, DataService, EventsService, DeveloperService, CommunitiesService]
 })
 @RouteConfig([
     {
@@ -31,6 +33,11 @@ import {DataService} from './services/dataservice/dataservice';
         path: '/missions/...',
         name: 'MissionsComponent',
         component: MissionsComponent
+    },
+    {
+        path: '/communities/...',
+        name: 'CommunitiesComponent',
+        component: CommunitiesComponent
     }
 ])
 

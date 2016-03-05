@@ -4,12 +4,13 @@
       "id": "aaronfrost",
       "bio": "The greatest lie that Frosty ever told the world was convincing them that Angular is easy. Three years and thousands of bugs later, it is safe to say that Frosty's respect for Angular has never been higher. \n\nHe is an accomplished speaker, having spoken at dozens of mainstream events in five different countries and in two different languages. He is also an accomplished community organizer. His first start in community organizing was helping out with the GDG Utah, helping out as both a presenter and a co-organizer. He is most know for his help in co-organizing ng-conf, the world's favorite Angular conference.\n\nHaving worked with many technologies in his career, Frosty has chosen to focus on the web. His opinions are many, and if you want to know what they are, just ask. ",
       "buddy": "Jeff",
-      "community": "GDG Utah",
+      "communities": {
+        "c4": true
+      },
       "events": {
         "e1": "true",
         "e3": "true"
       },
-      "conferences": "ng-conf 2016",
       "eMail": "aaronfrost@gmail.com",
       "firstName": "Aaron",
       "languages": {
@@ -17,7 +18,10 @@
         "es": "Spanish"
       },
       "lastName": "Frost",
-      "businessLocations": "USA, Mexico",
+      "businessLocations": {
+        "US": true,
+        "MX": true
+      },
       "picUrl": "https://pbs.twimg.com/profile_images/460667350706962433/UCvQytmY_400x400.jpeg",
       "resumeUrl": "",
       "twitterID": "js_dev",
@@ -34,18 +38,19 @@
       "id": "beardyco",
       "bio": "",
       "buddy": "",
-      "community": "",
+      "communities": {},
       "events": {
         "e1": "true"
       },
-      "conferences": "",
       "eMail": "hello@mynameisdonald.com",
       "firstName": "Donald",
       "languages": {
         "en": "English"
       },
       "lastName": "Sutherland",
-      "businessLocations": "US",
+      "businessLocations": {
+        "US": true
+      },
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -62,9 +67,12 @@
       "id": "christianweyer",
       "bio": "Christian Weyer is a well-known veteran in designing and implementing distributed application architectures for Windows- and NET-based systems. With his company Thinktecture he has focused in the past 17 years on end-to-end aspects of distributed software systems. His toolbox includes technologies such as HTML5, JavaScript, AngularJS, .NET, ASP.NET, Web API, SignalR, and Azure. For several years now, he is a friend of lightweight architectures based on Web APIs and push services with HTML5-base application UIs that can span multiple platforms and devices.\nChristian is a Google GDE & Microsoft MVP. He talks about software architecture and development with cross-platform and integration aspects at conferences for almost 2 decades - with passion.",
       "buddy": "",
-      "community": "",
-      "events": {},
-      "conferences": "OOP Conference 2016,BASTA! Spring,BASTA!,AngularJS Days (Munich, Germany)",
+      "communities": {},
+      "events": {
+        "e6": true,
+        "e7": true,
+        "e8": true
+      },
       "eMail": "christian.weyer.cw@gmail.com",
       "firstName": "Christian",
       "languages": {
@@ -72,7 +80,11 @@
         "de": "German"
       },
       "lastName": "Weyer",
-      "businessLocations": "Germany, Switzerland, Austria ",
+      "businessLocations": {
+        "Germany": true,
+        "Switzerland": true,
+        "Austria": true
+      },
       "picUrl": "http://en.gravatar.com/cweyer74",
       "resumeUrl": "",
       "twitterID": "christianweyer",
@@ -89,9 +101,13 @@
       "id": "cironunesdev",
       "bio": "Ciro is a Frontend Engineer who writes code on Vim, he's addicted to tests and write them first whenever possible. Ciro is very active on GitHub, helping several known projects like Angular and Karma, but also creating his own projects like angular-testing-recipes.",
       "buddy": "Victor",
-      "community": "Angular JS Meetup BH, Angular JS Meeting Sao Paulo",
-      "events": {},
-      "conferences": "qconsp",
+      "communities": {
+        "c5": true,
+        "c6": true
+      },
+      "events": {
+        "e9": true
+      },
       "eMail": "ciroanunes@gmail.com",
       "firstName": "Ciro",
       "addedGG": "x",
@@ -100,7 +116,11 @@
         "pt": "Portugese"
       },
       "lastName": "Nunes",
-      "businessLocations": "Brazil, Germany, USA",
+      "businessLocations": {
+        "Brazil": true,
+        "Germany": true,
+        "USA": true
+      },
       "picUrl": "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/11750675_868938726516037_8091921334795566827_n.jpg?oh=439bb7a8fc0e3d79f79ee745f0722974&oe=56EB83A1",
       "resumeUrl": "",
       "twitterID": "cironunesdev",
@@ -108,7 +128,7 @@
       "blogUrl": "http://cironunes.com/ http://medium.com/@cironunesdev",
       "ngConsult": "Yes",
       "projects": "",
-      "isGDE": "true",
+      "isGDE": true,
       "webpage": "",
       "phone": "",
       "linkedIn": ""
@@ -117,16 +137,24 @@
       "id": "danwahlin",
       "bio": "Dan is the founder of Wahlin Consulting, which provides consulting and training services on web technologies such as JavaScript, Angular, HTML5, jQuery, Node.js, C#, ASP.NET MVC, Web API and SharePoint. He%u2019s also a course author on Pluralsight.com and Udemy.com and has published several courses covering a range of technologies including the Angular JumpStart and Custom Angular Directives courses.\n\nDan speaks at conferences and user groups around the world and has written several books on web technologies. He blogs at http://blogUrl.codewithdan.com, runs the Web Weekly newsletter (a great way to stay updated on the latest technologies), and writes columns for various technical magazines.",
       "buddy": "Martin",
-      "community": "",
-      "events": {},
-      "conferences": "DevIntersection,AngleBrackets,NDC London,DevSum,NDC Oslo,NDC Australia",
+      "communities": {},
+      "events": {
+        "e10": true,
+        "e11": true,
+        "e12": true,
+        "e13": true,
+        "e14": true,
+        "e15": true
+      },
       "eMail": "dwahlin@gmail.com",
       "firstName": "Dan",
       "languages": {
         "en": "English"
       },
       "lastName": "Wahlin",
-      "businessLocations": "United States",
+      "businessLocations": {
+        "US": true
+      },
       "picUrl": "https://dl.dropboxusercontent.com/u/6037348/dan-wahlin500x500.jpg",
       "resumeUrl": "",
       "twitterID": "danwahlin",
@@ -143,9 +171,10 @@
       "id": "elecash",
       "bio": "Raul is a software engineer passionate about JS frameworks, web technologies and cross-platform development. Since 2012 he's focused in Angular, HTML5 video and his open source project Videogular.\n\nRaul works as a freelance front-end architect for companies around the world helping them to build high-performance web apps. In his spare time he's usually involved in local meetups, writing blogUrl posts, speaking at conferences and contributing to open source projects.\n\nHe lives in Barcelona and is happy by default :)",
       "buddy": "",
-      "community": "",
-      "events": {},
-      "conferences": "AngularJS Days",
+      "communities": {},
+      "events": {
+        "e8": true
+      },
       "eMail": "elecash@gmail.com",
       "firstName": "Raul",
       "languages": {
@@ -154,7 +183,11 @@
         "ca": "Catalon"
       },
       "lastName": "Jimenez",
-      "businessLocations": "USA, China, Spain",
+      "businessLocations": {
+        "US": true,
+        "China": true,
+        "Spain": true
+      },
       "picUrl": "http://twofuckingdevelopers.com/wp-content/uploads/raul_jimenez.jpg",
       "resumeUrl": "https://docs.google.com/document/d/1H79lsEtJ1cbnnKwS4tSKQxKeb0aILfP5UcAtMCaorbU/edit",
       "twitterID": "elecash",
@@ -171,16 +204,17 @@
       "id": "gonzaloruizdevilla",
       "bio": "",
       "buddy": "Matias",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "",
       "eMail": "gonzaloruizdevilla@gmail.com",
       "firstName": "Gonzalo",
       "languages": {
         "es": "Spanish"
       },
       "lastName": "Ruiz de Villa",
-      "businessLocations": "Spain",
+      "businessLocations": {
+        "Spain": true
+      },
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -195,11 +229,20 @@
     },
     {
       "id": "gsans",
-      "bio": "Gerard is a multi-talented Computer Science Engineer specialised in Web. He is now an AngularJS fanboy and a community activist fighting for the JavaScript revolution. He has lived and worked for all sorts of companies in Germany, Brazil, UK and Spain. He is always up for a good challenge. He enjoys running AngularJS Labs London, mentoring AngularJS students, participating in the community, giving talks and writing technical articles at Medium.",
+      "bio": "Gerard is a multi-talented Computer Science Engineer specialised in Web. He is now an AngularJS fanboy and a communities activist fighting for the JavaScript revolution. He has lived and worked for all sorts of companies in Germany, Brazil, UK and Spain. He is always up for a good challenge. He enjoys running AngularJS Labs London, mentoring AngularJS students, participating in the community, giving talks and writing technical articles at Medium.",
       "buddy": "",
-      "community": "Angular Labs London",
-      "events": {},
-      "conferences": "jfokus, ng-nl, Riga Dev Day, QCon London, AngularJS Days, Jazoon, ng-conf, Fullstack 2016, Webvisions London",
+      "communities": {
+        "c7": true
+      },
+      "events": {
+        "e16": true,
+        "e9": true,
+        "e8": true,
+        "e17": true,
+        "e1": true,
+        "e18": true,
+        "e19": true
+      },
       "eMail": "gerard.sans@gmail.com",
       "firstName": "Gerard",
       "languages": {
@@ -207,7 +250,11 @@
         "es": "Spanish"
       },
       "lastName": "Sans",
-      "businessLocations": "UK, Spain, Brazil",
+      "businessLocations": {
+        "UK": true,
+        "Spain": true,
+        "Brazil": true
+      },
       "picUrl": "http://photos1.meetupstatic.com/photos/member/3/2/f/7/highres_9133047.jpeg",
       "resumeUrl": "",
       "twitterID": "gerardsans",
@@ -225,15 +272,16 @@
       "bio": "",
       "buddy": "Julie",
       "events": {},
-      "community": "",
-      "conferences": "",
+      "communities": {},
       "eMail": "jack@jackfranklin.net",
       "firstName": "Jack",
       "languages": {
         "en": "English"
       },
       "lastName": "Franklin",
-      "businessLocations": "UK",
+      "businessLocations": {
+        "UK": true
+      },
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -250,9 +298,10 @@
       "id": "jeffwhelpley",
       "bio": "Chief Architect at GetHuman, Google Developer Expert (GDE), Host of @AngularAir, Angular Universal contributor, Boston Angular Meetup Co-organizer, Boston College '00",
       "buddy": "",
-      "community": "Boston Angular Meetup",
+      "communities": {
+        "c8": true
+      },
       "events": {},
-      "conferences": "",
       "eMail": "jeffwhelpley@gmail.com",
       "firstName": "Jeff",
       "addedGG": "x",
@@ -260,7 +309,9 @@
         "en": "English"
       },
       "lastName": "Whelpley",
-      "businessLocations": "United States",
+      "businessLocations": {
+        "US": true
+      },
       "picUrl": "https://pbs.twimg.com/profile_images/614410324607901696/nKGEuUS7.jpg",
       "resumeUrl": "https://docs.google.com/document/d/1chXwUUmCmjsfWd0iJYmAfyUnyoo1zibpx9_NS31LcGk/edit?usp=sharing",
       "twitterID": "jeffwhelpley",
@@ -277,16 +328,17 @@
       "id": "joeeames",
       "bio": "",
       "buddy": "",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "",
       "eMail": "joeeames@gmail.com",
       "firstName": "Joe",
       "languages": {
         "en": "English"
       },
       "lastName": "Eames",
-      "businessLocations": "United States",
+      "businessLocations": {
+        "US": true
+      },
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -303,18 +355,25 @@
       "id": "johnpapa",
       "bio": "John Papa is the author of a top 100 most starred github repo, the Angular Style Guide. He is a Google Development Expert, Microsoft Regional Director and MVP, author of 100+ articles and 10 books, and is a former Sr Technical Evangelist for Microsoft on the Silverlight and Windows teams. He can often be found speaking around the world at keynotes and sessions for conferences such as ngConf, Build, Mix, PDC, TechEd, VSLive and AngleBrackets.\n\nJohn was the host of the popular show Silveright TV on Channel 9 and is currently a co-host of the Adventures in Angular podcast. He currently enjoys authoring courses for Pluralsight johnpapa.net or on twitter at @john_papa.",
       "buddy": "Tobias",
-      "community": "",
+      "communities": {},
       "events": {
-        "e1": "true"
+        "e1": true,
+        "e10": true,
+        "e20": true,
+        "e21": true,
+        "e12": true
       },
-      "conferences": "Anglebrackets, Build Ignite, ngConf, NDC",
       "eMail": "john@johnpapa.net",
       "firstName": "John",
       "languages": {
         "en": "English"
       },
       "lastName": "Papa",
-      "businessLocations": "US, Europe, Canada",
+      "businessLocations": {
+        "US": true,
+        "Europe": true,
+        "Canada": true
+      },
       "picUrl": "http://www.johnpapa.net/wp-content/uploads/2007/12/JPBW-150x150.png",
       "resumeUrl": "",
       "twitterID": "john_papa",
@@ -331,9 +390,8 @@
       "id": "manekinekko",
       "bio": "I am a JavaScript developer and trainer located in Paris, France. I believe that AngularJS is what the Web platform was missing. When I am not working on production ready apps, I enjoy writing technical articles, speaking at local meetups and conferences, hacking on different technologies and sharing with the community.",
       "buddy": "",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "DevFest Paris 2016",
       "eMail": "wassim.chegham@gmail.com",
       "firstName": "Wassim",
       "languages": {
@@ -341,7 +399,9 @@
         "fr": "French"
       },
       "lastName": "Chegham",
-      "businessLocations": "France",
+      "businessLocations": {
+        "France": true
+      },
       "picUrl": "https://avatars0.githubusercontent.com/u/1699357?v=3&s=460",
       "resumeUrl": "",
       "twitterID": "manekinekko",
@@ -358,16 +418,17 @@
       "id": "mgonto",
       "bio": "",
       "buddy": "",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "",
       "eMail": "martin@gon.to",
       "firstName": "Martin",
       "languages": {
         "en": "English"
       },
       "lastName": "Gontovnikas",
-      "businessLocations": "Argentina",
+      "businessLocations": {
+        "Argentina": true
+      },
       "picUrl": "",
       "resumeUrl": "https://docs.google.com/a/gon.to/document/d/1X9v3A3zONCDv9qTwc6yfXpEmp68yImh5xLtfZIwC3GU/edit",
       "twitterID": "",
@@ -384,9 +445,10 @@
       "id": "pascalprecht",
       "bio": "Pascal is a Angular GDE and a trainer at @thoughtram. He also works on the Angular 2 project, loves open source and has a big heart for the community.",
       "buddy": "",
-      "community": "HannoverJS",
+      "communities": {
+        "c9": true
+      },
       "events": {},
-      "conferences": "ng-nl",
       "eMail": "pascal@thoughtram.io ",
       "firstName": "Pascal",
       "languages": {
@@ -394,7 +456,10 @@
         "de": "German"
       },
       "lastName": "Precht",
-      "businessLocations": "Germany, Netherlands",
+      "businessLocations": {
+        "Germany": true,
+        "Netherlands": true
+      },
       "picUrl": "http://pascalprecht.github.io/public/me.jpg",
       "resumeUrl": "",
       "twitterID": "PascalPrecht",
@@ -411,16 +476,15 @@
       "id": "patrickstapleton",
       "bio": "",
       "buddy": "",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "",
       "eMail": "patrick@gdi2290.com",
       "firstName": "Patrick",
       "languages": {
         "en": "English"
       },
       "lastName": "Stapleton",
-      "businessLocations": "",
+      "businessLocations": {},
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -437,16 +501,17 @@
       "id": "robwormald",
       "bio": "",
       "buddy": "",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "",
       "eMail": "",
       "firstName": "Rob",
       "languages": {
         "en": "English"
       },
       "lastName": "Wormald",
-      "businessLocations": "US",
+      "businessLocations": {
+        "US": true
+      },
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -463,16 +528,17 @@
       "id": "sharondio",
       "bio": "",
       "buddy": "Brian",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "",
       "eMail": "sharondio@gmail.com",
       "firstName": "Sharon",
       "languages": {
         "en": "English"
       },
       "lastName": "DiOrio",
-      "businessLocations": "United States",
+      "businessLocations": {
+        "US": true
+      },
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -489,9 +555,12 @@
       "id": "tchatel",
       "bio": "I'm an Angular consultant and trainer, from South of France. I conduct training sessions in a lot of French companies, and also in some other French-speaking countries.",
       "buddy": "Chirayu",
-      "community": "",
-      "events": {},
-      "conferences": "Devoxx France 2016, DevFest Paris 2016, DevFest Nantes 2016, BreizhCamp 2016",
+      "communities": {},
+      "events": {
+        "e22": true,
+        "e23": true,
+        "e24": true
+      },
       "eMail": "tchatel@gmail.com",
       "firstName": "Thierry",
       "languages": {
@@ -499,7 +568,9 @@
         "fr": "French"
       },
       "lastName": "Chatel",
-      "businessLocations": "France",
+      "businessLocations": {
+        "France": true
+      },
       "picUrl": "http://www.gravatar.com/avatar/b7f1da7c20c20b6aeb1eea0b9dc13f25.jpg",
       "resumeUrl": "",
       "twitterID": "ThierryChatel",
@@ -516,16 +587,19 @@
       "id": "timruffles",
       "bio": "Tim Ruffles is a Javascript contractor & trainer in London. He is a co-founder of the Sidekick code-quality tool.\n\nTim maintains the Javascript Garden and runs Functional Javascript London. Beyond that he speaks frequently at conferences and user-groups. He's been writing single-page apps since dojo and Flex were cool.",
       "buddy": "",
-      "community": "Functional Javascript London",
+      "communities": {
+        "c10": true
+      },
       "events": {},
-      "conferences": "",
       "eMail": "timruffles@googlemail.com",
       "firstName": "Tim",
       "languages": {
         "en": "English"
       },
       "lastName": "Ruffles",
-      "businessLocations": "UK",
+      "businessLocations": {
+        "UK": true
+      },
       "picUrl": "https://www.dropbox.com/s/p9btik2qzufjxef/512.jpg?dl=0",
       "resumeUrl": "",
       "twitterID": "timruffles",
@@ -542,9 +616,13 @@
       "id": "urish",
       "bio": "Uri Shaked is a Google Developer Expert for AngularJS. He created the popular angular-moment open source module and regularly speaks about Web-related technologies in conferences and meetups. Among his interests are reverse engineering, hardware hacking, playing music and Salsa dancing.",
       "buddy": "Rado",
-      "community": "ng-conf Israel, GDG Tel Aviv",
-      "events": {},
-      "conferences": "ng-nl, ng-conf, AngularConnect , DevWeek",
+      "communities": {
+        "c11": true
+      },
+      "events": {
+        "e1": true,
+        "e2": true
+      },
       "eMail": "uri@salsa4fun.co.il",
       "firstName": "Uri",
       "languages": {
@@ -552,7 +630,10 @@
         "he": "Hebrew"
       },
       "lastName": "Shaked",
-      "businessLocations": "Israel, UK",
+      "businessLocations": {
+        "Israel": true,
+        "UK": true
+      },
       "picUrl": "http://urish.org/img/urish.jpg",
       "resumeUrl": "",
       "twitterID": "UriShaked",
@@ -569,16 +650,17 @@
       "id": "vincirufus",
       "bio": "",
       "buddy": "",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "",
       "eMail": "vince@neevtech.com",
       "firstName": "Vinci",
       "languages": {
         "en": "English"
       },
       "lastName": "Rufus",
-      "businessLocations": "India",
+      "businessLocations": {
+        "India": true
+      },
       "picUrl": "",
       "resumeUrl": "https://docs.google.com/document/d/1ryuTJJdgxbW_FJ6vndp1-aJBiQI5Yq8k8yMucQUCVcQ/edit?usp=sharing",
       "twitterID": "",
@@ -595,18 +677,17 @@
       "id": "wardbell",
       "bio": "",
       "buddy": "",
-      "community": "",
-      "events": {
-        "e2": "true"
-      },
-      "conferences": "",
+      "communities": {},
+      "events": {},
       "eMail": "wardbell@gmail.com",
       "firstName": "Ward",
       "languages": {
         "en": "English"
       },
       "lastName": "Bell",
-      "businessLocations": "United States",
+      "businessLocations": {
+        "US": true
+      },
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -623,9 +704,12 @@
       "id": "webmaxru",
       "bio": "Maxim Salnikov is Oslo-based web UI developer, a Google Developer Expert with strong passion to mobile. He has 10+ years experience in development front-ends for complex web applications. He knows everything about web front-end: starting from user interfaces prototyping, going through HTML/CSS/JS implementation and finishing with architecting RESTful APIs.\n\nWorking daily with web front-end technologies he is happy to experiment with the same stack for building hybrid mobile apps using latest hybrid frameworks. On evenings he runs Norway%u2019s largest meetups dedicated to web front-end: Framsia, AngularJS Oslo. Also he is leader of Norway's biggest community dedicated to mobile development (Mobile Meetup Oslo) and currently working on organizing conference for mobile developers in 2016.\n\nMaxim likes to travel the world visiting developers events and open for offers to share his experiences and knowledge by speaking at conferences and meetups.",
       "buddy": "",
-      "community": "AngularJS Oslo Meetup, ngCommunity, World Angular Day",
-      "events": {},
-      "conferences": "Riga Dev Day 2016",
+      "communities": {
+        "c12": true
+      },
+      "events": {
+        "e16": true
+      },
       "eMail": "salnikov@gmail.com",
       "firstName": "Maxim",
       "languages": {
@@ -633,7 +717,10 @@
         "ru": "Russian"
       },
       "lastName": "Salnikov",
-      "businessLocations": "Norway, USA",
+      "businessLocations": {
+        "Norway": true,
+        "US": true
+      },
       "picUrl": "https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/10891681_10153357342756777_3642710206684319290_n.jpg?oh=6176f0d1d0b08344b31256a8a9af2dc5&oe=56EEC694",
       "resumeUrl": "https://docs.google.com/document/d/10z05OgLZnuYkcgJplC0WeiE87kSnCS-v863cIBHXOUA/",
       "twitterID": "webmaxru",
@@ -650,16 +737,17 @@
       "id": "wilsonmendesneto",
       "bio": "",
       "buddy": "Jeremy",
-      "community": "",
+      "communities": {},
       "events": {},
-      "conferences": "",
       "eMail": "willmendesneto@gmail.com",
       "firstName": "Wilson",
       "languages": {
         "en": "English"
       },
       "lastName": "Mendes Neto",
-      "businessLocations": "Brazil",
+      "businessLocations": {
+        "Brazil": true
+      },
       "picUrl": "",
       "resumeUrl": "",
       "twitterID": "",
@@ -680,7 +768,10 @@
       "type": "conference",
       "location": "Salt Lake City, Nevada, US",
       "speakers": {
-        "aaronfrost": true
+        "aaronfrost": true,
+        "gsans": true,
+        "johnpapa": true,
+        "urish": true
       },
       "date": "05/04/16",
       "url": "http://www.ng-conf.org/"
@@ -691,21 +782,9 @@
       "type": "conference",
       "location": "London, UK",
       "speakers": {
-        "johnpapa": true,
-        "beardyco": true
+        "urish": true
       },
       "date": "9/27/2016",
-      "url": ""
-    },
-    {
-      "id": "e3",
-      "name": "Meetup Test",
-      "type": "meetup",
-      "location": "London, UK",
-      "speakers": {
-        "wardbell": true
-      },
-      "date": "10/26/16",
       "url": ""
     },
     {
@@ -727,6 +806,221 @@
       "speakers": {},
       "date": "3/8/2016",
       "url": "http://conferences.oreilly.com/fluent/javascript-html-us"
+    },
+    {
+      "id": "e6",
+      "name": "OOP Conference 2016",
+      "type": "conference",
+      "location": "",
+      "speakers": {
+        "christianweyer": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e7",
+      "name": "BASTA! Spring,BASTA!",
+      "type": "conference",
+      "location": "",
+      "speakers": {
+        "christianweyer": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e8",
+      "name": "AngularJS Days",
+      "type": "conference",
+      "location": "",
+      "speakers": {
+        "christianweyer": true,
+        "elecash": true,
+        "gsans": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e9",
+      "name": "QCon",
+      "type": "conference",
+      "location": "London, UK",
+      "speakers": {
+        "cironunesdev": true,
+        "gsans": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e10",
+      "name": "AngleBrackets",
+      "type": "conference",
+      "location": "Las Vegas, NV",
+      "speakers": {
+        "danwahlin": true,
+        "johnpapa": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e11",
+      "name": "DevIntersections",
+      "type": "conference",
+      "location": "Hamden, Amsterdam",
+      "speakers": {
+        "danwahlin": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e12",
+      "name": "NDC London",
+      "type": "conference",
+      "location": "London, UK",
+      "speakers": {
+        "danwahlin": true,
+        "johnpapa": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e13",
+      "name": "DevSum",
+      "type": "conference",
+      "location": "",
+      "speakers": {
+        "danwahlin": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e14",
+      "name": "NDC Oslo",
+      "type": "conference",
+      "location": "Oslo, Norway",
+      "speakers": {
+        "danwahlin": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e15",
+      "name": "NDC Australia",
+      "type": "conference",
+      "location": "Sydney, Australia",
+      "speakers": {
+        "danwahlin": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e16",
+      "name": "Riga Dev Day",
+      "type": "conference",
+      "location": "",
+      "speakers": {
+        "gsans": true,
+        "webmaxru": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e17",
+      "name": "Jazoon",
+      "type": "conference",
+      "location": "",
+      "speakers": {
+        "gsans": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e18",
+      "name": "Fullstack 2016",
+      "type": "conference",
+      "location": "London, UK",
+      "speakers": {
+        "gsans": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e19",
+      "name": "Webvisions",
+      "type": "conference",
+      "location": "London, UK",
+      "speakers": {
+        "gsans": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e20",
+      "name": "Microsoft BUILD",
+      "type": "conference",
+      "location": "San Francisco, CA",
+      "speakers": {
+        "johnpapa": true
+      },
+      "date": "3/29/2016",
+      "url": ""
+    },
+    {
+      "id": "e21",
+      "name": "Microsoft Ignite",
+      "type": "conference",
+      "location": "Atlanta, GA",
+      "speakers": {
+        "johnpapa": true
+      },
+      "date": "9/27/2016",
+      "url": ""
+    },
+    {
+      "id": "e22",
+      "name": "DEVOXX",
+      "type": "conference",
+      "location": "Paris, France",
+      "speakers": {
+        "tchatel": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e23",
+      "name": "DevFest Nantes",
+      "type": "conference",
+      "location": "Nantes, France",
+      "speakers": {
+        "tchatel": true
+      },
+      "date": "",
+      "url": ""
+    },
+    {
+      "id": "e24",
+      "name": "BreizhCamp",
+      "type": "conference",
+      "location": "",
+      "speakers": {
+        "tchatel": true
+      },
+      "date": "",
+      "url": ""
     }
   ],
   "communities": [
@@ -734,19 +1028,129 @@
       "id": "c1",
       "name": "City Angular MeetUp",
       "type": "meetup",
-      "description": "",
       "location": "Mountain View, CA",
+      "description": "",
       "span": "monthly",
       "contact": "aaronfrost",
-      "url": "blah.org"
+      "url": "blah.org",
+      "members": {
+        "aaronfrost": true,
+        "beardyco": true
+      }
     },
     {
       "id": "c2",
       "name": "Angular Community",
       "type": "Slack/Forum/GroupChat",
+      "location": "Mountain View, CA",
       "description": "",
       "contact": "aaronfrost",
-      "url": "blahblah.org"
+      "url": "blahblah.org",
+      "members": {
+        "aaronfrost": true
+      }
+    },
+    {
+      "id": "c3",
+      "name": "Angular Gitter",
+      "type": "Slack/Forum/GroupChat",
+      "location": "Mountain View, CA",
+      "description": "",
+      "contact": "johnpapa",
+      "url": "blahblah.org",
+      "members": {
+        "aaronfrost": true
+      }
+    },
+    {
+      "id": "c4",
+      "name": "GDG Utah",
+      "type": "GDG",
+      "location": "Salt Lake City, UT",
+      "description": "",
+      "contact": "aaronfrost",
+      "url": "blahblah.org",
+      "members": {}
+    },
+    {
+      "id": "c5",
+      "name": "Angular JS Meetup BH",
+      "type": "meetup",
+      "location": "",
+      "description": "",
+      "contact": "cironunesdev",
+      "url": "blahblah.org",
+      "members": {}
+    },
+    {
+      "id": "c6",
+      "name": "Angular JS Meetup San Paulo",
+      "type": "meetup",
+      "location": "",
+      "description": "",
+      "contact": "cironunesdev",
+      "url": "blahblah.org",
+      "members": {}
+    },
+    {
+      "id": "c7",
+      "name": "Angular Labs London",
+      "type": "meetup",
+      "location": "London, UK",
+      "description": "",
+      "contact": "gsans",
+      "url": "blahblah.org",
+      "members": {}
+    },
+    {
+      "id": "c8",
+      "name": "Boston Angular Meetup",
+      "type": "meetup",
+      "location": "Boston, MA",
+      "description": "",
+      "contact": "jeffwhelpley",
+      "url": "blahblah.org",
+      "members": {}
+    },
+    {
+      "id": "c9",
+      "name": "HannoverJS",
+      "type": "meetup",
+      "location": "Hannover",
+      "description": "",
+      "contact": "pascalprecht",
+      "url": "blahblah.org",
+      "members": {}
+    },
+    {
+      "id": "c10",
+      "name": "Functional Javascript London",
+      "type": "meetup",
+      "location": "London UK",
+      "description": "",
+      "contact": "timruffles",
+      "url": "blahblah.org",
+      "members": {}
+    },
+    {
+      "id": "c11",
+      "name": "GDG Tel Aviv",
+      "type": "gdg",
+      "location": "Tel Aviv, Israel",
+      "description": "",
+      "contact": "urish",
+      "url": "blahblah.org",
+      "members": {}
+    },
+    {
+      "id": "c12",
+      "name": "AngularJS Oslo",
+      "type": "meetup",
+      "location": "Oslo, Norway",
+      "description": "",
+      "contact": "webmaxru",
+      "url": "blahblah.org",
+      "members": {}
     }
   ]
 }

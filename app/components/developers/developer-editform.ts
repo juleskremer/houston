@@ -1,10 +1,8 @@
 import {Component, Input, ChangeDetectionStrategy} from 'angular2/core';
 import {NgForm} from 'angular2/common';
-import {DeveloperService} from '../../services/developers/developer.service';
 import {IDeveloper} from '../../services/developers/developer';
 import {Router} from 'angular2/router';
 import {Language} from '../../services/common/language-model';
-import {LanguageService} from '../../services/common/language.service';
 import {Observable} from 'rxjs';
 import {EventEmitter, Output} from 'angular2/core';
 
@@ -12,20 +10,18 @@ import {EventEmitter, Output} from 'angular2/core';
     selector: 'developer-editform',
     templateUrl: 'app/components/developers/developer-editform.html',
     styles: ['.mdl-textfield__label {top: 0;}'],
-    inputs: ['developer', 'language'],
-    providers: [LanguageService],
+    inputs: ['developer'],
+    providers: [],
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DeveloperEditFormComponent {
-    public languages: Language[];
     submitted = false;
 
     @Input() developer: IDeveloper;
     @Output() save: EventEmitter<IDeveloper> = new EventEmitter();
 
     constructor(
-        private _router: Router,
-        public _devService: DeveloperService) { }
+        private _router: Router) { }
 
     onSubmit() { 
         this.submitted = true; 

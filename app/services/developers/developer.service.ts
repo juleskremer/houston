@@ -1,5 +1,6 @@
 import {IDeveloper} from './developer';
 import {IEvent} from '../events/event';
+import {ICommunity} from '../communities/community';
 import {Injectable} from 'angular2/core';
 import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
 import {Observable} from 'rxjs';
@@ -32,10 +33,12 @@ export class DeveloperService {
         this.developers$ = Observable.combineLatest(
             this.store.select('developers'),
             this.store.select('events'),
-            (developers: any[], events: any[]) => {
+            this.store.select('communities'),
+            (developers: any[], events: any[], communities: any[]) => {
                 return developers.map(developer => {
-                    var devEvents: Array<IEvent> = Object.keys(developer.events).map(eventId => events.find(event => event.id === eventId))
-                    return Object.assign({}, developer, { events: devEvents });
+                    var devEvents: Array<IEvent> = Object.keys(developer.events).map(eventId => events.find(event => event.id === eventId));                   
+                    var devCommunities: Array<ICommunity> = Object.keys(developer.communities).map(communityId => communities.find(community => community.id === communityId));                   
+                    return Object.assign({}, developer, { events: devEvents, communities: devCommunities });
                 });
             });   
 
