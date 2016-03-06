@@ -12,6 +12,6 @@ import {CommunityEditComponent} from './community-edit';
 })
 @RouteConfig([
     { path: '/', name: 'CommunitiesListing', component: CommunitiesListingComponent, useAsDefault: true },
-    { path: '/community-edit', name: 'CommunityEdit', component: CommunityEditComponent },
+    { path: '/community-edit/:id', name: 'CommunityEdit', component: CommunityEditComponent },
 ])
 export class CommunitiesComponent { }

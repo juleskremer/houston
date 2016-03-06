@@ -32,6 +32,6 @@ export class DeveloperEditFormComponent {
     }
     
     onCancel(developer: IDeveloper) {
-        this._router.navigate(['DeveloperDetail']);
+        this._router.navigate(['DeveloperDetail', { id: developer.id }]);
     }
 }

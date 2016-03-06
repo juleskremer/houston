@@ -17,8 +17,8 @@
       },
       "lastName": "Frost",
       "locations": {
-        "US": true,
-        "MX": true
+        "US": "United States",
+        "MX": "Mexico"
       },
       "picUrl": "https://pbs.twimg.com/profile_images/460667350706962433/UCvQytmY_400x400.jpeg",
       "resumeUrl": "",
@@ -46,7 +46,7 @@
       },
       "lastName": "Sutherland",
       "locations": {
-        "US": true
+        "US": "United States"
       },
       "picUrl": "",
       "resumeUrl": "",
@@ -77,9 +77,9 @@
       },
       "lastName": "Weyer",
       "locations": {
-        "Germany": true,
-        "Switzerland": true,
-        "Austria": true
+        "DE": "Germany",
+        "CH": "Switzerland",
+        "AT": "Austria"
       },
       "picUrl": "http://en.gravatar.com/cweyer74",
       "resumeUrl": "",
@@ -112,9 +112,9 @@
       },
       "lastName": "Nunes",
       "locations": {
-        "Brazil": true,
-        "Germany": true,
-        "USA": true
+        "BR": "Brazil",
+        "DE": "Germany",
+        "US": "United States"
       },
       "picUrl": "https://scontent-mia1-1.xx.fbcdn.net/hphotos-xtf1/v/t1.0-9/11750675_868938726516037_8091921334795566827_n.jpg?oh=439bb7a8fc0e3d79f79ee745f0722974&oe=56EB83A1",
       "resumeUrl": "",
@@ -147,7 +147,7 @@
       },
       "lastName": "Wahlin",
       "locations": {
-        "US": true
+        "US": "United States"
       },
       "picUrl": "https://dl.dropboxusercontent.com/u/6037348/dan-wahlin500x500.jpg",
       "resumeUrl": "",
@@ -177,9 +177,9 @@
       },
       "lastName": "Jimenez",
       "locations": {
-        "US": true,
-        "China": true,
-        "Spain": true
+        "US": "United States",
+        "CN": "China",
+        "ES": "Spain"
       },
       "picUrl": "http://twofuckingdevelopers.com/wp-content/uploads/raul_jimenez.jpg",
       "resumeUrl": "https://docs.google.com/document/d/1H79lsEtJ1cbnnKwS4tSKQxKeb0aILfP5UcAtMCaorbU/edit",
@@ -205,7 +205,7 @@
       },
       "lastName": "Ruiz de Villa",
       "locations": {
-        "Spain": true
+        "ES": "Spain"
       },
       "picUrl": "",
       "resumeUrl": "",
@@ -242,9 +242,9 @@
       },
       "lastName": "Sans",
       "locations": {
-        "UK": true,
-        "Spain": true,
-        "Brazil": true
+        "GB": "United Kingdom",
+        "ES": "Spain",
+        "BR": "Brazil"
       },
       "picUrl": "http://photos1.meetupstatic.com/photos/member/3/2/f/7/highres_9133047.jpeg",
       "resumeUrl": "",
@@ -270,7 +270,7 @@
       },
       "lastName": "Franklin",
       "locations": {
-        "UK": true
+        "GB": "United Kingdom"
       },
       "picUrl": "",
       "resumeUrl": "",
@@ -299,7 +299,7 @@
       },
       "lastName": "Whelpley",
       "locations": {
-        "US": true
+        "US": "United States"
       },
       "picUrl": "https://pbs.twimg.com/profile_images/614410324607901696/nKGEuUS7.jpg",
       "resumeUrl": "https://docs.google.com/document/d/1chXwUUmCmjsfWd0iJYmAfyUnyoo1zibpx9_NS31LcGk/edit?usp=sharing",
@@ -325,7 +325,7 @@
       },
       "lastName": "Eames",
       "locations": {
-        "US": true
+        "US": "United States"
       },
       "picUrl": "",
       "resumeUrl": "",
@@ -357,9 +357,8 @@
       },
       "lastName": "Papa",
       "locations": {
-        "US": true,
-        "Europe": true,
-        "Canada": true
+        "US": "United States",
+        "CA": "Canada"
       },
       "picUrl": "http://www.johnpapa.net/wp-content/uploads/2007/12/JPBW-150x150.png",
       "resumeUrl": "",
@@ -386,7 +385,7 @@
       },
       "lastName": "Chegham",
       "locations": {
-        "France": true
+        "FR": "France"
       },
       "picUrl": "https://avatars0.githubusercontent.com/u/1699357?v=3&s=460",
       "resumeUrl": "",
@@ -412,7 +411,7 @@
       },
       "lastName": "Gontovnikas",
       "locations": {
-        "Argentina": true
+        "AR": "Argentina"
       },
       "picUrl": "",
       "resumeUrl": "https://docs.google.com/a/gon.to/document/d/1X9v3A3zONCDv9qTwc6yfXpEmp68yImh5xLtfZIwC3GU/edit",
@@ -441,8 +440,8 @@
       },
       "lastName": "Precht",
       "locations": {
-        "Germany": true,
-        "Netherlands": true
+        "DE": "Germany",
+        "NL": "Netherlands"
       },
       "picUrl": "http://pascalprecht.github.io/public/me.jpg",
       "resumeUrl": "",
@@ -492,7 +491,7 @@
       },
       "lastName": "Wormald",
       "locations": {
-        "US": true
+        "US": "United States"
       },
       "picUrl": "",
       "resumeUrl": "",
@@ -518,7 +517,7 @@
       },
       "lastName": "DiOrio",
       "locations": {
-        "US": true
+        "US": "United States"
       },
       "picUrl": "",
       "resumeUrl": "",
@@ -549,7 +548,7 @@
       },
       "lastName": "Chatel",
       "locations": {
-        "France": true
+        "FR": "France"
       },
       "picUrl": "http://www.gravatar.com/avatar/b7f1da7c20c20b6aeb1eea0b9dc13f25.jpg",
       "resumeUrl": "",
@@ -577,7 +576,7 @@
       },
       "lastName": "Ruffles",
       "locations": {
-        "UK": true
+        "UK": "United Kingdom"
       },
       "picUrl": "https://www.dropbox.com/s/p9btik2qzufjxef/512.jpg?dl=0",
       "resumeUrl": "",
@@ -609,8 +608,8 @@
       },
       "lastName": "Shaked",
       "locations": {
-        "Israel": true,
-        "UK": true
+        "IL": "Israel",
+        "UK": "United Kingdom"
       },
       "picUrl": "http://urish.org/img/urish.jpg",
       "resumeUrl": "",
@@ -636,7 +635,7 @@
       },
       "lastName": "Rufus",
       "locations": {
-        "India": true
+        "IN": "India"
       },
       "picUrl": "",
       "resumeUrl": "https://docs.google.com/document/d/1ryuTJJdgxbW_FJ6vndp1-aJBiQI5Yq8k8yMucQUCVcQ/edit?usp=sharing",
@@ -662,7 +661,7 @@
       },
       "lastName": "Bell",
       "locations": {
-        "US": true
+        "US": "United States"
       },
       "picUrl": "",
       "resumeUrl": "",
@@ -693,8 +692,8 @@
       },
       "lastName": "Salnikov",
       "locations": {
-        "Norway": true,
-        "US": true
+        "NO": "Norway",
+        "US": "United States"
       },
       "picUrl": "https://scontent-cdg2-1.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/10891681_10153357342756777_3642710206684319290_n.jpg?oh=6176f0d1d0b08344b31256a8a9af2dc5&oe=56EEC694",
       "resumeUrl": "https://docs.google.com/document/d/10z05OgLZnuYkcgJplC0WeiE87kSnCS-v863cIBHXOUA/",
@@ -720,7 +719,7 @@
       },
       "lastName": "Mendes Neto",
       "locations": {
-        "Brazil": true
+        "BR": "Brazil"
       },
       "picUrl": "",
       "resumeUrl": "",

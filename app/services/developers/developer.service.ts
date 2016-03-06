@@ -16,21 +16,19 @@ export class DeveloperService {
     developers$: Observable<IDeveloper[]>;
 
     constructor(public _http: Http, private store: Store<AppStore>) {
-        //this.developers$ = store.select('developers');
     }
 
-    fetchDevelopers() {
+    fetchDevelopers(): Observable<IDeveloper[]> {
 
+        //retrieve and *store* developer data stream
         this._http.get(BASE_URL)
             .map(res => res.json())
             .map(payload => ({ type: 'ADD_DEVELOPERS', payload }))
             .subscribe(action => this.store.dispatch(action));
 
-    }
-
-    loadDevelopers() {
-
-        this.developers$ = Observable.combineLatest(
+        //compute developer data stream
+        //for application view
+        return this.developers$ = Observable.combineLatest(
             this.store.select('developers'),
             this.store.select('events'),
             this.store.select('communities'),
@@ -42,12 +40,6 @@ export class DeveloperService {
                 });
             });   
 
-    }
-
-    getDeveloper(id: string): Observable<IDeveloper> { 
-        var devs$: Observable<IDeveloper[]>
-        devs$ = this.store.select('developers');
-        return devs$.map(devs => devs.find(dev => dev.id === id));
     }
 
     updateDeveloper(developer: IDeveloper) {

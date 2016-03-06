@@ -13,26 +13,19 @@ const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
 export class CommunitiesService {
 
     communities$: Observable<ICommunity[]>;
-    testcommunities$: Observable<ICommunity[]>;
 
     constructor(public _http: Http, private store: Store<AppStore>) {
-        
-
     }
 
 
-    fetchCommunities() {
+    fetchCommunities(): Observable<ICommunity[]> {
 
         this._http.get(BASE_URL)
             .map(res => res.json())
             .map(payload => ({ type: 'ADD_COMMUNITIES', payload }))
             .subscribe(action => this.store.dispatch(action));
-            
-    }
-    
-    loadCommunities(){
 
-        this.communities$ = Observable.combineLatest(
+        return this.communities$ = Observable.combineLatest(
             this.store.select('communities'),
             this.store.select('developers'),
             (communities: any[], developers: any[]) => {

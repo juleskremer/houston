@@ -22,21 +22,11 @@ export class DataService {
     }
     
     initData(){
-        //load raw store data
-        this._devService.fetchDevelopers();
-        this._eventService.fetchEvents();
-        this._communityService.fetchCommunities();
-        
-        //generate computed streams
-        this._devService.loadDevelopers();
-        this._eventService.loadEvents();
-        this._communityService.loadCommunities();
-        
-        //setup streams
-        this.developers$ = this._devService.developers$;
-        this.events$ = this._eventService.events$;
-        this.communities$ = this._communityService.communities$;
 
+        this.developers$ = this._devService.fetchDevelopers();
+        this.events$ = this._eventService.fetchEvents();
+        this.communities$ = this._communityService.fetchCommunities();
+        
     }
     
     

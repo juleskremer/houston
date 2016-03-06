@@ -25,13 +25,10 @@ export class EventsListingComponent  {
     }
     
     onEdit(event: IEvent) {
-
-        this.store.dispatch({type: 'SELECT_EVENT', payload: event});
-        this._router.navigate(['EventEdit']);
+        this._router.navigate(['EventEdit', { id: event.id }]);
     }
     onSpeakerSelect(developer) {
-        this.store.dispatch({type: 'SELECT_DEVELOPER', payload: developer});
-       this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail']);
+       this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', { id: developer.id }]);
     }
     
     onNew(){

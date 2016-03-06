@@ -19,17 +19,14 @@ export class EventsService {
     }
 
 
-    fetchEvents() {
+    fetchEvents(): Observable<IEvent[]> {
 
         this._http.get(BASE_URL)
             .map(res => res.json())
             .map(payload => ({ type: 'ADD_EVENTS', payload }))
             .subscribe(action => this.store.dispatch(action));
-    }
-    
-    loadEvents(){
 
-        this.events$ = Observable.combineLatest(
+        return this.events$ = Observable.combineLatest(
             this.store.select('events'),
             this.store.select('developers'),
             (events: any[], developers: any[]) => {

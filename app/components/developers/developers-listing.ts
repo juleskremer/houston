@@ -24,8 +24,6 @@ export class DevelopersListingComponent {
     }
 
     onSelect(developer: IDeveloper) {
-
-        this.store.dispatch({type: 'SELECT_DEVELOPER', payload: developer});
-        this._router.navigate(['DeveloperDetail']);
+        this._router.navigate(['DeveloperDetail', { id: developer.id }]);
     }
 }

@@ -25,13 +25,11 @@ export class CommunitiesListingComponent  {
     }
     
     onEdit(community: ICommunity) {
+        this._router.navigate(['CommunityEdit', { id: community.id }]);
 
-        this.store.dispatch({type: 'SELECT_COMMUNITY', payload: community});
-        this._router.navigate(['CommunityEdit']);
     }
     onSelect(developer) {
-        this.store.dispatch({type: 'SELECT_DEVELOPER', payload: Observable.of(developer)});
-       this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail']);
+       this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', { id: developer.id }]);
     }
     
     onNew(){

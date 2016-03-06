@@ -1,31 +1,51 @@
 <div class="container">
-    <!--<div [hidden]="submitted">-->
-    <form (ngSubmit)="onSubmit()" #eventedit="ngForm">
-        <article class="template animated slideInRight">
-            <div>
-                <h4 *ngIf="!selectedEvent.id">Creating New Event</h4>
-                <h4 *ngIf="selectedEvent.id">{{selectedEvent.name}}</h4>
+    <div [hidden]="submitted">
+    <form #editForm="ngForm" (ngSubmit)="onSubmit()">
+        <div>
+            <h4 *ngIf="!selectedEvent.id">Creating New Event</h4>
+            <h4 *ngIf="selectedEvent.id">{{selectedEvent.name}}</h4>
 
+            <div class="form-group">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <label class="mdl-textfield__label" for="name">Name</label>
-                    <input type="text" id="name" class="mdl-textfield__input" [(ngModel)]="selectedEvent.name" />
+                    <input type="text" id="name" class="mdl-textfield__input" 
+                        required 
+                        [(ngModel)]="selectedEvent.name"
+                        ngControl="name" #name="ngForm" #spy />
+                        <br> TODO {{spy.className}}
+                    <div [hidden]="name.valid" class="alert alert-danger">
+                        Event name is required </div>
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <label class="mdl-textfield__label" for="type">Type</label>
-                    <input type="text" id="type" class="mdl-textfield__input" [(ngModel)]="selectedEvent.type" />
+                    <input type="text" id="type" class="mdl-textfield__input" 
+                        required
+                        [(ngModel)]="selectedEvent.type"
+                        ngControl="type" />
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <label class="mdl-textfield__label" for="location">Location</label>
-                    <input type="text" id="location" class="mdl-textfield__input" [(ngModel)]="selectedEvent.location" />
+                    <input type="text" id="location" class="mdl-textfield__input"  
+                        required
+                        [(ngModel)]="selectedEvent.location"
+                        ngControl="location" />
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <label class="mdl-textfield__label" for="date">Date</label>
-                    <input type="text" id="date" class="mdl-textfield__input" [(ngModel)]="selectedEvent.date" />
+                    <input type="text" id="date" class="mdl-textfield__input" 
+                        required
+                        [(ngModel)]="selectedEvent.date"
+                        ngControl="date" />
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <label class="mdl-textfield__label" for="url">URL</label>
-                    <input type="text" id="url" class="mdl-textfield__input" [(ngModel)]="selectedEvent.url" />
+                    <input type="text" id="url" class="mdl-textfield__input" 
+                        required
+                        [(ngModel)]="selectedEvent.url"
+                        ngControl="url" />
                 </div>
+            </div>
+            <div class="form-group">
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <label class="mdl-textfield__label" for="speakers">Speakers</label>
                     <div *ngFor="#speaker of event.speakers">
@@ -34,22 +54,23 @@
                     </div>
                 </div>
             </div>
-            <div>
-                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-                (click)="save.emit(selectedEvent)" [disabled]="!eventedit.form.valid">Save</button>
-                &nbsp;
-                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="cancel.emit()">Cancel</button>
-                &nbsp;
-                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="addSpeaker">Add Speaker</button>
-                &nbsp;
-                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="delete()">Delete</button>
-            </div>
-        </article>
+        </div>
+        <div>
+            <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                [disabled]="!editForm.form.valid"
+                (click)="save.emit(selectedEvent)">Save</button>
+            &nbsp;
+            <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="cancel.emit()">Cancel</button>
+            &nbsp;
+            <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="addSpeaker">Add Speaker</button>
+            &nbsp;
+            <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="delete()">Delete</button>
+        </div>
     </form>
 
     <!--</div>-->
 
-    <!--<div [hidden]="!submitted">
+    <div [hidden]="!submitted">
         <p>yay you saved something</p>
-    </div>-->
+    </div>
     <div>

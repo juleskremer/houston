@@ -128,7 +128,7 @@
         <div class="col-md-4 mainright">
             <div class="row">
                 <div class="col-sm-1 col-md-2 mobmid">
-                    <span class="secicon fa fa-magic"></span>
+                    <span class="secicon fa fa-globe"></span>
                 </div>
                 <!--icon end-->
 
@@ -136,20 +136,34 @@
                     <div class="col-sm-11 col-md-10 ">
 
                         <div class="award">
-                            <h4>Locations</h4>
-                            <!--<div *ngFor="#location of developer.locations">
-                                {{location.name}}
-                            </div>-->
-                    </div>
-
-                        <div class="award">
-                            <h4>Languages</h4>
-                            <p>{{developer.languages}}</p>
+                            <h3>Locations</h3>
+                            <div *ngFor='#location of developer.locations | values:"key":true'>
+                                {{location}}
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!--tech skills end-->
+            
+            <hr>
+                        <div class="row">
+                <div class="col-sm-1 col-md-2 mobmid">
+                    <span class="secicon fa fa-language"></span>
+                </div>
+                <!--icon end-->
+
+                <div class="col-sm-11 col-md-10">
+                    <div class="col-sm-11 col-md-10 ">
+
+                        <div class="award">
+                            <h3>Languages</h3>
+                            <div *ngFor='#language of developer.languages | values:"key":true'>
+                                {{language}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <hr>
 
@@ -211,7 +225,7 @@
     =========================== -->
     <footer class="text-center">
         <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-        (click)="onSelect(developer)">Edit Developer</button>
+        (click)="onEdit(developer)">Edit Developer</button>
         &nbsp;
         <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="gotoDevelopers()">Cancel</button>
     </footer>
