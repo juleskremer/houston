@@ -1,4 +1,4 @@
-import {Language} from './language-model';
+import {Language} from './language.service';
 
 export var LANGUAGES: Language[] = 
 [

@@ -28,7 +28,10 @@
                 </div>
                 <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
                     <label class="mdl-textfield__label" for="speakers">Speakers</label>
-                    <input type="text" id="speakers" class="mdl-textfield__input" [(ngModel)]="selectedEvent.speakers" />
+                    <div *ngFor="#speaker of event.speakers">
+                        <img src="{{speaker.picUrl}}" width="25" height="25"> {{speaker.firstName}} {{speaker.lastName}}
+                        <p>
+                    </div>
                 </div>
             </div>
             <div>
@@ -36,6 +39,8 @@
                 (click)="save.emit(selectedEvent)" [disabled]="!eventedit.form.valid">Save</button>
                 &nbsp;
                 <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="cancel.emit()">Cancel</button>
+                &nbsp;
+                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="addSpeaker">Add Speaker</button>
                 &nbsp;
                 <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="delete()">Delete</button>
             </div>

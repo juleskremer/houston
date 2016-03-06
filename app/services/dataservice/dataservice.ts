@@ -36,6 +36,7 @@ export class DataService {
         this.developers$ = this._devService.developers$;
         this.events$ = this._eventService.events$;
         this.communities$ = this._communityService.communities$;
+
     }
     
     

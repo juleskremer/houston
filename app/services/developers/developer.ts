@@ -1,5 +1,6 @@
 import {IEvent} from '../events/event';
 import {ICommunity} from '../communities/community';
+import {ILanguage} from '../common/common.service';
 
 export interface IDeveloper {
     //note: using gitID as id
@@ -12,7 +13,7 @@ export interface IDeveloper {
     events: IEvent[];
     email: string;
     firstName: string;
-    languages: string;
+    languages: ILanguage[];
     lastName: string;
     locations: string;
     picUrl: string;

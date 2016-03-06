@@ -4,9 +4,9 @@
         (click)="onNew()">Add New Community</button>
     </div>
     <div class="mdl-grid">
-        <div class="mdl-cell mdl-cell--4-col " *ngFor="#community of communities$ | async">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet" *ngFor="#community of communities$ | async">
 
-            <div class="demo-card-event mdl-card mdl-shadow--2dp">
+            <div class="mdl-card mdl-shadow--2dp">
                 <div class="mdl-card__title mdl-card--expand">
                     <div [ngSwitch]="community.type">
                         <template [ngSwitchWhen]="'chat'"><i class="material-icons">chat</i></template>
@@ -18,9 +18,8 @@
                 </div>
                 <div *ngIf="community.contact">
                     <div class=" mdl-card__actions mdl-card--border ">
-                        Organizer
-                        <img src="{{community.contact.picUrl}}" width="50" height="50" (click)="onSelect(community.contact)">
-                        <a href="mailto:{{community.contact.eMail}}"><span class="social fa fa-envelope-o"></span>{{community.contact.firstName}} {{community.contact.lastName}}</a>
+                        Organizer <br>
+                        <a href="mailto:{{community.contact.eMail}}"><span class="social fa fa-envelope-o"></span></a>{{community.contact.firstName}} {{community.contact.lastName}}
                     </div>
                 </div>
                 <div class="mdl-card__actions mdl-card--border">

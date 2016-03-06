@@ -6,7 +6,7 @@ import {COMMUNITY_TYPES} from '../../const/const';
 
 @Component({
     selector: 'community-editform',
-    templateUrl: 'app/components/communityies/community-editform.html',
+    templateUrl: 'app/components/communities/community-editform.html',
     styles: ['.mdl-textfield__label {top: 0;}'],
     inputs: ['community'],
     changeDetection: ChangeDetectionStrategy.OnPush

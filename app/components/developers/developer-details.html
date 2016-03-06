@@ -1,14 +1,13 @@
 <div *ngIf="developer">
     <div class="container">
-        <!-- ===========================
-        HEADER 
-        ============================ -->
+        <!-- HEADER -->
         <div id="header" class="row">
+            <!-- picture -->
             <div class="col-sm-2">
                 <img class="propic" src="{{developer.picUrl}}" alt="{{developer.lastName}}">
             </div>
-            <!-- photo end-->
 
+            <!-- name and GDE badge -->
             <div class="col-sm-10">
                 <div class="cv-title">
                     <div class="row">
@@ -18,51 +17,32 @@
                     </div>
                     <h2 *ngIf="developer.isGDE">Angular Google Developer Expert</h2>
                 </div>
-                <!-- Title end-->
 
-                <!-- ===========================
-                SOCIAL & CONTACT
-                ============================ -->
-                <div class="row">
-                    <div class="col-sm-4">
-                        <ul class="list-unstyled">
-                            <li *ngIf="developer.webpage"><a target="_blank" href=""><span class="social fa fa-home"></span>(Ask for WebPage)</a>
-                            </li>
-                            <li *ngIf="developer.phone"><a href=""><span class="social fa fa-phone"></span>(Ask for Phone)</a>
-                            </li>
-                            <li *ngIf="developer.eMail"><a href="mailto:{{developer.eMail}}"><span class="social fa fa-envelope-o"></span>{{developer.eMail}}</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- social 1st col end-->
-
-                    <div class="col-sm-4">
-                        <ul class="list-unstyled">
-                            <li *ngIf="developer.blogUrl"><a target="_blank" href="{{developer.blogUrl}}"><span class="fa fa-file-text-o"></span>Blog</a>
-                            </li>
-                            <li *ngIf="developer.twitterID"><a target="_blank" href="http://www.twitter.com/{{developer.twitterID}}"><span class="social fa fa-twitter"></span>Twitter</a>
-                            </li>
-                            <li *ngIf="developer.resumeUrl"><a target="_blank" href="{{developer.resumeUrl}}"><span class="fa fa-file-code-o"></span>Resume</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- social 2nd col end-->
-
-                    <div class="col-sm-4">
-                        <ul class="list-unstyled">
-                            <li><a target="_blank" href="http://www.github.com/{{developer.id}}"><span class="social fa fa-github"></span>GitHub</a>
-                            </li>
-                            <li *ngIf="developer.linkedIn"><a target="_blank" href="http://www.linkedin.com/in/{{developer.linkedIn}}"><span class="social fa fa-linkedin"></span>Linkedin</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- social 3nd col end-->
+                <!-- social links -->
+                <div class="col-sm-1">
+                    <ul class="list-unstyled">
+                        <li *ngIf="developer.eMail"><a href="mailto:{{developer.eMail}}"><span class="social fa fa-envelope-o"></span></a>
+                        </li>
+                        <li *ngIf="developer.webpage"><a target="_blank" href={{developer.webpage}}><span class="social fa fa-home"></span></a>
+                        </li>
+                        <li><a target="_blank" href="http://www.github.com/{{developer.id}}"><span class="social fa fa-github"></span></a>
+                        </li>
+                        <li *ngIf="developer.twitterID"><a target="_blank" href="http://www.twitter.com/{{developer.twitterID}}"><span class="social fa fa-twitter"></span></a>
+                        </li>
+                        <li *ngIf="developer.linkedIn"><a target="_blank" href="http://www.linkedin.com/in/{{developer.linkedIn}}"><span class="social fa fa-linkedin"></span></a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- header social end-->
+
+                <!-- biography -->
+                <div class="row">
+                    <div class="col-sm-10">
+                        <p>{{developer.bio}}</p>
+                    </div>
+                </div>
             </div>
-            <!-- header right end-->
         </div>
-        <!-- header end-->
+        <!-- HEADER END-->
 
         <hr class="firsthr">
 
@@ -70,199 +50,173 @@
         BODY LEFT PART
         ============================ -->
         <div class="col-md-8 mainleft">
-            <div id="statement" class="row mobmid">
-                <div class="col-sm-1">
-                    <span class="secicon fa fa-user"></span>
-                </div>
-                <!--icon end-->
 
-                <div class="col-sm-11">
-                    <h3>Biography</h3>
-                    <p>{{developer.bio}}</p>
-                    <p class="signature">{{developer.firstName}} {{developer.lastName}}</p>
-                </div>
-                <!--info end-->
-            </div>
-            <!--personal statement end-->
-
-            <hr>
-
-            <div id="education" class="row mobmid">
+            <!--icon: COMMUNITIES: this places the icon in the appropriate column only-->
+            <div id="communities" class="row mobmid">
                 <div class="col-sm-1">
                     <span class="secicon fa fa-users"></span>
                 </div>
                 <!--icon end-->
 
+                <!--COMMUNITIES-->
                 <div class="col-sm-11">
                     <h3>Communities</h3>
-
                     <div class="row">
                         <div class="col-md-9">
                             <div *ngFor="#community of developer.communities">
                                 <a href="{{community.url}}">{{community.name}}</a>
                             </div>
                         </div>
-                        <!-- Communities 1 end-->
-
                     </div>
                 </div>
-                <!--Communities end-->
-
-                <hr>
-
-                <div id="education" class="row mobmid">
-                    <div class="col-sm-1">
-                        <span class="secicon fa fa-graduation-cap"></span>
-                    </div>
-                    <!--icon end-->
-
-                    <div class="col-sm-11">
-                        <h3>Events & Conferences</h3>
-
-                        <div class="row">
-                            <div class="col-md-9">
-                                <div *ngFor="#event of developer.events">
-                                    <a href="{{event.url}}">{{event.name}}</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- Communities 1 end-->
-
-                    </div>
-                </div>
-                <!--Communities end-->
-
-                <hr>
-
-                <!-- ===========================
-            MISSIONS
-            ============================ -->
-                <div id="job" class="row mobmid">
-                    <div class="col-sm-1">
-                        <span class="secicon fa fa-space-shuttle"></span>
-                    </div>
-                    <!--icon end-->
-
-                    <div class="col-sm-11">
-                        <h3>Angular Missions</h3>
-
-                        <div class="row">
-                            <div class="col-md-9">
-                                <h4>Each Mission Header</h4>
-                                <p class="sub"><a href="">LinktoMission</a>
-                                </p>
-                                <p>{{developer.missions}}</p>
-                            </div>
-                        </div>
-                        <!--Mission 1 end-->
-
-                    </div>
-                    <!--Missions end-->
-                </div>
-                <!--Missions end-->
-
             </div>
-            <!--left end-->
+            <!-- COMMUNITIES END-->
 
-            <!-- ===========================
-        SIDEBAR
-        =========================== -->
-            <div class="col-md-4 mainright">
-                <div class="row">
-                    <div class="col-sm-1 col-md-2 mobmid">
-                        <span class="secicon fa fa-magic"></span>
-                    </div>
-                    <!--icon end-->
+            <hr>
 
-                    <div class="col-sm-11 col-md-10">
-                        <div class="col-sm-11 col-md-10 ">
+            <!--icon: EVENTS: this places the icon in the appropriate column only-->
+            <div id="education" class="row mobmid">
+                <div class="col-sm-1">
+                    <span class="secicon fa fa-graduation-cap"></span>
+                </div>
+                <!--icon end-->
 
-                            <div class="award">
-                                <h4>Locations</h4>
-                                <p>{{developer.locations}}</p>
+                <!--EVENTS-->
+                <div class="col-sm-11">
+                    <h3>Events & Conferences</h3>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <div *ngFor="#event of developer.events">
+                                <a href="{{event.url}}">{{event.name}}</a>
                             </div>
-                            <!--1st award end-->
-
-                            <div class="award">
-                                <h4>Languages</h4>
-                                <p>{{developer.languages}}</p>
-                            </div>
-                            <!--1st award end-->
                         </div>
-                        <!--awards end-->
-
                     </div>
-                    <!--info end-->
                 </div>
-                <!--tech skills end-->
-
-                <hr>
-
-                <div class="row mobmid">
-                    <div class="col-sm-1 col-md-2">
-                        <span class="secicon fa fa-trophy"></span>
-                    </div>
-                    <!--icon end-->
-
-                    <div class="col-sm-11 col-md-10 ">
-                        <h3>Awards</h3>
-
-                        <div class="award">
-                            <h4>Mission Leader</h4>
-                            <p>I did the most missions.</p>
-                        </div>
-                        <!--1st award end-->
-
-                        <div class="award">
-                            <h4>Most Answers</h4>
-                            <p>I answered the most ?</p>
-                        </div>
-                        <!--1st award end-->
-                    </div>
-                    <!--awards end-->
-
-                </div>
-
-                <hr>
-
-                <div class="row ">
-                    <div class="col-sm-1 col-md-2 mobmid">
-                        <span class="secicon fa fa-quote-left"></span>
-                    </div>
-                    <!--icon end-->
-
-                    <div class="col-sm-11 col-md-10 testimonials">
-                        <h3 class="mobmid">Leaderboard </h3>
-
-                        <div class="row">
-                            <blockquote>
-                                <p>showsomething</p>
-                            </blockquote>
-                        </div>
-                        <!--1st testimonial end-->
-                    </div>
-                    <!--awards end-->
-                </div>
-                <!--tech skills end-->
             </div>
-            <!--right end-->
+            <!--EVENTS end-->
 
+            <hr>
+
+            <!--icon: MISSIONS: this places the icon in the appropriate column only-->
+            <div id="job" class="row mobmid">
+                <div class="col-sm-1">
+                    <span class="secicon fa fa-space-shuttle"></span>
+                </div>
+                <!--icon end-->
+
+                <!--MISSIONS-->
+                <div class="col-sm-11">
+                    <h3>Missions</h3>
+                    <div class="row">
+                        <div class="col-md-9">
+                            <h4>Each Mission Header</h4>
+                            <p class="sub"><a href="">LinktoMission</a>
+                            </p>
+                            <p>{{developer.missions}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--MISSIONS end-->
 
         </div>
-        <!--container end-->
+        <!--left end-->
 
         <!-- ===========================
-    FOOTER
-    =========================== -->
-        <footer class="text-center">
-            <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-            (click)="onSelect(developer)">Edit Developer</button>
-            &nbsp;
-            <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="gotoDevelopers()">Cancel</button>
-        </footer>
-        <div>
-            <p></p>
+        SIDEBAR
+        =========================== -->
+        <div class="col-md-4 mainright">
+            <div class="row">
+                <div class="col-sm-1 col-md-2 mobmid">
+                    <span class="secicon fa fa-magic"></span>
+                </div>
+                <!--icon end-->
+
+                <div class="col-sm-11 col-md-10">
+                    <div class="col-sm-11 col-md-10 ">
+
+                        <div class="award">
+                            <h4>Locations</h4>
+                            <!--<div *ngFor="#location of developer.locations">
+                                {{location.name}}
+                            </div>-->
+                    </div>
+
+                        <div class="award">
+                            <h4>Languages</h4>
+                            <p>{{developer.languages}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--tech skills end-->
+
+            <hr>
+
+            <div class="row mobmid">
+                <div class="col-sm-1 col-md-2">
+                    <span class="secicon fa fa-trophy"></span>
+                </div>
+                <!--icon end-->
+
+                <div class="col-sm-11 col-md-10 ">
+                    <h3>Awards</h3>
+
+                    <div class="award">
+                        <h4>Mission Leader</h4>
+                        <p>I did the most missions.</p>
+                    </div>
+                    <!--1st award end-->
+
+                    <div class="award">
+                        <h4>Most Answers</h4>
+                        <p>I answered the most ?</p>
+                    </div>
+                    <!--1st award end-->
+                </div>
+                <!--awards end-->
+
+            </div>
+
+            <hr>
+
+            <div class="row ">
+                <div class="col-sm-1 col-md-2 mobmid">
+                    <span class="secicon fa fa-quote-left"></span>
+                </div>
+                <!--icon end-->
+
+                <div class="col-sm-11 col-md-10 testimonials">
+                    <h3 class="mobmid">Leaderboard </h3>
+
+                    <div class="row">
+                        <blockquote>
+                            <p>showsomething</p>
+                        </blockquote>
+                    </div>
+                    <!--1st testimonial end-->
+                </div>
+                <!--awards end-->
+            </div>
+            <!--tech skills end-->
         </div>
+        <!--right end-->
+
 
     </div>
+    <!--container end-->
+
+    <!-- ===========================
+    FOOTER
+    =========================== -->
+    <footer class="text-center">
+        <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+        (click)="onSelect(developer)">Edit Developer</button>
+        &nbsp;
+        <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="gotoDevelopers()">Cancel</button>
+    </footer>
+    <div>
+        <p></p>
+    </div>
+
+</div>

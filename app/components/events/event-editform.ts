@@ -37,5 +37,9 @@ export class EventEditFormComponent {
         this.selectedEvent.type = event.target.options.selectedIndex; 
         this.selectedType = EVENT_TYPES[event.target.options.selectedIndex]
     }
+    
+    addSpeaker(){
+        
+    }
 
 }

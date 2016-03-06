@@ -30,7 +30,7 @@ export class CommunitiesListingComponent  {
         this._router.navigate(['CommunityEdit']);
     }
     onSelect(developer) {
-        this.store.dispatch({type: 'SELECT_DEVELOPER', payload: developer});
+        this.store.dispatch({type: 'SELECT_DEVELOPER', payload: Observable.of(developer)});
        this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail']);
     }
     
