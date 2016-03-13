@@ -1,17 +1,13 @@
 import {IDeveloper} from '../developers/developer';
 import {IEvent} from '../events/event';
 import {ICommunity} from '../communities/community';
+import {IContent} from '../content/content';
 
 export interface AppStore {
     developers: IDeveloper[];
-    selectedDeveloper: IDeveloper;
-    
     events: IEvent[];
-    selectedEvent: IEvent;
-    
-    communities: ICommunity[];
-    selectedCommunity: ICommunity;
-    
+    communities: ICommunity[];    
+    contents: IContent[];   
 }
 
 export const developers = (state: any = [], {type, payload}) => {
@@ -33,16 +29,6 @@ export const developers = (state: any = [], {type, payload}) => {
   }
 };
 
-export const selectedDeveloper = (state: any = null, {type, payload}) => {
-  switch (type) {
-    case 'SELECT_DEVELOPER':
-      return payload;
-    default:
-      return state;
-  }
-};
-
-
 export const events = (state: any = [], {type, payload}) => {
   switch (type) {
     case 'ADD_EVENTS':
@@ -61,16 +47,6 @@ export const events = (state: any = [], {type, payload}) => {
       return state;
   }
 };
-
-export const selectedEvent = (state: any = null, {type, payload}) => {
-  switch (type) {
-    case 'SELECT_EVENT':
-      return payload;
-    default:
-      return state;
-  }
-};
-
 
 export const communities = (state: any = [], {type, payload}) => {
   switch (type) {
@@ -91,11 +67,22 @@ export const communities = (state: any = [], {type, payload}) => {
   }
 };
 
-export const selectedCommunity = (state: any = null, {type, payload}) => {
+export const contents = (state: any = [], {type, payload}) => {
   switch (type) {
-    case 'SELECT_COMMUNITY':
+    case 'ADD_CONTENTS':
       return payload;
+    case 'CREATE_CONTENT':
+      return [...state, payload];
+    case 'UPDATE_CONTENT':
+      return state.map(content => {
+        return content.id === payload.id ? Object.assign({}, content, payload) : content;
+      });
+    case 'DELETE_CONTENT':
+      return state.filter(content => {
+        return content.id !== payload.id;
+      });
     default:
       return state;
   }
 };
+

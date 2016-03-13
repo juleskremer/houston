@@ -1,30 +1,27 @@
-import {LANGUAGES} from './mock-language';
-import {COUNTRIES} from './mock-countries';
+import {Observable} from 'rxjs';
+import {Http} from 'angular2/http';
+import {Injectable} from 'angular2/core';
+
+const BASE_URL = 'http://localhost:3004/';
 
 export interface ILanguage {
-    code: string;
+    id: string;
     name: string;
-    nativeName: string;
 }
 
-export interface Country {
-    name: string;
-    code: string;
-}
-
+@Injectable()
 export class CommonService {
 
-    getLanguages(): Promise<ILanguage[]> { return Promise.resolve(LANGUAGES); }
+    constructor(public _http: Http){}
 
-    getLanguage(id: string): Promise<ILanguage> {
-        return Promise.resolve(LANGUAGES)
-            .then(languages => languages.find((lang) => lang.code === id));
+    fetchLanguages(): Observable<ILanguage[]> {
+        return this._http.get(BASE_URL + 'languages')
+            .map(res => res.json());
     }
-
-    getCountries(): Promise<Country[]> { return Promise.resolve(COUNTRIES); }
-
-    getCountry(id: string): Promise<Country> {
-        return Promise.resolve(COUNTRIES)
-            .then(countries => countries.find((country) => country.code === id));
+    
+    searchLanguages(query){
+        
+        return this._http.get(BASE_URL + 'languages' + '/' + query)
+          .map(res => res.json());
     }
 }

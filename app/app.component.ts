@@ -8,6 +8,8 @@ import {EventsComponent} from './components/events/events';
 import {EventsService} from './services/events/events.service';
 import {CommunitiesComponent} from './components/communities/communities';
 import {CommunitiesService} from './services/communities/communities.service';
+import {ContentsComponent} from './components/content/contents';
+import {ContentsService} from './services/content/contents.service';
 import {DataService} from './services/dataservice/dataservice';
 
 @Component({
@@ -15,7 +17,13 @@ import {DataService} from './services/dataservice/dataservice';
     templateUrl: 'app/app.component.html',
     viewProviders: [],
     directives: [[ROUTER_DIRECTIVES]],
-    providers: [ROUTER_PROVIDERS, DataService, EventsService, DeveloperService, CommunitiesService]
+    providers: [ROUTER_PROVIDERS, 
+                DataService, 
+                EventsService, 
+                DeveloperService, 
+                CommunitiesService,
+                ContentsService
+    ]
 })
 @RouteConfig([
     {
@@ -38,6 +46,11 @@ import {DataService} from './services/dataservice/dataservice';
         path: '/communities/...',
         name: 'CommunitiesComponent',
         component: CommunitiesComponent
+    },
+    {
+        path: '/contents/...',
+        name: 'ContentsComponent',
+        component: ContentsComponent
     }
 ])
 

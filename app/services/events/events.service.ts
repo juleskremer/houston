@@ -31,7 +31,7 @@ export class EventsService {
             this.store.select('developers'),
             (events: any[], developers: any[]) => {
                 return events.map(event => {
-                    var speakers: Array<IDeveloper> = Object.keys(event.speakers).map(speakerId => developers.find(developer => developer.id === speakerId))
+                    var speakers: Array<IDeveloper> = Object.keys(event.speakers).map(speakerId => developers.find(developer => developer.id === speakerId) || ({id:speakerId}))
                     return Object.assign({}, event, { speakers: speakers });
                 });
             });        

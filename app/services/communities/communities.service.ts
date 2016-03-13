@@ -30,8 +30,8 @@ export class CommunitiesService {
             this.store.select('developers'),
             (communities: any[], developers: any[]) => {
                 return communities.map(community => {
-                    var members: Array<IDeveloper> = Object.keys(community.members).map(memberId => developers.find(developer => developer.id === memberId))
-                    var contact: IDeveloper = developers.find(developer => developer.id === community.contact);
+                    var members: Array<IDeveloper> = Object.keys(community.members).map(memberId => developers.find(developer => developer.id === memberId) || ({id:memberId}))
+                    var contact: IDeveloper = developers.find(developer => developer.id === community.contact) || ({id:community.contact});
                     var trying = Object.assign({}, community, { members: members, contact: contact });
                     return trying;
                 });

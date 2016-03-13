@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="mdl-grid">
+        <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet" *ngFor="#content of content$ | async">
+
+            <div class="mdl-card mdl-shadow--2dp">
+                <div class="mdl-card__title mdl-card--expand">
+                    <div [ngSwitch]="content.type">
+                        <template [ngSwitchWhen]="'video'"><i class="material-icons">chat</i></template>
+                        <template [ngSwitchWhen]="'presentation'"><i class="material-icons">group</i></template>
+                        <template [ngSwitchWhen]="'paper'"><i class="material-icons">group</i></template>
+                        <template [ngSwitchWhen]="'other'"><i class="material-icons">hearing</i></template>
+                        <template ngSwitchDefault><i class="material-icons">bookmark</i></template>
+                    </div>
+                    <a href="{{content.url}}">{{content.title}}</a> 
+                    <p>{{content.description}}</p>
+                </div>
+                <div *ngIf="content.contact">
+                    <div class=" mdl-card__actions mdl-card--border ">
+                        Author: {{content.author.firstName}} {{content.author.lastName}}
+                    </div>
+                </div>
+                <div class="mdl-card__actions mdl-card--border ">
+                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect " data-upgraded=",MaterialButton,MaterialRipple "
+                    (click)="onEdit(content) ">Edit</a>
+                </div>
+            </div>
+
+            <div></div>
+        </div>
+    </div>
+</div>

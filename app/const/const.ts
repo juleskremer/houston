@@ -13,3 +13,11 @@ export const  COMMUNITY_TYPES = [
        {id: "gdg", name:"Google Developer Group"},
        {id: "other", name: "Other"}
    ]
+   
+      
+export const  CONTENT_TYPES = [
+       {id: "video", name: "Video"},
+       {id: "presentation", name:"Presentation"},
+       {id: "paper", name:"Blog/Paper/Document"},
+       {id: "other", name: "Other"}
+   ]

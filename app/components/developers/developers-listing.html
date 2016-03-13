@@ -1,21 +1,25 @@
 <div *ngIf="developers$">
+
+    
     <div class="mdl-grid">
         <div class="mdl-cell mdl-cell--4-col mdl-cell--6-col-tablet" *ngFor="#developer of developers$ | async">
             <div class="mdl-card mdl-shadow--2dp mdl-card--horizontal">
-                <div class="mdl-card__media">
-                    <img src="./images/expertslogo.png" width="150" height="200" alt="img">
-                </div>
-                <div class="mdl-card__title">
-                    <h2 class="mdl-card__title-text">{{developer.firstName}}<br>{{developer.lastName}}</h2>
-                </div>
-                <div class="mdl-card__supporting-text">
-                    <a href="http://www.twitter.com/{{developer.twitterID}}"><img src="./images/twitter.svg" width="25" height="25"></a>
-                    <a href="http://www.github.com/{{developer.id}}"><img src="./images/github.svg" width="25" height="25"></a>
-                </div>
-                <div class="mdl-card__actions mdl-card--border">
-                    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"
-                    (click)="onSelect(developer)">Details</a>
-                </div>
+                <div class="row">
+                    <div class="mdl-card__media">
+                        <img class="propic" src="{{developer.picUrl}}" alt="{{developer.lastName}}">
+                    </div>
+                    <div class="mdl-card__title">
+                        <h2 class="mdl-card__title-text">{{developer.firstName}}<br>{{developer.lastName}}</h2>
+                    </div>
+                    <div class="mdl-card__supporting-text">
+                        <a href="http://www.twitter.com/{{developer.twitterID}}"><img src="./images/twitter.svg" width="25" height="25"></a>
+                        <a href="http://www.github.com/{{developer.id}}"><img src="./images/github.svg" width="25" height="25"></a>
+                    </div>
+                    <div class="mdl-card__actions mdl-card--border">
+                        <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" data-upgraded=",MaterialButton,MaterialRipple"
+                        (click)="onSelect(developer)">Details</a>
+                    </div>
+                 </div>
             </div>
         </div>
     </div>

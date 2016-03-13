@@ -1,0 +1,46 @@
+<div class="container">
+    <!--<div [hidden]="submitted">-->
+    <form (ngSubmit)="onSubmit()" #contentedit="ngForm">
+        <article class="template animated slideInRight">
+            <div>
+                <h4 *ngIf="!selectedContent.id">Creating New Content</h4>
+                <h4 *ngIf="selectedContent.id">{{selectedContent.title}}</h4>
+
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="name">Title</label>
+                    <input type="text" id="title" class="mdl-textfield__input" 
+                        [(ngModel)]="selectedContent.title" />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="type">Type</label>
+                    <input type="text" id="type" class="mdl-textfield__input" 
+                        [(ngModel)]="selectedContent.type" />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="location">Description</label>
+                    <input type="text" id="location" class="mdl-textfield__input" 
+                        [(ngModel)]="selectedContent.description" />
+                </div>
+                <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                    <label class="mdl-textfield__label" for="url">URL</label>
+                    <input type="text" id="url" class="mdl-textfield__input" 
+                        [(ngModel)]="selectedContent.url" />
+                </div>
+            </div>
+            <div>
+                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                (click)="save.emit(selectedContent)" >Save</button>
+                &nbsp;
+                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="cancel.emit()">Cancel</button>
+                &nbsp;
+                <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="delete()">Delete</button>
+            </div>
+        </article>
+    </form>
+
+    <!--</div>-->
+
+    <!--<div [hidden]="!submitted">
+        <p>yay you saved something</p>
+    </div>-->
+    <div>

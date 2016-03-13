@@ -4,91 +4,154 @@
         <form (ngSubmit)="onSubmit()" #developeredit="ngForm">
             <article class="template animated slideInRight">
                 <div *ngIf="developer">
-                    <h4>{{developer.firstName}} {{developer.lastName}}</h4>
 
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="firstName">First Name</label>
-                        <input type="text" id="firstName" class="mdl-textfield__input" [(ngModel)]="developer.firstName" />
+                    <!--ROW HEADER-->
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <img class="propic" src="{{developer.picUrl}}" alt="{{developer.lastName}}">
+                            <p>Change Profile Picture</p>
+                        </div>
+                        <h2>{{developer.firstName}} {{developer.lastName}}</h2>
+                        <div class="row">
+                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                <!--this WIDTH should not be set here, but need someone who gets CSS :)-->
+                                <textarea style="width:800px" class="mdl-textfield__input" type="text " rows="10" id="bio " [(ngModel)]="developer.bio "></textarea>
+                                <label class="mdl-textfield__label " for="sample5 ">Bio</label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="lastName">Last Name</label>
-                        <input type="text" id="lastName" class="mdl-textfield__input" [(ngModel)]="developer.lastName" />
+                    <hr>
+
+                    <!--ROW PROFILE BASICS-->
+                    <div class="row">
+                        <!--COLUMN BASIC INFORMATION-->
+                        <div class="row ">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><i class="material-icons">person</i>  Basic Information</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="mdl-textfield mdl-js-textfield ">
+                                        <label class="mdl-textfield__label " for="firstName ">First Name</label>
+                                        <input type="text " id="firstName " class="mdl-textfield__input " [(ngModel)]="developer.firstName " />
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="lastName ">Last Name</label>
+                                        <input type="text " id="lastName " class="mdl-textfield__input " [(ngModel)]="developer.lastName " />
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="eMail ">E-Mail</label>
+                                        <input type="text " id="eMail " class="mdl-textfield__input " [(ngModel)]="developer.eMail " />
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="locations ">Phone Number</label>
+                                        <input type="text " id="locations " class="mdl-textfield__input " [(ngModel)]="developer.phone " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><i class="material-icons">web</i>  Web Links</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="blogUrl ">Blog Url</label>
+                                        <input type="text " id="blogUrl " class="mdl-textfield__input " [(ngModel)]="developer.blogUrl " />
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="locations ">Resume Url</label>
+                                        <input type="text " id="locations " class="mdl-textfield__input " [(ngModel)]="developer.resumeUrl " />
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="locations ">Website Url</label>
+                                        <input type="text " id="locations " class="mdl-textfield__input " [(ngModel)]="developer.webpage " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><i class="material-icons">plus_one</i>  Social IDs</h3>
+                                </div>
+                                <div class="panel-body">
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="id ">Git ID</label>
+                                        <input type="text " id="id " class="mdl-textfield__input " [(ngModel)]="developer.id " />
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="twitterID ">Twitter ID</label>
+                                        <input type="text " id="twitterID " class="mdl-textfield__input " [(ngModel)]="developer.twitterID " />
+                                    </div>
+                                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                        <label class="mdl-textfield__label " for="locations ">Linked In ID</label>
+                                        <input type="text " id="locations " class="mdl-textfield__input " [(ngModel)]="developer.linkedIn " />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><i class="material-icons">language</i>  Languages</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="col-sm-4">
+                                            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                            <div *ngFor='#language of developer.languages | values:"key":true'>
+                                                {{language}}
+                                            </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-2">
+                                            <h2>Add Language</h2>
+                                            <!--<input [ngFormControl]="searchLanguages">
+                                            <div *ngFor="#language of searchResults | async">
+                                                </div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="panel panel-default">
+                                    <div class="panel-heading">
+                                        <h3 class="panel-title"><i class="material-icons">location_on</i>  Business Locations</h3>
+                                    </div>
+                                    <div class="panel-body">
+                                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label ">
+                                            <div *ngFor='#location of developer.locations | values:"key":true'>
+                                                {{location}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="eMail">E-Mail</label>
-                        <input type="text" id="eMail" class="mdl-textfield__input" [(ngModel)]="developer.eMail" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="id">Git ID</label>
-                        <input type="text" id="id" class="mdl-textfield__input" [(ngModel)]="developer.id" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="twitterID">Twitter ID</label>
-                        <input type="text" id="twitterID" class="mdl-textfield__input" [(ngModel)]="developer.twitterID" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="picUrl">Bio Pic Url</label>
-                        <input type="text" id="picUrl" class="mdl-textfield__input" [(ngModel)]="developer.picUrl" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="blogUrl">Blog Url</label>
-                        <input type="text" id="blogUrl" class="mdl-textfield__input" [(ngModel)]="developer.blogUrl" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="languages">Languages</label>
-                        <input type="text" id="languages" class="mdl-textfield__input" [(ngModel)]="developer.languages" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="locations">Locations</label>
-                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.locations" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="locations">Resume Url</label>
-                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.resumeUrl" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="locations">Twitter ID</label>
-                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.twitterID" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="locations">Linked In ID</label>
-                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.linkedIn" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="locations">Website Url</label>
-                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.webpage" />
-                    </div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <label class="mdl-textfield__label" for="locations">Phone Number</label>
-                        <input type="text" id="locations" class="mdl-textfield__input" [(ngModel)]="developer.phone" />
-                    </div>
+                    <!--FOOTER BUTTONS-->
+                    <hr>
                     <div>
-                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-                        <textarea class="mdl-textfield__input" type="text" rows="5" id="bio" [(ngModel)]="developer.bio"></textarea>
-                        <label class="mdl-textfield__label" for="sample5">Bio</label>
-                    </div>
-                    </div>
-
-
-
-
-                    <div>
-                        <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
-      mdl-button--accent" (click)="save.emit(developer)" [disabled]="!developeredit.form.valid">Save</button>
+                        <button type="submit " class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
+                    mdl-button--accent " (click)="save.emit(developer) " [disabled]="!developeredit.form.valid ">Save</button>
                         &nbsp;
                         <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
-      " (click)="onCancel(developer)">Cancel</button>
+                    " (click)="onCancel(developer) ">Cancel</button>
                         &nbsp;
-                        <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="delete()">Delete</button>
+                        <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect
+                    " (click)="delete() ">Delete</button>
                     </div>
-
                 </div>
             </article>
         </form>
 
     </div>
 
-    <div [hidden]="!submitted">
+    <div [hidden]="!submitted ">
         <p>you submitted somethan</p>
     </div>
     <div>
