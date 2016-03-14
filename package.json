@@ -11,6 +11,11 @@
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
   },
   "license": "MIT",
+  "dependenciesNotes": {
+    "bootstrap": "we use only css for styling - this will be eventually replaced with better base css or material design",
+    "es6-promise": "required polyfill for angular2",
+    "es6-shim": "required polyfill for angular2"
+  },
   "dependencies": {
     "@ngrx/store": "^1.3.3",
     "angular2": "2.0.0-beta.8",
