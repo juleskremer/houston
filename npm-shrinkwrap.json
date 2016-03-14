@@ -2321,11 +2321,6 @@
       "from": "nested-error-stacks@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/nested-error-stacks/-/nested-error-stacks-1.0.2.tgz"
     },
-    "ng2-bootstrap": {
-      "version": "0.53.0",
-      "from": "ng2-bootstrap@>=0.53.0 <0.54.0",
-      "resolved": "https://registry.npmjs.org/ng2-bootstrap/-/ng2-bootstrap-0.53.0.tgz"
-    },
     "node-status-codes": {
       "version": "1.0.0",
       "from": "node-status-codes@>=1.0.0 <2.0.0",
