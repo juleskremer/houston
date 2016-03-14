@@ -2609,23 +2609,6 @@
       "from": "preserve@>=0.2.0 <0.3.0",
       "resolved": "https://registry.npmjs.org/preserve/-/preserve-0.2.0.tgz"
     },
-    "primeng": {
-      "version": "0.5.0",
-      "from": "primeng@>=0.5.0 <0.6.0",
-      "resolved": "https://registry.npmjs.org/primeng/-/primeng-0.5.0.tgz",
-      "dependencies": {
-        "angular2": {
-          "version": "2.0.0-beta.7",
-          "from": "angular2@2.0.0-beta.7",
-          "resolved": "https://registry.npmjs.org/angular2/-/angular2-2.0.0-beta.7.tgz"
-        },
-        "systemjs": {
-          "version": "0.19.22",
-          "from": "systemjs@0.19.22",
-          "resolved": "https://registry.npmjs.org/systemjs/-/systemjs-0.19.22.tgz"
-        }
-      }
-    },
     "process-nextick-args": {
       "version": "1.0.6",
       "from": "process-nextick-args@>=1.0.6 <1.1.0",
