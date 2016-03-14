@@ -1953,11 +1953,6 @@
       "from": "js-tokens@>=1.0.1 <2.0.0",
       "resolved": "https://registry.npmjs.org/js-tokens/-/js-tokens-1.0.2.tgz"
     },
-    "json-loader": {
-      "version": "0.5.4",
-      "from": "json-loader@>=0.5.3 <0.6.0",
-      "resolved": "https://registry.npmjs.org/json-loader/-/json-loader-0.5.4.tgz"
-    },
     "json-parse-helpfulerror": {
       "version": "1.0.3",
       "from": "json-parse-helpfulerror@>=1.0.3 <2.0.0",
