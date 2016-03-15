@@ -1,6 +1,6 @@
 import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {IDeveloper} from '../../services/developers/developer';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {DeveloperDetailsComponent} from './developer-details';
 import {RouteParams} from 'angular2/router';
 import {DataService} from '../../services/dataservice/dataservice';

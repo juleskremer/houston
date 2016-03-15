@@ -7,7 +7,7 @@ import {CommunitiesService} from '../communities/communities.service';
 import {IContent} from '../content/content';
 import {ContentsService} from '../content/contents.service';
 import {Injectable} from 'angular2/core';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class DataService {

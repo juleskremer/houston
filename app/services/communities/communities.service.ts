@@ -1,10 +1,11 @@
 import {ICommunity} from './community';
 import {Injectable} from 'angular2/core';
 import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../store/appstore';
 import {IDeveloper} from '../developers/developer';
+import 'rxjs/add/observable/combineLatest';
 
 const BASE_URL = 'http://localhost:3004/communities/';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
@@ -35,8 +36,8 @@ export class CommunitiesService {
                     var trying = Object.assign({}, community, { members: members, contact: contact });
                     return trying;
                 });
-            });   
-       
+            });
+
     }
 
     saveCommunity(community: ICommunity) {
@@ -55,7 +56,7 @@ export class CommunitiesService {
             .subscribe(action => this.store.dispatch({ type: 'UPDATE_COMMUNITY', payload: event }));
 
     }
-    
+
     // NOTE: Utility functions to simulate server generated IDs
     private addUUID(community: ICommunity): ICommunity {
         return Object.assign({}, community, { id: this.generateUUID() }); // Avoiding state mutation FTW!

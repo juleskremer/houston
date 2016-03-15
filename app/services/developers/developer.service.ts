@@ -3,9 +3,10 @@ import {IEvent} from '../events/event';
 import {ICommunity} from '../communities/community';
 import {Injectable} from 'angular2/core';
 import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../store/appstore';
+import 'rxjs/add/observable/combineLatest';
 
 const BASE_URL = 'http://localhost:3004/developers';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
@@ -34,11 +35,11 @@ export class DeveloperService {
             this.store.select('communities'),
             (developers: any[], events: any[], communities: any[]) => {
                 return developers.map(developer => {
-                    var devEvents: Array<IEvent> = Object.keys(developer.events).map(eventId => events.find(event => event.id === eventId) || ({id:eventId}));                   
-                    var devCommunities: Array<ICommunity> = Object.keys(developer.communities).map(communityId => communities.find(community => community.id === communityId) || ({id:communityId}));                   
+                    var devEvents: Array<IEvent> = Object.keys(developer.events).map(eventId => events.find(event => event.id === eventId) || ({id:eventId}));
+                    var devCommunities: Array<ICommunity> = Object.keys(developer.communities).map(communityId => communities.find(community => community.id === communityId) || ({id:communityId}));
                     return Object.assign({}, developer, { events: devEvents, communities: devCommunities });
                 });
-            });   
+            });
 
     }
 

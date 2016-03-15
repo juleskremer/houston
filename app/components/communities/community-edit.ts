@@ -1,6 +1,6 @@
 import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {ICommunity} from '../../services/communities/community';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {CommunityEditFormComponent} from './community-editform';
 import {CommunitiesService} from '../../services/communities/communities.service';
 import {Router, RouteParams} from 'angular2/router';

@@ -1,6 +1,6 @@
 import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {IContent} from '../../services/content/content';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {ContentEditFormComponent} from './content-editform';
 import {ContentsService} from '../../services/content/contents.service';
 import {Router, RouteParams} from 'angular2/router';

@@ -1,6 +1,6 @@
 import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {IDeveloper} from '../../services/developers/developer';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {DeveloperEditFormComponent} from './developer-editform';
 import {DeveloperService} from '../../services/developers/developer.service';
 import {DataService} from '../../services/dataservice/dataservice';

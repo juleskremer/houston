@@ -1,5 +1,5 @@
 import {IDeveloper} from '../developers/developer';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 
 export interface IEvent {
   id: string;

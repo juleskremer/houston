@@ -1,6 +1,6 @@
 import {Component, Input, ChangeDetectionStrategy} from 'angular2/core';
 import {IContent} from '../../services/content/content';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {EventEmitter, Output} from 'angular2/core';
 import {CONTENT_TYPES} from '../../const/const';
 

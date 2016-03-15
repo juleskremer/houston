@@ -1,6 +1,6 @@
 import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {Router} from 'angular2/router';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../../services/store/appstore';
 import {IContent} from '../../services/content/content';

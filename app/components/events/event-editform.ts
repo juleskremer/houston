@@ -1,6 +1,6 @@
 import {Component, Input, ChangeDetectionStrategy} from 'angular2/core';
 import {IEvent} from '../../services/events/event';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {EventEmitter, Output} from 'angular2/core';
 import {EVENT_TYPES} from '../../const/const';
 

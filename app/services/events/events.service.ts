@@ -1,10 +1,11 @@
 import {IEvent} from './event';
 import {Injectable} from 'angular2/core';
 import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../store/appstore';
 import {IDeveloper} from '../developers/developer';
+import 'rxjs/add/observable/combineLatest';
 
 const BASE_URL = 'http://localhost:3004/events/';
 const HEADER = { headers: new Headers({ 'Content-Type': 'application/json' }) };
@@ -34,7 +35,7 @@ export class EventsService {
                     var speakers: Array<IDeveloper> = Object.keys(event.speakers).map(speakerId => developers.find(developer => developer.id === speakerId) || ({id:speakerId}))
                     return Object.assign({}, event, { speakers: speakers });
                 });
-            });        
+            });
     }
 
     saveEvent(event: IEvent) {
@@ -53,7 +54,7 @@ export class EventsService {
             .subscribe(action => this.store.dispatch({ type: 'UPDATE_EVENT', payload: event }));
 
     }
-    
+
     // NOTE: Utility functions to simulate server generated IDs
     private addUUID(event: IEvent): IEvent {
         return Object.assign({}, event, { id: this.generateUUID() }); // Avoiding state mutation FTW!

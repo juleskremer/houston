@@ -1,6 +1,6 @@
 import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {IEvent} from '../../services/events/event';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {EventEditFormComponent} from './event-editform';
 import {EventsService} from '../../services/events/events.service';
 import {Router, RouteParams} from 'angular2/router';

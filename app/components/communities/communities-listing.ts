@@ -1,7 +1,7 @@
 import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {ICommunity} from '../../services/communities/community';
 import {Router} from 'angular2/router';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../../services/store/appstore';
 import {DataService} from '../../services/dataservice/dataservice';
@@ -23,7 +23,7 @@ export class CommunitiesListingComponent  {
     ) {
         this.communities$ = _dataService.communities$;
     }
-    
+
     onEdit(community: ICommunity) {
         this._router.navigate(['CommunityEdit', { id: community.id }]);
 
@@ -31,8 +31,8 @@ export class CommunitiesListingComponent  {
     onSelect(developer) {
        this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', { id: developer.id }]);
     }
-    
+
     onNew(){
-        this._router.navigate(['CommunityEdit']);        
+        this._router.navigate(['CommunityEdit']);
     }
 }

@@ -3,7 +3,7 @@ import {NgForm, Control} from 'angular2/common';
 import {IDeveloper} from '../../services/developers/developer';
 import {Router} from 'angular2/router';
 import {ILanguage, CommonService} from '../../services/common/common.service';
-import {Observable} from 'rxjs';
+import {Observable} from 'rxjs/Observable';
 import {EventEmitter, Output} from 'angular2/core';
 import {ValuesPipe} from '../../pipes/valuespipe';
 
