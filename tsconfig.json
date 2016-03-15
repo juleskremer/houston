@@ -9,9 +9,8 @@
     "removeComments": false,
     "noImplicitAny": false
   },
-  "exclude": [
-    "node_modules",
-    "typings/main",
-    "typings/main.d.ts"
+  "files": [
+    "app/boot.ts",
+    "typings/browser.d.ts"
   ]
 }
