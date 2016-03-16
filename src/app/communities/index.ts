@@ -1,0 +1,1 @@
+export {CommunitiesComponent} from './communities';

@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Foo</title>
+  <base href="/">
+  {{content-for 'head'}}
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.pink-red.min.css" />
+  <script src="https://storage.googleapis.com/code.getmdl.io/1.0.6/material.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:300,400,500,700" type="text/css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="vendor/bootstrap/dist/css/bootstrap.min.css">
+
+  <!-- for responsive bootstrap -->
+  <link rel="stylesheet" href="rstyle.css">
+  <link rel="stylesheet" href="responsive.css">
+  <link href='https://fonts.googleapis.com/css?family=Kristi|Alegreya+Sans:300' rel='stylesheet' type='text/css'>
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+<houston-app>Loading....</houston-app>
+
+<!-- TODO: do we need this?
+<script src="vendor/es6-shim/es6-shim.js"></script>
+
+https://github.com/systemjs/systemjs#polyfills
+<script src="vendor/systemjs/dist/system-polyfills.js"></script>
+-->
+<!-- https://github.com/angular/angular/blob/master/modules/angular2/docs/bundles/overview.md -->
+<script src="vendor/angular2/bundles/angular2-polyfills.js"></script>
+<script src="vendor/systemjs/dist/system.src.js"></script>
+<script src="vendor/rxjs/bundles/Rx.js"></script>
+
+<script src="vendor/angular2/bundles/angular2.dev.js"></script>
+<script src="vendor/angular2/bundles/http.dev.js"></script>
+<script src="vendor/angular2/bundles/router.dev.js"></script>
+
+<script src="thirdparty/libs.js"></script>
+<script>
+  System.config({
+    packages: {
+      app: {
+        format: 'register',
+        defaultExtension: 'js'
+      },
+      '@ngrx/store': {
+        main: 'dist/index.js',
+        defaultExtension: 'js'
+      },
+    },
+    map: {
+      '@ngrx/store': 'vendor/@ngrx/store'
+    }
+  });
+
+  // TODO: cli should auto-generate this on the fly
+  var barrelConfig = [
+    'app/_/communities',
+    'app/_/data-service',
+    'app/_/developers',
+    'app/_/events',
+    'app/_/language-service',
+    'app/_/missions',
+    'app/_/store',
+    'app/_/values-pipe',
+    'app/communities/',
+    'app/communities/communities-listing',
+    'app/communities/community-edit',
+    'app/developers/',
+    'app/developers/developer-details',
+    'app/developers/developer-edit',
+    'app/developers/developers-listing',
+    'app/events/',
+    'app/events/event-edit',
+    'app/events/events-listing',
+    'app/missions/',
+    'app/missions/mission-detail',
+    'app/missions/mission-edit',
+    'app/missions/missions-listings',
+
+  ].reduce(function(barrelConfig, barrelName) {
+    barrelConfig[barrelName] = {
+        format: 'register',
+        defaultExtension: 'js',
+        main: 'index'
+    };
+    return barrelConfig;
+  }, {});
+
+  System.config({
+    packages: barrelConfig
+  });
+
+  System.import('app/main.js').then(null, console.error.bind(console));
+</script>
+</body>
+</html>

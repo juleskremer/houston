@@ -10,7 +10,7 @@
     "noImplicitAny": false
   },
   "files": [
-    "app/boot.ts",
+    "app/main.ts",
     "typings/browser.d.ts"
   ]
 }

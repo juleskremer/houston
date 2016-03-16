@@ -1,0 +1,1 @@
+export {DeveloperDetailsComponent} from './developer-details'

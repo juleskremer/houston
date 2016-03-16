@@ -1,0 +1,1 @@
+export {DeveloperEditComponent} from './developer-edit';

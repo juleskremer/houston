@@ -1,0 +1,1 @@
+export {EventEditComponent} from './event-edit';

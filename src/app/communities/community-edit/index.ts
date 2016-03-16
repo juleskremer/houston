@@ -1,0 +1,1 @@
+export {CommunityEditComponent} from './community-edit';

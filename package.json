@@ -7,7 +7,7 @@
     "lite": "lite-server",
     "typings": "typings",
     "postinstall": "typings install",
-    "server": "json-server --watch app/mock-data/db.json --port 3004",
+    "server": "json-server --watch mock-data/db.json --port 3004",
     "start": "concurrent \"npm run tsc:w\" \"npm run lite\" "
   },
   "license": "MIT",
