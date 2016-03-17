@@ -28,7 +28,7 @@
     "zone.js": "0.5.15"
   },
   "devDependencies": {
-    "angular-cli": "0.0.*",
+    "angular-cli": "github:igorminar/angular-cli#build-typings",
     "concurrently": "^1.0.0",
     "json-server": "^0.8.7",
     "lite-server": "^1.3.1",
