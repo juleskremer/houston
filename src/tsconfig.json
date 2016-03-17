@@ -16,6 +16,6 @@
   },
   "files": [
     "app/main.ts",
-    "typings/browser.d.ts"
+    "typings.d.ts"
   ]
 }
