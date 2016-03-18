@@ -1830,6 +1830,11 @@
       "from": "ember-cli-get-dependency-depth@>=1.0.0 <2.0.0",
       "resolved": "https://registry.npmjs.org/ember-cli-get-dependency-depth/-/ember-cli-get-dependency-depth-1.0.0.tgz"
     },
+    "ember-cli-inject-live-reload": {
+      "version": "1.4.0",
+      "from": "ember-cli-inject-live-reload@latest",
+      "resolved": "https://registry.npmjs.org/ember-cli-inject-live-reload/-/ember-cli-inject-live-reload-1.4.0.tgz"
+    },
     "ember-cli-is-package-missing": {
       "version": "1.0.0",
       "from": "ember-cli-is-package-missing@>=1.0.0 <2.0.0",
