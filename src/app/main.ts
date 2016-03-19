@@ -15,5 +15,4 @@ bootstrap(AppComponent, [
             events,
             communities,
      })
-])
-.catch(err => console.error(err));
+]);
