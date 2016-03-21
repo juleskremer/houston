@@ -6,7 +6,7 @@
   "scripts": {
     "start": "ng serve",
     "server": "json-server --watch src/server/mock-data/db.json --port 3004",
-    "postinstall": "typings install; pree2e",
+    "postinstall": "typings install; npm run pree2e",
     "lint": "tslint src/**/*.ts",
     "format": "clang-format -i -style=file --glob=src/**/*.ts",
     "pree2e": "webdriver-manager update",
