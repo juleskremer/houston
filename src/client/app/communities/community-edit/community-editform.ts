@@ -16,21 +16,18 @@ export class CommunityEditFormComponent {
   communityTypes = COMMUNITY_TYPES;
 
   @Output()
-  save:EventEmitter<ICommunity> = new EventEmitter();
+  save: EventEmitter<ICommunity> = new EventEmitter();
   @Output()
-  cancel:EventEmitter<ICommunity> = new EventEmitter();
+  cancel: EventEmitter<ICommunity> = new EventEmitter();
 
-  originalID:string;
-  selectedCommunity:ICommunity;
+  originalID: string;
+  selectedCommunity: ICommunity;
 
   @Input('community')
-  set community(value:ICommunity) {
+  set community(value: ICommunity) {
     if (value) this.originalID = value.id;
     this.selectedCommunity = Object.assign({}, value);
   }
 
-  onSubmit() {
-    this.submitted = true;
-  }
-
+  onSubmit() { this.submitted = true; }
 }

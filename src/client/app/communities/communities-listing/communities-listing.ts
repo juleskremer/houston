@@ -16,25 +16,18 @@ import {DataService} from '../../_/data-service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CommunitiesListingComponent {
+  communities$: Observable<ICommunity[]>;
 
-  communities$:Observable<ICommunity[]>;
-
-  constructor(private _router:Router,
-              private _dataService:DataService,
-              private store:Store<AppStore>) {
+  constructor(
+      private _router: Router, private _dataService: DataService, private store: Store<AppStore>) {
     this.communities$ = _dataService.communities$;
   }
 
-  onEdit(community:ICommunity) {
-    this._router.navigate(['CommunityEdit', {id: community.id}]);
-
-  }
+  onEdit(community: ICommunity) { this._router.navigate(['CommunityEdit', {id: community.id}]); }
 
   onSelect(developer) {
     this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', {id: developer.id}]);
   }
 
-  onNew() {
-    this._router.navigate(['CommunityEdit']);
-  }
+  onNew() { this._router.navigate(['CommunityEdit']); }
 }

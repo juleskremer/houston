@@ -10,22 +10,18 @@ import {Mission, MissionsService} from '../../_/missions';
   inputs: ['mission']
 })
 export class MissionEditComponent {
-  public mission:Mission;
+  public mission: Mission;
 
   submitted = false;
 
-  onSubmit() {
-    this.submitted = true;
-  }
+  onSubmit() { this.submitted = true; }
 
-  constructor(private _router:Router,
-              private _routeParams:RouteParams,
-              private _service:MissionsService) {
-  }
+  constructor(
+      private _router: Router, private _routeParams: RouteParams,
+      private _service: MissionsService) {}
 
   ngOnInit() {
     let id = this._routeParams.get('id');
     this._service.getMission(id).then(mission => this.mission = mission);
   }
-
 }

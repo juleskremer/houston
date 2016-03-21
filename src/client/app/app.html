@@ -1,28 +1,28 @@
 <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
-    <div class="mdl-layout__drawer">
-        <span class="mdl-layout-title">Houston</span>
-        <nav class="mdl-navigation">
-            <a class="mdl-navigation__link" [routerLink]="['MissionsComponent']">Missions</a>
-            <a class="mdl-navigation__link" [routerLink]="['DevelopersComponent']">Developers</a>
-            <a class="mdl-navigation__link" [routerLink]="['EventsComponent']">Events</a>
-            <a class="mdl-navigation__link" [routerLink]="['CommunitiesComponent']">Communities</a>
-        </nav>
-    </div>
+  <div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">Houston</span>
+    <nav class="mdl-navigation">
+      <a class="mdl-navigation__link" [routerLink]="['MissionsComponent']">Missions</a>
+      <a class="mdl-navigation__link" [routerLink]="['DevelopersComponent']">Developers</a>
+      <a class="mdl-navigation__link" [routerLink]="['EventsComponent']">Events</a>
+      <a class="mdl-navigation__link" [routerLink]="['CommunitiesComponent']">Communities</a>
+    </nav>
+  </div>
 
-    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
-        <header class="mdl-layout__header">
-            <div class="mdl-layout__header-row">
-                <div class="mdl-layout-spacer"></div>
-            </div>
-        </header>
+  <div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <div class="mdl-layout-spacer"></div>
+      </div>
+    </header>
 
-        <main class="mdl-layout__content">
-            <div class="page-content" style="padding-left:10px;">
+    <main class="mdl-layout__content">
+      <div class="page-content" style="padding-left:10px;">
 
-                <router-outlet></router-outlet>
+        <router-outlet></router-outlet>
 
-            </div>
-        </main>
+      </div>
+    </main>
 
-    </div>
+  </div>
 </div>

@@ -1,7 +1,5 @@
 export class HoustonPage {
-  navigateTo() {
-    return browser.get('/');
-  }
+  navigateTo() { return browser.get('/'); }
 
   getTitle() {
     // TODO(i): use getText() instead, but we need to fix stylesheet not to hide the title

@@ -14,51 +14,36 @@ import {CommunitiesComponent} from './communities';
 
 
 @Component({
-    selector: 'houston-app',
-    templateUrl: 'app/app.html',
-    viewProviders: [],
-    directives: [[ROUTER_DIRECTIVES]],
-    providers: [ROUTER_PROVIDERS,
-                DataService,
-                EventsService,
-                DeveloperService,
-                CommunitiesService,
-    ]
+  selector: 'houston-app',
+  templateUrl: 'app/app.html',
+  viewProviders: [],
+  directives: [[ROUTER_DIRECTIVES]],
+  providers: [
+    ROUTER_PROVIDERS,
+    DataService,
+    EventsService,
+    DeveloperService,
+    CommunitiesService,
+  ]
 })
 @RouteConfig([
-    {
-        path: '/developers/...',
-        name: 'DevelopersComponent',
-        component: DevelopersComponent,
-        useAsDefault: true
-    },
-    {
-        path: '/events/...',
-        name: 'EventsComponent',
-        component: EventsComponent,
-    },
-    {
-        path: '/missions/...',
-        name: 'MissionsComponent',
-        component: MissionsComponent
-    },
-    {
-        path: '/communities/...',
-        name: 'CommunitiesComponent',
-        component: CommunitiesComponent
-    },
+  {
+    path: '/developers/...',
+    name: 'DevelopersComponent',
+    component: DevelopersComponent,
+    useAsDefault: true
+  },
+  {
+    path: '/events/...',
+    name: 'EventsComponent',
+    component: EventsComponent,
+  },
+  {path: '/missions/...', name: 'MissionsComponent', component: MissionsComponent},
+  {path: '/communities/...', name: 'CommunitiesComponent', component: CommunitiesComponent},
 ])
 
 export class AppComponent implements OnInit {
+  constructor(private _dataService: DataService) {}
 
-    constructor(private _dataService: DataService){
-
-    }
-
-    ngOnInit() {
-
-        this._dataService.initData();
-
-    }
-
+  ngOnInit() { this._dataService.initData(); }
 }

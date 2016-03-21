@@ -10,30 +10,22 @@ import {DataService} from '../../_/data-service';
 
 @Component({
 
-    selector: 'events-listing',
-    templateUrl: 'app/events/events-listing/events-listing.html',
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'events-listing',
+  templateUrl: 'app/events/events-listing/events-listing.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class EventsListingComponent  {
+export class EventsListingComponent {
+  events$: Observable<IEvent[]>;
 
-    events$: Observable<IEvent[]>;
+  constructor(
+      private _router: Router, private _dataService: DataService, private store: Store<AppStore>) {
+    this.events$ = _dataService.events$;
+  }
 
-    constructor(
-        private _router: Router,
-        private _dataService: DataService,
-        private store: Store<AppStore>
-    ) {
-        this.events$ = _dataService.events$;
-    }
+  onEdit(event: IEvent) { this._router.navigate(['EventEdit', {id: event.id}]); }
+  onSpeakerSelect(developer) {
+    this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', {id: developer.id}]);
+  }
 
-    onEdit(event: IEvent) {
-        this._router.navigate(['EventEdit', { id: event.id }]);
-    }
-    onSpeakerSelect(developer) {
-       this._router.parent.navigate(['DevelopersComponent', 'DeveloperDetail', { id: developer.id }]);
-    }
-
-    onNew(){
-        this._router.navigate(['EventEdit']);
-    }
+  onNew() { this._router.navigate(['EventEdit']); }
 }

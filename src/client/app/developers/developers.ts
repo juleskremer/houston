@@ -8,14 +8,15 @@ import {DeveloperEditComponent} from './developer-edit';
 
 
 @Component({
-    template: '<router-outlet></router-outlet>',
-    directives: [RouterOutlet],
-    providers: [DeveloperService]
+  template: '<router-outlet></router-outlet>',
+  directives: [RouterOutlet],
+  providers: [DeveloperService]
 })
 @RouteConfig([
-    { path: '/', name: 'DevelopersListing', component: DevelopersListingComponent, useAsDefault: true },
-    { path: '/developer-detail/:id', name: 'DeveloperDetail', component: DeveloperDetailsComponent },
-    { path: '/developer-edit/', name: 'DeveloperEdit', component: DeveloperEditComponent }
+  {path: '/', name: 'DevelopersListing', component: DevelopersListingComponent, useAsDefault: true},
+  {path: '/developer-detail/:id', name: 'DeveloperDetail', component: DeveloperDetailsComponent},
+  {path: '/developer-edit/', name: 'DeveloperEdit', component: DeveloperEditComponent}
 
 ])
-export class DevelopersComponent { }
+export class DevelopersComponent {
+}

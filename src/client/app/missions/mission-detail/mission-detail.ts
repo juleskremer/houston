@@ -5,28 +5,22 @@ import {Mission, MissionsService} from '../../_/missions';
 
 
 @Component({
-    selector: 'my-mission-detail',
-    templateUrl: 'app/missions/mission-detail/mission-detail.html',
-    inputs: ['mission']
+  selector: 'my-mission-detail',
+  templateUrl: 'app/missions/mission-detail/mission-detail.html',
+  inputs: ['mission']
 })
 export class MissionDetailComponent {
-    public mission: Mission;
+  public mission: Mission;
 
-    constructor(
-        private _router: Router,
-        private _routeParams: RouteParams,
-        private _service: MissionsService) { }
+  constructor(
+      private _router: Router, private _routeParams: RouteParams,
+      private _service: MissionsService) {}
 
-    ngOnInit() {
-        let id = this._routeParams.get('id');
-        this._service.getMission(id).then(mission => this.mission = mission);
-    }
-    onSelect(mission: Mission) {
-        this._router.navigate(['MissionEdit', { id: mission.gitID }]);
-    }
+  ngOnInit() {
+    let id = this._routeParams.get('id');
+    this._service.getMission(id).then(mission => this.mission = mission);
+  }
+  onSelect(mission: Mission) { this._router.navigate(['MissionEdit', {id: mission.gitID}]); }
 
-    gotoMissions() {
-        this._router.navigate(['MissionsListing']);
-    }
-
+  gotoMissions() { this._router.navigate(['MissionsListing']); }
 }

@@ -9,23 +9,19 @@ import {DataService} from '../../_/data-service';
 
 
 @Component({
-    selector: 'developers-listing',
-    templateUrl: 'app/developers/developers-listing/developers-listing.html',
-    changeDetection: ChangeDetectionStrategy.OnPush
+  selector: 'developers-listing',
+  templateUrl: 'app/developers/developers-listing/developers-listing.html',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DevelopersListingComponent {
+  developers$: Observable<IDeveloper[]>;
 
-    developers$: Observable<IDeveloper[]>;
+  constructor(
+      private _router: Router, private _dataService: DataService, private store: Store<AppStore>) {
+    this.developers$ = _dataService.developers$;
+  }
 
-    constructor(
-        private _router: Router,
-        private _dataService: DataService,
-        private store: Store<AppStore>
-    ) {
-        this.developers$ = _dataService.developers$;
-    }
-
-    onSelect(developer: IDeveloper) {
-        this._router.navigate(['DeveloperDetail', { id: developer.id }]);
-    }
+  onSelect(developer: IDeveloper) {
+    this._router.navigate(['DeveloperDetail', {id: developer.id}]);
+  }
 }

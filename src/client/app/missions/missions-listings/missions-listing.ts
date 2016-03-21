@@ -6,25 +6,19 @@ import {Mission, MissionsService} from '../../_/missions';
 
 @Component({
 
-    selector: 'missions-listing',
-    templateUrl: 'app/missions/missions-listing/missions-listing.html',
-    styleUrls: [],
-    providers: [],
-    directives: [],
-    pipes: []
+  selector: 'missions-listing',
+  templateUrl: 'app/missions/missions-listing/missions-listing.html',
+  styleUrls: [],
+  providers: [],
+  directives: [],
+  pipes: []
 })
 export class MissionsListingComponent implements OnInit {
-    missions: Mission[] = [];
+  missions: Mission[] = [];
 
-    constructor(
-        private _router: Router,
-        private _service: MissionsService) { }
+  constructor(private _router: Router, private _service: MissionsService) {}
 
-    ngOnInit() {
-        this._service.getMissions().then(missions => this.missions = missions);
-    }
+  ngOnInit() { this._service.getMissions().then(missions => this.missions = missions); }
 
-    onSelect(mission: Mission) {
-        this._router.navigate(['MissionDetail', { id: mission.gitID }]);
-    }
+  onSelect(mission: Mission) { this._router.navigate(['MissionDetail', {id: mission.gitID}]); }
 }
