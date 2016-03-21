@@ -66,8 +66,8 @@
     },
     "angular-cli": {
       "version": "0.0.25",
-      "from": "angular/angular-cli#master",
-      "resolved": "git://github.com/angular/angular-cli.git#b1289060c2ac29389280e51c801e5b7724cd88b9",
+      "from": "igorminar/angular-cli#src-client-app",
+      "resolved": "git://github.com/igorminar/angular-cli.git#fbef8a474418e1da3eebf1ba9af669e2dc0fc9e1",
       "dependencies": {
         "bluebird": {
           "version": "3.3.4",

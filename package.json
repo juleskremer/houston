@@ -30,7 +30,7 @@
     "zone.js": "^0.6.4"
   },
   "devDependencies": {
-    "angular-cli": "github:angular/angular-cli#master",
+    "angular-cli": "github:igorminar/angular-cli#src-client-app",
     "clang-format": "^1.0.35",
     "ember-cli-inject-live-reload": "^1.4.0",
     "jasmine-core": "^2.3.4",
