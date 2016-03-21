@@ -1,4 +1,5 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
     "declaration": true,
     "emitDecoratorMetadata": true,
@@ -8,14 +9,15 @@
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": false,
-    "outDir": "../dist",
+    "outDir": "../dist/",
     "rootDir": ".",
     "sourceMap": true,
     "sourceRoot": "/",
     "target": "es5"
   },
+
   "files": [
-    "app/main.ts",
+    "app/index.ts",
     "typings.d.ts"
   ]
 }

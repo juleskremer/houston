@@ -1,13 +1,18 @@
 {
-  "name": "Houston",
-  "version": "1.0.0",
-  "scripts": {
-    "typings": "typings",
-    "postinstall": "typings install",
-    "server": "json-server --watch mock-data/db.json --port 3004",
-    "start": "ng serve"
-  },
+  "name": "houston",
+  "version": "0.0.0",
   "license": "MIT",
+  "angular-cli": {},
+  "scripts": {
+    "start": "ng serve",
+    "server": "json-server --watch src/server/mock-data/db.json --port 3004",
+    "postinstall": "typings install; pree2e",
+    "lint": "tslint src/**/*.ts",
+    "format": "clang-format -i -style=file --glob=src/**/*.ts",
+    "pree2e": "webdriver-manager update",
+    "e2e": "protractor"
+  },
+  "private": true,
   "dependenciesNotes": {
     "bootstrap": "we use only css for styling - this will be eventually replaced with better base css or material design",
     "es6-promise": "required polyfill for angular2",
@@ -26,8 +31,18 @@
   },
   "devDependencies": {
     "angular-cli": "github:angular/angular-cli#master",
+    "clang-format": "^1.0.35",
     "ember-cli-inject-live-reload": "^1.4.0",
+    "jasmine-core": "^2.3.4",
+    "jasmine-spec-reporter": "^2.4.0",
     "json-server": "^0.8.7",
+    "karma": "^0.13.15",
+    "karma-chrome-launcher": "^0.2.1",
+    "karma-jasmine": "^0.3.6",
+    "protractor": "^3.0.0",
+    "ts-node": "^0.5.5",
+    "tslint": "^3.6.0",
+    "typescript": "^1.8.7",
     "typings": "^0.6.8"
   }
 }

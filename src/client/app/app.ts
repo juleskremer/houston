@@ -1,4 +1,4 @@
-import {Component} from 'angular2/core';
+import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
 import {DeveloperService} from './_/developers';
@@ -15,7 +15,7 @@ import {CommunitiesComponent} from './communities';
 
 @Component({
     selector: 'houston-app',
-    templateUrl: 'app/app.component.html',
+    templateUrl: 'app/app.html',
     viewProviders: [],
     directives: [[ROUTER_DIRECTIVES]],
     providers: [ROUTER_PROVIDERS,
@@ -49,13 +49,13 @@ import {CommunitiesComponent} from './communities';
     },
 ])
 
-export class AppComponent {
+export class AppComponent implements OnInit {
 
     constructor(private _dataService: DataService){
 
     }
 
-    ngOnInit(){
+    ngOnInit() {
 
         this._dataService.initData();
 
