@@ -1,1 +1,0 @@
-export {CommunitiesComponent} from './communities';

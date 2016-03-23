@@ -1,2 +1,1 @@
-export {ICommunity} from './community';
-export {CommunitiesService} from './communities.service';
+export {CommunitiesComponent} from './communities';

@@ -6,7 +6,7 @@ import {Store} from '@ngrx/store';
 
 import {IEvent} from './event';
 import {AppStore} from '../store';
-import {IDeveloper} from '../developers';
+import {IDeveloper} from '.';
 
 
 const BASE_URL = 'http://localhost:3004/events/';

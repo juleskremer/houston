@@ -1,5 +1,5 @@
-import {IEvent} from '../events/event';
-import {ICommunity} from '../communities/community';
+import {IEvent} from '../events-model/event';
+import {ICommunity} from '../communities-model/community';
 import {ILanguage} from '../language-service/common.service';
 
 export interface IDeveloper {

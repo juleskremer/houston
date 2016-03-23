@@ -1,1 +1,0 @@
-export {DevelopersComponent} from './developers';

@@ -1,1 +1,0 @@
-export {EventsComponent} from './events';

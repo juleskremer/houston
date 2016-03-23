@@ -1,2 +1,1 @@
-export {IEvent} from './event';
-export {EventsService} from './events.service';
+export {EventsComponent} from './events';

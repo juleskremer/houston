@@ -4,7 +4,7 @@ import {Http, HTTP_PROVIDERS, Headers} from 'angular2/http';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 import {AppStore} from '../store/appstore';
-import {IDeveloper} from '../developers/developer';
+import {IDeveloper} from '../developers-model/developer';
 import 'rxjs/add/observable/combineLatest';
 
 const BASE_URL = 'http://localhost:3004/communities/';
