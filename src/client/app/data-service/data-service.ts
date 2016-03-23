@@ -1,9 +1,9 @@
 import {Injectable} from 'angular2/core';
 import {Observable} from 'rxjs/Observable';
 
-import {IDeveloper, DeveloperService} from '../developers';
-import {IEvent, EventsService} from '../events';
-import {ICommunity, CommunitiesService} from '../communities';
+import {IDeveloper, DeveloperService} from '.';
+import {IEvent, EventsService} from '.';
+import {ICommunity, CommunitiesService} from '.';
 
 
 @Injectable()

@@ -1,6 +1,6 @@
-import {IDeveloper} from '../developers/developer';
-import {IEvent} from '../events/event';
-import {ICommunity} from '../communities/community';
+import {IDeveloper} from '../developers-model/developer';
+import {IEvent} from '../events-model/event';
+import {ICommunity} from '../communities-model/community';
 
 export interface AppStore {
   developers: IDeveloper[];

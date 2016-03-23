@@ -1,4 +1,4 @@
-import {IDeveloper} from '../developers/developer';
+import {IDeveloper} from '../developers-model/developer';
 
 export interface ICommunity {
   id: string;

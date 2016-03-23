@@ -8,7 +8,7 @@ import {EventsService} from './_/events';
 
 
 import {DevelopersComponent} from './developers';
-import {MissionsComponent} from './missions/missions';
+import {MissionsComponent} from 'missions/missions';
 import {EventsComponent} from './events';
 import {CommunitiesComponent} from './communities';
 

@@ -5,8 +5,8 @@ import 'rxjs/add/observable/combineLatest';
 import {Store} from '@ngrx/store';
 
 import {IDeveloper} from './developer';
-import {IEvent} from '../events/event';
-import {ICommunity} from '../communities/community';
+import {IEvent} from '../events-model/event';
+import {ICommunity} from '../communities-model/community';
 
 import {AppStore} from '../store/appstore';
 
