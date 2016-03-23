@@ -7,10 +7,10 @@ import {CommunitiesService} from './_/communities';
 import {EventsService} from './_/events';
 
 
-import {DevelopersComponent} from './developers';
-import {MissionsComponent} from './missions/missions';
-import {EventsComponent} from './events';
-import {CommunitiesComponent} from './communities';
+import {DevelopersComponent} from './_developers';
+import {MissionsComponent} from '_missions/missions';
+import {EventsComponent} from './_events';
+import {CommunitiesComponent} from './_communities';
 
 
 @Component({
