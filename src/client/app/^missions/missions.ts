@@ -2,9 +2,9 @@ import {Component} from 'angular2/core';
 import {RouteConfig, RouterOutlet} from 'angular2/router';
 
 import {Mission, MissionsService} from '../_/missions';
-import {MissionsListingComponent} from './_missions-listings';
-import {MissionDetailComponent} from './_mission-detail';
-import {MissionEditComponent} from './_mission-edit';
+import {MissionsListingComponent} from './^missions-listings';
+import {MissionDetailComponent} from './^mission-detail';
+import {MissionEditComponent} from './^mission-edit';
 
 
 @Component({
