@@ -3,14 +3,14 @@ import {Router} from 'angular2/router';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 
-import {IDeveloper} from '../../_/developers';
-import {AppStore} from '../../_/store';
-import {DataService} from '../../_/data-service';
+import {IDeveloper} from '../../developers';
+import {AppStore} from '../../store';
+import {DataService} from '../../data-service';
 
 
 @Component({
   selector: 'developers-listing',
-  templateUrl: 'app/developers/developers-listing/developers-listing.html',
+  templateUrl: 'app/+developers/+developers-listing/developers-listing.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class DevelopersListingComponent {

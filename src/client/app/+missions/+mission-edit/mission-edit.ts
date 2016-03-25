@@ -1,12 +1,12 @@
 import {Component} from 'angular2/core';
 import {RouteParams, Router} from 'angular2/router';
 
-import {Mission, MissionsService} from '../../_/missions';
+import {Mission, MissionsService} from '../../missions';
 
 
 @Component({
   selector: 'mission-edit',
-  templateUrl: 'app/missions/mission-edit/mission-edit.html',
+  templateUrl: 'app/+missions/+mission-edit/mission-edit.html',
   inputs: ['mission']
 })
 export class MissionEditComponent {

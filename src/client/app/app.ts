@@ -1,16 +1,15 @@
 import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
-import {DeveloperService} from './_/developers';
-import {DataService} from './_/data-service';
-import {CommunitiesService} from './_/communities';
-import {EventsService} from './_/events';
-
-
 import {DevelopersComponent} from './+developers';
-import {MissionsComponent} from '+missions/missions';
+import {MissionsComponent} from './+missions/missions';
 import {EventsComponent} from './+events';
 import {CommunitiesComponent} from './+communities';
+
+import {DeveloperService} from './developers';
+import {DataService} from './data-service';
+import {CommunitiesService} from './communities';
+import {EventsService} from './events';
 
 
 @Component({

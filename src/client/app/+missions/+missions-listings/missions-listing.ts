@@ -1,13 +1,13 @@
 import {Component, OnInit} from 'angular2/core';
 import {Router} from 'angular2/router';
 
-import {Mission, MissionsService} from '../../_/missions';
+import {Mission, MissionsService} from '../../missions';
 
 
 @Component({
 
   selector: 'missions-listing',
-  templateUrl: 'app/missions/missions-listing/missions-listing.html',
+  templateUrl: 'app/+missions/+missions-listing/missions-listing.html',
   styleUrls: [],
   providers: [],
   directives: [],

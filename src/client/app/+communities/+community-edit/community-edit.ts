@@ -3,9 +3,10 @@ import {Router, RouteParams} from 'angular2/router';
 import {Observable} from 'rxjs/Observable';
 
 import {ICommunity} from '../../communities/community';
-import {CommunityEditFormComponent} from './community-editform';
 import {CommunitiesService} from '../../communities';
 import {DataService} from '../../data-service';
+
+import {CommunityEditFormComponent} from './community-editform';
 
 
 @Component({
@@ -14,7 +15,7 @@ import {DataService} from '../../data-service';
   template: `
         <community-editform [community]='communities$ | async' 
         (save)='saveEvent($community)'
-        (cancel)='onCancel()'>`,
+        (cancel)='onCancel()'></community-editform>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CommunityEditComponent {

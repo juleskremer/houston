@@ -1,12 +1,12 @@
 import {EventEmitter, Output, Component, Input, ChangeDetectionStrategy} from 'angular2/core';
 
-import {EVENT_TYPES} from '../../_/const/const';
-import {IEvent} from '../../_/events/event';
+import {EVENT_TYPES} from '../../const/const';
+import {IEvent} from '../../events/event';
 
 
 @Component({
   selector: 'event-editform',
-  templateUrl: 'app/events/event-edit/event-editform.html',
+  templateUrl: 'app/+events/+event-edit/event-editform.html',
   styles: ['.mdl-textfield__label {top: 0;}'],
   inputs: ['event'],
   changeDetection: ChangeDetectionStrategy.OnPush

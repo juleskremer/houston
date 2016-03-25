@@ -6,7 +6,7 @@ import {ICommunity} from '../../communities';
 
 @Component({
   selector: 'community-editform',
-  templateUrl: 'app/communities/community-editform.html',
+  templateUrl: 'app/+communities/+community-editform.html',
   styles: ['.mdl-textfield__label {top: 0;}'],
   inputs: ['community'],
   changeDetection: ChangeDetectionStrategy.OnPush

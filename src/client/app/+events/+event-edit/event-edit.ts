@@ -2,8 +2,8 @@ import {Component, ChangeDetectionStrategy} from 'angular2/core';
 import {Router, RouteParams} from 'angular2/router';
 import {Observable} from 'rxjs/Observable';
 
-import {IEvent, EventsService} from '../../_/events';
-import {DataService} from '../../_/data-service';
+import {IEvent, EventsService} from '../../events';
+import {DataService} from '../../data-service';
 import {EventEditFormComponent} from './event-editform';
 
 
@@ -13,7 +13,7 @@ import {EventEditFormComponent} from './event-editform';
   template: `
         <event-editform [event]='event$ | async' 
         (save)='saveEvent($event)'
-        (cancel)='onCancel()'>`,
+        (cancel)='onCancel()'></event-editform>`,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventEditComponent {

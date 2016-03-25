@@ -3,15 +3,15 @@ import {Router} from 'angular2/router';
 import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 
-import {IEvent} from '../../_/events';
-import {AppStore} from '../../_/store';
-import {DataService} from '../../_/data-service';
+import {IEvent} from '../../events';
+import {AppStore} from '../../store';
+import {DataService} from '../../data-service';
 
 
 @Component({
 
   selector: 'events-listing',
-  templateUrl: 'app/events/events-listing/events-listing.html',
+  templateUrl: 'app/+events/+events-listing/events-listing.html',
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class EventsListingComponent {

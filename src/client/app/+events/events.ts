@@ -1,7 +1,7 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, RouterOutlet} from 'angular2/router';
 
-import {EventsService} from '../_/events';
+import {EventsService} from '../events';
 import {EventsListingComponent} from './+events-listing';
 import {EventEditComponent} from './+event-edit';
 

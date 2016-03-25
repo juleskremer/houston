@@ -1,13 +1,14 @@
 import {Component, Input, ChangeDetectionStrategy, EventEmitter, Output} from 'angular2/core';
 import {Router} from 'angular2/router';
 
-import {IDeveloper} from '../../_/developers';
-import {LanguageService, ILanguage} from '../../_/language-service';
-import {ValuesPipe} from '../../_/values-pipe';
+import {IDeveloper} from '../../developers';
+import {LanguageService} from '../../language-service';
+import {ValuesPipe} from '../../values-pipe';
+
 
 @Component({
   selector: 'developer-editform',
-  templateUrl: 'app/developers/developers-edit/developer-editform.html',
+  templateUrl: 'app/+developers/+developers-edit/developer-editform.html',
   styles: ['.mdl-textfield__label {top: 0;}'],
   inputs: ['developer'],
   pipes: [ValuesPipe],

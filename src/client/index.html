@@ -43,10 +43,14 @@ https://github.com/systemjs/systemjs#polyfills
   <script>
     System.config({
       packages: {
-        '@ngrx/store': {
-          main: 'dist/index.js',
-          defaultExtension: 'js'
+        'app': {
+          defaultExtension: 'js',
+          main: 'main'
         },
+        '@ngrx/store': {
+          defaultExtension: 'js',
+          main: 'dist/index.js'
+        }
       },
       map: {
         '@ngrx/store': 'vendor/@ngrx/store'

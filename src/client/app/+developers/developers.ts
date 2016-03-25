@@ -1,7 +1,8 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, RouterOutlet} from 'angular2/router';
 
-import {DeveloperService} from '../_/developers';
+import {DeveloperService} from '../developers';
+
 import {DevelopersListingComponent} from './+developers-listing';
 import {DeveloperDetailsComponent} from './+developer-details';
 import {DeveloperEditComponent} from './+developer-edit';

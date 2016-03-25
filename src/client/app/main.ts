@@ -3,8 +3,8 @@ import {HTTP_PROVIDERS} from 'angular2/http';
 import {provideStore} from '@ngrx/store';
 
 import {AppComponent} from './app';
-import {DeveloperService} from './_/developers';
-import {developers, events, communities} from './_/store';
+import {DeveloperService} from './developers';
+import {developers, events, communities} from './store';
 
 
 bootstrap(AppComponent, [

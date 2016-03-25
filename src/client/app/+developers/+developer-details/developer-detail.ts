@@ -1,11 +1,13 @@
 import {Component, Input, ChangeDetectionStrategy} from 'angular2/core';
-import {IDeveloper} from '../../_/developers';
 import {Router} from 'angular2/router';
-import {ValuesPipe} from '../../_/values-pipe';
+
+import {IDeveloper} from '../../developers';
+import {ValuesPipe} from '../../values-pipe';
+
 
 @Component({
   selector: 'developer-details',
-  templateUrl: 'app/developers/developer-details/developer-detail.html',
+  templateUrl: 'app/+developers/+developer-details/developer-detail.html',
   inputs: ['developer'],
   pipes: [ValuesPipe],
   changeDetection: ChangeDetectionStrategy.OnPush
