@@ -1,1 +1,2 @@
-export {DevelopersComponent} from './developers';
+export {IDeveloper} from './developer';
+export {DeveloperService} from './developer.service';

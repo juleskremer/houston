@@ -1,9 +1,9 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, RouterOutlet} from 'angular2/router';
 
-import {CommunitiesService} from '../_/communities';
-import {CommunitiesListingComponent} from './communities-listing';
-import {CommunityEditComponent} from './community-edit';
+import {CommunitiesService} from '../communities';
+import {CommunitiesListingComponent} from './+communities-listing';
+import {CommunityEditComponent} from './+community-edit';
 
 @Component({
   template: '<router-outlet></router-outlet>',

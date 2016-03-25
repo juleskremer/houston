@@ -18,7 +18,9 @@ const HEADER = {
 export class EventsService {
   events$: Observable<IEvent[]>;
 
-  constructor(public _http: Http, private store: Store<AppStore>) {}
+  constructor(public _http: Http, private store: Store<AppStore>) {
+    store.select('devs').map(developers => developers]-)
+  }
 
 
   fetchEvents(): Observable<IEvent[]> {

@@ -4,13 +4,12 @@ import {Observable} from 'rxjs/Observable';
 import {Store} from '@ngrx/store';
 
 
-import {ICommunity} from '../../_/communities';
-import {AppStore} from '../../_/store';
-import {DataService} from '../../_/data-service';
+import {ICommunity} from '../../communities';
+import {AppStore} from '../../store';
+import {DataService} from '../../data-service';
 
 
 @Component({
-
   selector: 'communities-listing',
   templateUrl: 'app/communities/communities-listing/communities-listing.html',
   changeDetection: ChangeDetectionStrategy.OnPush

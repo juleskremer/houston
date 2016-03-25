@@ -55,29 +55,28 @@ https://github.com/systemjs/systemjs#polyfills
 
     // TODO: cli should auto-generate this on the fly
     var barrelConfig = [
-      'app',
-      'app/_/communities',
-      'app/_/data-service',
-      'app/_/developers',
-      'app/_/events',
-      'app/_/language-service',
-      'app/_/missions',
-      'app/_/store',
-      'app/_/values-pipe',
-      'app/communities/',
-      'app/communities/communities-listing',
-      'app/communities/community-edit',
-      'app/developers/',
-      'app/developers/developer-details',
-      'app/developers/developer-edit',
-      'app/developers/developers-listing',
-      'app/events/',
-      'app/events/event-edit',
-      'app/events/events-listing',
-      'app/missions/',
-      'app/missions/mission-detail',
-      'app/missions/mission-edit',
-      'app/missions/missions-listings',
+      'app/communities',
+      'app/data-service',
+      'app/developers',
+      'app/events',
+      'app/language-service',
+      'app/missions',
+      'app/store',
+      'app/values-pipe',
+      'app/+communities/',
+      'app/+communities/+communities-listing',
+      'app/+communities/+community-edit',
+      'app/+developers/',
+      'app/+developers/+developer-details',
+      'app/+developers/+developer-edit',
+      'app/+developers/+developers-listing',
+      'app/+events/',
+      'app/+events/+event-edit',
+      'app/+events/+events-listing',
+      'app/+missions/',
+      'app/+missions/+mission-detail',
+      'app/+missions/+mission-edit',
+      'app/+missions/+missions-listings',
 
     ].reduce(function(barrelConfig, barrelName) {
       barrelConfig[barrelName] = {
@@ -92,7 +91,7 @@ https://github.com/systemjs/systemjs#polyfills
       packages: barrelConfig
     });
 
-    System.import('app');
+    System.import('app/main');
   </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 import {EventEmitter, Output, Component, Input, ChangeDetectionStrategy} from 'angular2/core';
 
-import {COMMUNITY_TYPES} from '../../_/const/const';
-import {ICommunity} from '../../_/communities';
+import {COMMUNITY_TYPES} from '../../const/const';
+import {ICommunity} from '../../communities';
 
 
 @Component({
