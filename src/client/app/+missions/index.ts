@@ -1,0 +1,1 @@
+export {MissionsComponent} from './missions';

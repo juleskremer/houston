@@ -7,7 +7,7 @@ import {Mission, MissionsService} from '../../missions';
 @Component({
 
   selector: 'missions-listing',
-  templateUrl: 'app/+missions/+missions-listing/missions-listing.html',
+  templateUrl: 'app/+missions/+missions-listings/missions-listing.html',
   styleUrls: [],
   providers: [],
   directives: [],
