@@ -1,11 +1,6 @@
 import {Component, OnInit} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from 'angular2/router';
 
-import {DevelopersComponent} from './+developers';
-import {MissionsComponent} from './+missions/missions';
-import {EventsComponent} from './+events';
-import {CommunitiesComponent} from './+communities';
-
 import {DeveloperService} from './developers';
 import {DataService} from './data-service';
 import {CommunitiesService} from './communities';
@@ -29,16 +24,20 @@ import {EventsService} from './events';
   {
     path: '/developers/...',
     name: 'DevelopersComponent',
-    component: DevelopersComponent,
+    loader: () => window['System'].import('app/+developers').then((module) => module.DevelopersComponent),
     useAsDefault: true
   },
   {
     path: '/events/...',
     name: 'EventsComponent',
-    component: EventsComponent,
+    loader: () => window['System'].import('app/+events').then((module) => module.EventsComponent),
   },
-  {path: '/missions/...', name: 'MissionsComponent', component: MissionsComponent},
-  {path: '/communities/...', name: 'CommunitiesComponent', component: CommunitiesComponent},
+  {path: '/missions/...', name: 'MissionsComponent',
+    loader: () => window['System'].import('app/+missions').then((module) => module.MissionsComponent),
+  },
+  {path: '/communities/...', name: 'CommunitiesComponent',
+    loader: () => window['System'].import('app/+communities').then((module) => module.CommunitiesComponent),
+  },
 ])
 
 export class AppComponent implements OnInit {

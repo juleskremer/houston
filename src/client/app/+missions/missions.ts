@@ -2,9 +2,6 @@ import {Component} from 'angular2/core';
 import {RouteConfig, RouterOutlet} from 'angular2/router';
 
 import {MissionsService} from '../missions';
-import {MissionsListingComponent} from './+missions-listings';
-import {MissionDetailComponent} from './+mission-detail';
-import {MissionEditComponent} from './+mission-edit';
 
 
 @Component({
@@ -15,9 +12,28 @@ import {MissionEditComponent} from './+mission-edit';
   providers: [MissionsService]
 })
 @RouteConfig([
-  {path: '/', name: 'MissionsListing', component: MissionsListingComponent, useAsDefault: true},
-  {path: '/:id', name: 'MissionDetail', component: MissionDetailComponent},
-  {path: '/mission-detail/:id', name: 'MissionEdit', component: MissionEditComponent}
+  {
+    path: '/',
+    name: 'MissionsListing',
+    useAsDefault: true,
+    loader: () => window['System']
+                      .import('app/+missions/+missions-listings')
+                      .then((module) => module.MissionsListingComponent),
+  },
+  {
+    path: '/:id',
+    name: 'MissionDetail',
+    loader: () => window['System']
+                      .import('app/+missions/+mission-detail')
+                      .then((module) => module.MissionDetailComponent),
+  },
+  {
+    path: '/mission-edit/:id',
+    name: 'MissionEdit',
+    loader: () => window['System']
+                      .import('app/+missions/+mission-edit')
+                      .then((module) => module.MissionEditComponent),
+  }
 
 ])
 export class MissionsComponent {

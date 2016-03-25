@@ -3,10 +3,6 @@ import {RouteConfig, RouterOutlet} from 'angular2/router';
 
 import {DeveloperService} from '../developers';
 
-import {DevelopersListingComponent} from './+developers-listing';
-import {DeveloperDetailsComponent} from './+developer-details';
-import {DeveloperEditComponent} from './+developer-edit';
-
 
 @Component({
   template: '<router-outlet></router-outlet>',
@@ -14,10 +10,22 @@ import {DeveloperEditComponent} from './+developer-edit';
   providers: [DeveloperService]
 })
 @RouteConfig([
-  {path: '/', name: 'DevelopersListing', component: DevelopersListingComponent, useAsDefault: true},
-  {path: '/developer-detail/:id', name: 'DeveloperDetail', component: DeveloperDetailsComponent},
-  {path: '/developer-edit/', name: 'DeveloperEdit', component: DeveloperEditComponent}
-
+  {
+    path: '/',
+    name: 'DevelopersListing',
+    useAsDefault: true,
+    loader: () => window['System'].import('app/+developers/+developers-listing').then((module) => module.DevelopersListingComponent)
+  },
+  {
+    path: '/developer-detail/:id',
+    name: 'DeveloperDetail',
+    loader: () => window['System'].import('app/+developers/+developer-details').then((module) => module.DeveloperDetailsComponent)
+  },
+  {
+    path: '/developer-edit/',
+    name: 'DeveloperEdit',
+    loader: () => window['System'].import('app/+developers/+developer-edit').then((module) => module.DeveloperEditComponent)
+  }
 ])
 export class DevelopersComponent {
 }

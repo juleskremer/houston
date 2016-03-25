@@ -2,8 +2,7 @@ import {Component} from 'angular2/core';
 import {RouteConfig, RouterOutlet} from 'angular2/router';
 
 import {EventsService} from '../events';
-import {EventsListingComponent} from './+events-listing';
-import {EventEditComponent} from './+event-edit';
+
 
 @Component({
   template: '<router-outlet></router-outlet>',
@@ -11,8 +10,17 @@ import {EventEditComponent} from './+event-edit';
   providers: [EventsService]
 })
 @RouteConfig([
-  {path: '/', name: 'EventsListing', component: EventsListingComponent, useAsDefault: true},
-  {path: '/event-edit/:id', name: 'EventEdit', component: EventEditComponent},
+  {
+    path: '/',
+    name: 'EventsListing',
+    useAsDefault: true,
+    loader: () => window['System'].import('app/+events/+events-listing').then((module) => module.EventsListingComponent)
+  },
+  {
+    path: '/event-edit/:id',
+    name: 'EventEdit',
+    loader: () => window['System'].import('app/+events/+event-edit').then((module) => module.EventEditComponent)
+  },
 ])
 export class EventsComponent {
 }
