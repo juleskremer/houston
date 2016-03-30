@@ -1,7 +1,7 @@
 import {EventEmitter, Output, Component, Input, ChangeDetectionStrategy} from 'angular2/core';
 
 import {EVENT_TYPES} from '../../const/const';
-import {IEvent} from '../../events/event';
+import {IEvent} from '../../events';
 
 
 @Component({
