@@ -22,7 +22,7 @@ import {DeveloperService} from '../developers';
     loader: () => window['System'].import('app/+developers/+developer-details').then((module) => module.DeveloperDetailsComponent)
   },
   {
-    path: '/developer-edit/',
+    path: '/developer-edit/:id',
     name: 'DeveloperEdit',
     loader: () => window['System'].import('app/+developers/+developer-edit').then((module) => module.DeveloperEditComponent)
   }

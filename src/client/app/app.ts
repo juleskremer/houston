@@ -11,7 +11,7 @@ import {EventsService} from './events';
   selector: 'houston-app',
   templateUrl: 'app/app.html',
   viewProviders: [],
-  directives: [[ROUTER_DIRECTIVES]],
+  directives: [ROUTER_DIRECTIVES],
   providers: [
     ROUTER_PROVIDERS,
     DataService,

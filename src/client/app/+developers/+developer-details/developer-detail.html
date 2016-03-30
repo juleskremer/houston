@@ -224,10 +224,11 @@
     FOOTER
     =========================== -->
     <footer class="text-center">
-        <button type="submit" class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
-        (click)="onEdit(developer)">Edit Developer</button>
+        <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+                [routerLink]="['DeveloperEdit', {id: developer.id}]">Edit Developer</button>
         &nbsp;
-        <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect" (click)="gotoDevelopers()">Cancel</button>
+        <button class="dashboard-button mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect"
+                [routerLink]="['DevelopersListing']">Cancel</button>
     </footer>
     <div>
         <p></p>
