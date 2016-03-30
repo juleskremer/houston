@@ -8,7 +8,7 @@ import {ValuesPipe} from '../../values-pipe';
 
 @Component({
   selector: 'developer-editform',
-  templateUrl: 'app/+developers/+developers-edit/developer-editform.html',
+  templateUrl: 'app/+developers/+developer-edit/developer-editform.html',
   styles: ['.mdl-textfield__label {top: 0;}'],
   inputs: ['developer'],
   pipes: [ValuesPipe],
