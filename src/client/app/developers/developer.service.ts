@@ -53,7 +53,7 @@ export class DeveloperService {
   }
 
   updateDeveloper(developer: IDeveloper) {
-    this._http.put(`${BASE_URL}${developer.id}`, JSON.stringify(developer), HEADER)
+    this._http.put(`${BASE_URL}/${developer.id}`, JSON.stringify(developer), HEADER)
         .subscribe(action => this.store.dispatch({type: 'UPDATE_DEVELOPER', payload: developer}));
   }
 }

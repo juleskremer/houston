@@ -375,8 +375,8 @@
     {
       "id": "manekinekko",
       "bio": "I am a JavaScript developer and trainer located in Paris, France. I believe that AngularJS is what the Web platform was missing. When I am not working on production ready apps, I enjoy writing technical articles, speaking at local meetups and conferences, hacking on different technologies and sharing with the community.",
-      "communities": {},
-      "events": {},
+      "communities": [],
+      "events": [],
       "eMail": "wassim.chegham@gmail.com",
       "firstName": "Wassim",
       "languages": {
@@ -388,16 +388,16 @@
         "FR": "France"
       },
       "picUrl": "https://avatars0.githubusercontent.com/u/1699357?v=3&s=460",
-      "resumeUrl": "",
+      "resumeUrl": "https://fr.linkedin.com/in/wassimchegham",
       "twitterID": "manekinekko",
       "developerType": "Consultant",
-      "blogUrl": "wassimchegham.com",
+      "blogUrl": "http://wassimchegham.com",
       "ngConsult": "Yes",
       "projects": "",
-      "isGDE": "true",
-      "webpage": "",
-      "phone": "",
-      "linkedIn": ""
+      "isGDE": true,
+      "webpage": "http://wassimchegham.com",
+      "phone": "0033686466378",
+      "linkedIn": "wassimchegham"
     },
     {
       "id": "mgonto",
